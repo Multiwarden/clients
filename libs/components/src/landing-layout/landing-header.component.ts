@@ -1,8 +1,7 @@
 import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
-import { BitwardenLogo, BitwardenLogoBeta } from "@bitwarden/assets/svg";
-import { flagEnabled } from "@bitwarden/common/platform/misc/flags";
+import { MultiwardenLogo } from "@bitwarden/assets/svg";
 import { I18nPipe } from "@bitwarden/ui-common";
 
 import { SvgModule } from "../svg";
@@ -39,5 +38,6 @@ import { SvgModule } from "../svg";
 })
 export class LandingHeaderComponent {
   readonly hideLogo = input<boolean>(false);
-  protected readonly logo = flagEnabled("prereleaseBuild") ? BitwardenLogoBeta : BitwardenLogo;
+  // Multiwarden: own logo (upstream: BitwardenLogo / BitwardenLogoBeta by prereleaseBuild flag).
+  protected readonly logo = MultiwardenLogo;
 }

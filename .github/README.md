@@ -27,8 +27,8 @@ The official Bitwarden extension lets you sign in to several accounts, but only 
 account takes part in autofill, saving and passkeys. Running two copies side by side makes them
 compete for the same fields.
 
-Multiwarden is an unofficial fork of the Bitwarden browser extension in which every unlocked
-account takes part. It stays close to
+Multiwarden is an unofficial fork of the Bitwarden browser extension and desktop app in which
+every unlocked account takes part. It stays close to
 upstream: new behaviour lives in separate files, and upstream code only receives small, marked
 hooks.
 
@@ -52,6 +52,9 @@ hooks.
 Also included: Multiwarden branding and icons, translations for every extension language,
 builds for Chromium browsers, Firefox and Safari, and an automated nightly sync with upstream.
 
+The **desktop app** has the Combined view (vault list, account badges, "save to which vault?"),
+the Multiwarden settings tab, and installs next to Bitwarden's desktop app.
+
 ## Browser support
 
 | Browser                | Package                             | Notes                                                                     |
@@ -61,6 +64,17 @@ builds for Chromium browsers, Firefox and Safari, and an automated nightly sync 
 | Opera                  | `multiwarden-opera-*.zip`           | Manifest V3                                                               |
 | Firefox                | `multiwarden-firefox-*.zip`         | Manifest V2; temporary add-on until signed by Mozilla                     |
 | Safari (macOS)         | `multiwarden-safari-unsigned-*.zip` | Unsigned test build; see the [maintainer notes](../multiwarden/README.md) |
+
+## Desktop app
+
+| System  | Package                                                    | Notes                                                      |
+| ------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| Windows | `Multiwarden-*-Setup.exe`, `Multiwarden-*-Portable.exe`    | Unsigned: SmartScreen asks for confirmation on first start |
+| macOS   | `Multiwarden-*-mac-universal.dmg`                          | Not notarized: right-click → **Open** the first time       |
+| Linux   | `Multiwarden-*-x86_64.AppImage`, `Multiwarden-*-amd64.deb` |                                                            |
+
+It is a separate app with its own data, so Bitwarden's desktop app can stay installed. It does
+not update itself; new versions are on the releases page.
 
 ## Install
 
@@ -102,11 +116,11 @@ Build steps, the file map and the sync process are in the
 
 ## Repositories
 
-| Repository                                                            | Contents                                 |
-| --------------------------------------------------------------------- | ---------------------------------------- |
-| [multiwarden/clients](https://github.com/multiwarden/clients)         | The browser extension (this repository)  |
-| [multiwarden/android](https://github.com/multiwarden/android)         | The Android app                          |
-| [multiwarden/multiwarden](https://github.com/multiwarden/multiwarden) | The website, logos and store screenshots |
+| Repository                                                            | Contents                                                |
+| --------------------------------------------------------------------- | ------------------------------------------------------- |
+| [multiwarden/clients](https://github.com/multiwarden/clients)         | The browser extension and desktop app (this repository) |
+| [multiwarden/android](https://github.com/multiwarden/android)         | The Android app                                         |
+| [multiwarden/multiwarden](https://github.com/multiwarden/multiwarden) | The website, logos and store screenshots                |
 
 ## License and trademarks
 

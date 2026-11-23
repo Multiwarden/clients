@@ -75,13 +75,21 @@
     "markers": 2,
     "references": 3
   },
+  "apps/browser/src/background/nativeMessaging.background.ts": {
+    "markers": 1,
+    "references": 6
+  },
   "apps/browser/src/background/runtime.background.ts": {
     "markers": 1,
     "references": 2
   },
+  "apps/browser/src/platform/ipc/transports/desktop-ipc.transport.ts": {
+    "markers": 1,
+    "references": 6
+  },
   "apps/browser/src/platform/popup/layout/popup-header.component.ts": {
     "markers": 1,
-    "references": 5
+    "references": 3
   },
   "apps/browser/src/popup/app-routing.module.ts": {
     "markers": 1,
@@ -93,7 +101,7 @@
   },
   "apps/browser/src/popup/components/extension-anon-layout-wrapper/extension-anon-layout-wrapper.component.ts": {
     "markers": 1,
-    "references": 5
+    "references": 3
   },
   "apps/browser/src/popup/services/services.module.ts": {
     "markers": 1,
@@ -135,6 +143,78 @@
     "markers": 3,
     "references": 22
   },
+  "apps/desktop/desktop_native/biometric/src/linux.rs": {
+    "markers": 1,
+    "references": 2
+  },
+  "apps/desktop/desktop_native/biometric/src/windows.rs": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/desktop/desktop_native/core/src/autostart/impl_direct_write.rs": {
+    "markers": 1,
+    "references": 4
+  },
+  "apps/desktop/desktop_native/core/src/ipc/mod.rs": {
+    "markers": 3,
+    "references": 7
+  },
+  "apps/desktop/desktop_native/ssh_agent/src/server/listener/unix.rs": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/desktop/src/app/accounts/settings-dialog.component.html": {
+    "markers": 1,
+    "references": 4
+  },
+  "apps/desktop/src/app/accounts/settings-dialog.component.ts": {
+    "markers": 1,
+    "references": 6
+  },
+  "apps/desktop/src/app/services/services.module.ts": {
+    "markers": 1,
+    "references": 6
+  },
+  "apps/desktop/src/auth/components/account-switcher/account-switcher-v2.component.html": {
+    "markers": 1,
+    "references": 7
+  },
+  "apps/desktop/src/auth/components/account-switcher/account-switcher-v2.component.ts": {
+    "markers": 2,
+    "references": 10
+  },
+  "apps/desktop/src/main.ts": {
+    "markers": 1,
+    "references": 5
+  },
+  "apps/desktop/src/main/native-messaging.main.spec.ts": {
+    "markers": 1,
+    "references": 7
+  },
+  "apps/desktop/src/main/native-messaging.main.ts": {
+    "markers": 1,
+    "references": 31
+  },
+  "apps/desktop/src/main/updater.main.ts": {
+    "markers": 2,
+    "references": 9
+  },
+  "apps/desktop/src/vault/app/vault-v3/vault-items/vault-cipher-row.component.html": {
+    "markers": 1,
+    "references": 2
+  },
+  "apps/desktop/src/vault/app/vault-v3/vault-items/vault-cipher-row.component.ts": {
+    "markers": 1,
+    "references": 4
+  },
+  "apps/desktop/src/vault/app/vault-v3/vault.component.ts": {
+    "markers": 5,
+    "references": 21
+  },
+  "libs/assets/src/svg/svgs/index.ts": {
+    "markers": 1,
+    "references": 4
+  },
   "libs/common/src/platform/services/fido2/fido2-authenticator.service.ts": {
     "markers": 5,
     "references": 6
@@ -143,6 +223,10 @@
     "markers": 2,
     "references": 2
   },
+  "libs/components/src/landing-layout/landing-header.component.ts": {
+    "markers": 1,
+    "references": 3
+  },
   "libs/tools/send/send-ui/src/send-list-items-container/send-list-items-container.component.html": {
     "markers": 1,
     "references": 3
@@ -150,5 +234,21 @@
   "libs/tools/send/send-ui/src/services/send-items.service.ts": {
     "markers": 2,
     "references": 9
+  },
+  "libs/vault/src/components/vault-items-table/vault-items-table.component.html": {
+    "markers": 1,
+    "references": 2
+  },
+  "libs/vault/src/components/vault-items-table/vault-items-table.component.ts": {
+    "markers": 1,
+    "references": 4
+  },
+  "libs/vault/src/vault-item-dialog/vault-item-dialog.component.html": {
+    "markers": 1,
+    "references": 2
+  },
+  "libs/vault/src/vault-item-dialog/vault-item-dialog.component.ts": {
+    "markers": 1,
+    "references": 4
   }
 }

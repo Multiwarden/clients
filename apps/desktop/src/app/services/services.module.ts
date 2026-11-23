@@ -201,6 +201,7 @@ import { DesktopBiometricsService } from "../../key-management/biometrics/deskto
 import { RendererBiometricsService } from "../../key-management/biometrics/renderer-biometrics.service";
 import { DesktopLockComponentService } from "../../key-management/lock/services/desktop-lock-component.service";
 import { DesktopSessionTimeoutTypeService } from "../../key-management/session-timeout/services/desktop-session-timeout-type.service";
+import { MULTIWARDEN_DESKTOP_PROVIDERS } from "../../multiwarden/multiwarden-providers";
 import { flagEnabled } from "../../platform/flags";
 import { DesktopSettingsService } from "../../platform/services/desktop-settings.service";
 import { ElectronLogRendererService } from "../../platform/services/electron-log.renderer.service";
@@ -848,6 +849,8 @@ const safeProviders: SafeProvider[] = [
     deps: [],
   }),
   safeProvider(DesktopShareItemPresenter),
+  // Multiwarden: combined mode and Multiwarden settings.
+  ...MULTIWARDEN_DESKTOP_PROVIDERS,
   safeProvider({
     provide: SHARE_ITEM_PRESENTER,
     useExisting: DesktopShareItemPresenter,

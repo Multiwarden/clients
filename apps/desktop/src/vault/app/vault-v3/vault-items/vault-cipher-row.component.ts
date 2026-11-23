@@ -5,6 +5,7 @@ import { Component, HostListener, computed, inject, input, output, viewChild } f
 import { toSignal } from "@angular/core/rxjs-interop";
 
 import { PremiumBadgeComponent } from "@bitwarden/angular/billing/components/premium-badge/premium-badge.component";
+import { MultiwardenAccountBadgeComponent } from "@bitwarden/angular/multiwarden";
 import { IconComponent } from "@bitwarden/angular/vault/components/icon.component";
 import { Organization } from "@bitwarden/common/admin-console/models/domain/organization";
 import { I18nService } from "@bitwarden/common/platform/abstractions/i18n.service";
@@ -41,6 +42,8 @@ import { VaultItemEvent } from "./vault-item-event";
   selector: "tr[appVaultCipherRow]",
   templateUrl: "vault-cipher-row.component.html",
   imports: [
+    // Multiwarden: account badge (combined mode).
+    MultiwardenAccountBadgeComponent,
     NgClass,
     I18nPipe,
     TableModule,

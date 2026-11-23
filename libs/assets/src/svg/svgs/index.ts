@@ -120,3 +120,5 @@ export * from "./vault.icon";
 export * from "./vault";
 export * from "./wave.icon";
 export * from "./health.icon";
+// Multiwarden: the Multiwarden logo.
+export * from "./multiwarden/multiwarden-logo.icon";

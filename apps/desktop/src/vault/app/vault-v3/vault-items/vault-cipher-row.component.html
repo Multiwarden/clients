@@ -9,6 +9,8 @@
 </td>
 <td bitCell [ngClass]="RowHeightClass" class="tw-flex tw-items-center tw-gap-2">
   <app-vault-icon [cipher]="cipher()"></app-vault-icon>
+  <!-- Multiwarden: the item's account, in combined mode. -->
+  <app-multiwarden-account-badge [cipherId]="cipher().id" />
   <div class="tw-truncate">
     <div class="tw-inline-flex tw-w-full">
       <button

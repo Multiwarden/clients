@@ -19,6 +19,7 @@ import { toObservable, toSignal } from "@angular/core/rxjs-interop";
 import { Router } from "@angular/router";
 import { asapScheduler, catchError, map, observeOn, of, Subject, switchMap, take } from "rxjs";
 
+import { MultiwardenAccountBadgeComponent } from "@bitwarden/angular/multiwarden";
 import { IconComponent as VaultIconComponent } from "@bitwarden/angular/vault/components/icon.component";
 import { CollectionView } from "@bitwarden/common/admin-console/models/collections";
 import { Organization } from "@bitwarden/common/admin-console/models/domain/organization";
@@ -300,6 +301,8 @@ function chipItem(id: string, label: string, startIcon: BitwardenIcon): ChipGrou
     TableRowNameDirective,
     VaultIconComponent,
     VaultItemsTableActionsColumnComponent,
+    // Multiwarden: account badge (combined mode).
+    MultiwardenAccountBadgeComponent,
   ],
 })
 export class VaultItemsTableComponent<C extends CipherViewLike> {

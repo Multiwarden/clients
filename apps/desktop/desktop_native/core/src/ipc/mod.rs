@@ -8,6 +8,8 @@ use tokio_util::codec::{Framed, LengthDelimitedCodec};
 pub mod announcement;
 pub mod client;
 pub mod server;
+// Multiwarden: socket names of its own (see multiwarden/mod.rs).
+mod multiwarden;
 
 /// The maximum size of a message that can be sent over IPC.
 /// According to the documentation, the maximum size sent to the browser is 1MB.
@@ -121,6 +123,8 @@ fn cache_dir_name() -> String {
 
 /// The main path to the IPC socket.
 pub fn path(name: &str) -> std::path::PathBuf {
+    // Multiwarden: its own socket names, next to Bitwarden's.
+    let name = &multiwarden::ipc_name(name);
     if let Some(dir) = socket_dir_override() {
         // Windows named pipes must live under \\.\pipe\, so the override cannot be used as a
         // directory there. Hashing it into the pipe name isolates the instance just the same.
@@ -176,6 +180,8 @@ pub fn path(name: &str) -> std::path::PathBuf {
 /// Paths to the ipc sockets including alternative paths.
 /// For flatpak, a path per sandbox is created.
 pub fn all_paths(name: &str) -> Vec<std::path::PathBuf> {
+    // Multiwarden: its own socket names, next to Bitwarden's.
+    let name = &multiwarden::ipc_name(name);
     // An isolated debug instance must not take over the installed client's browser-facing
     // sockets, so the shared alternative paths are skipped.
     if socket_dir_override().is_some() {

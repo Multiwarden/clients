@@ -15,6 +15,7 @@ import { toSignal } from "@angular/core/rxjs-interop";
 import { of } from "rxjs";
 
 import { JslibModule } from "@bitwarden/angular/jslib.module";
+import { MultiwardenLogo } from "@bitwarden/assets/svg";
 import { FeatureFlag } from "@bitwarden/common/enums/feature-flag.enum";
 import { ConfigService } from "@bitwarden/common/platform/abstractions/config/config.service";
 import {
@@ -30,7 +31,6 @@ import {
   TypographyModule,
 } from "@bitwarden/components";
 
-import { MultiwardenLogo } from "../../../multiwarden/popup/multiwarden-logo";
 import { PopupRouterCacheService } from "../view-cache/popup-router-cache.service";
 
 import { PopupPageComponent } from "./popup-page.component";

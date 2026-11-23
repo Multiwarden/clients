@@ -27,6 +27,7 @@ import {
 import { map } from "rxjs/operators";
 
 import { PremiumBadgeComponent } from "@bitwarden/angular/billing/components/premium-badge";
+import { MultiwardenVaultBannerComponent } from "@bitwarden/angular/multiwarden";
 import { ApiService } from "@bitwarden/common/abstractions/api.service";
 import { CollectionView } from "@bitwarden/common/admin-console/models/collections";
 import { Organization } from "@bitwarden/common/admin-console/models/domain/organization";
@@ -153,6 +154,8 @@ export type VaultItemDialogResult = UnionOfValues<typeof VaultItemDialogResult>;
   selector: "app-vault-item-dialog",
   templateUrl: "vault-item-dialog.component.html",
   imports: [
+    // Multiwarden: vault banner (combined mode).
+    MultiwardenVaultBannerComponent,
     BitIconButtonComponent,
     ButtonModule,
     IconButtonModule,

@@ -1,6 +1,6 @@
-# Multiwarden: tests the Multiwarden changes and builds the extension for every browser.
-# It publishes a GitHub release with one zip per browser, plus the source package Firefox
-# Add-ons asks for, when started from the Actions tab with "release" ticked (it then creates the
+# Multiwarden: tests the Multiwarden changes and builds the extension for every browser and the
+# desktop app for Windows, macOS and Linux. It publishes a GitHub release with one zip per
+# browser, the desktop installers, plus the source package Firefox Add-ons asks for, when started from the Actions tab with "release" ticked (it then creates the
 # tag itself), or when a tag like v2026.11.0.1 is pushed. A release is also uploaded to the
 # Chrome Web Store when its secrets are set (see the "Chrome Web Store" job).
 #
@@ -52,15 +52,24 @@ jobs:
       - name: Lint Multiwarden code
         run: |
           npx eslint libs/common/src/multiwarden libs/angular/src/multiwarden \
-            apps/browser/src/multiwarden apps/browser/src/autofill/multiwarden
+            apps/browser/src/multiwarden apps/browser/src/autofill/multiwarden \
+            apps/desktop/src/multiwarden
           npx prettier --check libs/common/src/multiwarden libs/angular/src/multiwarden \
-            apps/browser/src/multiwarden apps/browser/src/autofill/multiwarden multiwarden/scripts
+            apps/browser/src/multiwarden apps/browser/src/autofill/multiwarden \
+            apps/desktop/src/multiwarden multiwarden/scripts
 
       - name: Test Multiwarden changes
         run: |
           (cd libs/common && npx jest src/multiwarden src/platform/services/fido2)
           (cd libs/angular && npx jest src/multiwarden)
           (cd libs/tools/send/send-ui && npx jest)
+          (cd libs/vault && npx jest src/components/vault-items-table src/vault-item-dialog)
+          (cd apps/desktop && npx jest --runInBand \
+            src/multiwarden \
+            src/vault/app/vault-v3 \
+            src/auth/components/account-switcher \
+            src/app/accounts/settings-dialog.component.spec.ts \
+            src/main/native-messaging.main.spec.ts)
           (cd apps/browser && npx jest --runInBand \
             src/multiwarden \
             src/autofill/multiwarden \
@@ -182,10 +191,92 @@ jobs:
           name: multiwarden-safari
           path: multiwarden-safari-unsigned-${{ env.VERSION }}.zip
 
+  build-desktop:
+    name: Build desktop ${{ matrix.os }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: linux
+            runner: ubuntu-22.04
+            native: --target=x86_64-unknown-linux-gnu --release
+            package: --linux --x64
+            files: "Multiwarden-*.AppImage Multiwarden-*.deb"
+          - os: windows
+            runner: windows-2022
+            native: --target=x86_64-pc-windows-msvc --release
+            package: --win --x64
+            files: "Multiwarden-*.exe"
+          - os: macos
+            runner: macos-15
+            # Both architectures, merged into one universal app.
+            native: cross-platform --release
+            package: --mac --universal
+            files: "Multiwarden-*.dmg Multiwarden-*.zip"
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Cache Rust build
+        uses: Swatinem/rust-cache@779680da715d629ac1d338a641029a2f4372abb5 # v2.8.2
+        with:
+          workspaces: apps/desktop/desktop_native -> target
+          key: ${{ matrix.os }}
+
+      - name: Install Linux build dependencies
+        if: matrix.os == 'linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install pkg-config libxss-dev
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Build native module
+        working-directory: apps/desktop/desktop_native
+        env:
+          PKG_CONFIG_ALLOW_CROSS: true
+          PKG_CONFIG_ALL_STATIC: true
+        run: node build.js ${{ matrix.native }}
+
+      - name: Build (open-source build only)
+        working-directory: apps/desktop
+        env:
+          NODE_OPTIONS: --max-old-space-size=8192
+        run: npm run build
+
+      - name: Apply Multiwarden branding
+        run: node multiwarden/scripts/brand-desktop.mjs
+
+      - name: Package
+        working-directory: apps/desktop
+        env:
+          # Unsigned builds: no certificates are looked up.
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+        run: |
+          npx electron-builder --config ../../multiwarden/.build/electron-builder.json \
+            ${{ matrix.package }} -p never
+          mkdir -p ../../desktop-dist
+          cd dist && cp ${{ matrix.files }} ../../../desktop-dist/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: multiwarden-desktop-${{ matrix.os }}
+          path: desktop-dist/*
+
   release:
     name: Publish release
     if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.release)
-    needs: [test, build, build-safari]
+    needs: [test, build, build-safari, build-desktop]
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.release.outputs.version }}
@@ -217,7 +308,7 @@ jobs:
             echo "::error::Release $tag already exists. Bump \"release\" in multiwarden/version.json first."
             exit 1
           fi
-          gh release create "$tag" dist/*.zip \
+          gh release create "$tag" dist/* \
             --repo "${GITHUB_REPOSITORY}" \
             --target "${GITHUB_SHA}" \
             --title "Multiwarden ${version}" --generate-notes
@@ -298,7 +389,7 @@ jobs:
     name: Merge sync
     # Only for the upstream sync branches, started by multiwarden-upstream-sync.yml.
     if: github.event_name == 'workflow_dispatch' && startsWith(github.ref, 'refs/heads/sync/bitwarden-')
-    needs: [test, build, build-safari]
+    needs: [test, build, build-safari, build-desktop]
     runs-on: ubuntu-latest
     permissions:
       actions: write

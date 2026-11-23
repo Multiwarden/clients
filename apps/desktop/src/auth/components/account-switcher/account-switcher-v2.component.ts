@@ -1,10 +1,11 @@
 // FIXME: Update this file to be type safe and remove this and next line
 // @ts-strict-ignore
 import { CommonModule } from "@angular/common";
-import { Component, input } from "@angular/core";
+import { Component, inject, input } from "@angular/core";
 import { Router } from "@angular/router";
-import { firstValueFrom, map, Observable } from "rxjs";
+import { combineLatest, firstValueFrom, map, Observable } from "rxjs";
 
+import { MultiwardenCombinedService } from "@bitwarden/angular/multiwarden";
 import { AccountService } from "@bitwarden/common/auth/abstractions/account.service";
 import {
   AccountSwitcherEntries,
@@ -55,6 +56,13 @@ export class AccountSwitcherV2Component {
 
   disabled = false;
 
+  // Multiwarden: the "Combined" entry, offered while more than one account is unlocked.
+  protected readonly multiwardenCombined = inject(MultiwardenCombinedService);
+  protected readonly multiwardenCombinedEntry$ = combineLatest([
+    this.multiwardenCombined.accounts$,
+    this.multiwardenCombined.enabled$,
+  ]).pipe(map(([accounts, on]) => ({ show: accounts.filter((a) => a.unlocked).length > 1, on })));
+
   constructor(
     private messagingService: MessagingService,
     private messageListener: MessageListener,
@@ -72,6 +80,8 @@ export class AccountSwitcherV2Component {
   }
 
   async switch(userId: string) {
+    // Multiwarden: choosing a single account leaves combined mode.
+    await this.multiwardenCombined.setCombined(false);
     await this.biometricsService.setShouldAutopromptNow(true);
 
     this.disabled = true;

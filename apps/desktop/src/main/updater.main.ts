@@ -6,6 +6,10 @@ import { I18nService } from "@bitwarden/common/platform/abstractions/i18n.servic
 import { UrlType } from "@bitwarden/common/platform/misc/safe-urls";
 import { LogService } from "@bitwarden/logging";
 
+import {
+  MULTIWARDEN_AUTO_UPDATE,
+  MULTIWARDEN_RELEASES_URL,
+} from "../multiwarden/main/multiwarden-main";
 import { SafeShell } from "../platform/main/safe-shell.main";
 import { isDev } from "../utils";
 
@@ -53,6 +57,8 @@ export class UpdaterMain {
     const macCanUpdate = process.platform === "darwin" && !isMacAppStore();
     this.canUpdate =
       !this.userDisabledUpdates() && (linuxCanUpdate || windowsCanUpdate || macCanUpdate);
+    // Multiwarden: no self-update from Bitwarden's feed (see multiwarden-main.ts).
+    this.canUpdate &&= MULTIWARDEN_AUTO_UPDATE;
   }
 
   async init() {
@@ -142,7 +148,8 @@ export class UpdaterMain {
     if (!this.canUpdate) {
       if (withFeedback) {
         void this.shell.openExternal(
-          "https://github.com/bitwarden/clients/releases",
+          // Multiwarden: its own releases.
+          MULTIWARDEN_RELEASES_URL,
           UrlType.WebUrl,
         );
       }

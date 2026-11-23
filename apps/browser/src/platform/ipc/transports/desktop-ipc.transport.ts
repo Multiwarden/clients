@@ -12,6 +12,7 @@ import {
   ipcRequestDiscover,
 } from "@bitwarden/sdk-internal";
 
+import { MULTIWARDEN_NATIVE_HOST } from "../../../multiwarden/multiwarden-native-host";
 import { BrowserApi } from "../../browser/browser-api";
 
 import { DESTINATION_UNREACHABLE_ERROR } from "./errors";
@@ -104,7 +105,8 @@ export class DesktopIpcTransport {
 
     let activePort: NativePort | undefined;
     try {
-      const port = BrowserApi.connectNative("com.8bit.bitwarden");
+      // Multiwarden: the Multiwarden desktop app's host, not Bitwarden's.
+      const port = BrowserApi.connectNative(MULTIWARDEN_NATIVE_HOST);
       activePort = port;
 
       let resolveReady: () => void;

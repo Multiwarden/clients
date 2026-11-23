@@ -8,6 +8,8 @@
   }
 
   <div bitDialogContent #dialogContent>
+    <!-- Multiwarden: which account's vault this item is in, in combined mode. -->
+    <app-multiwarden-vault-banner />
     @if (showCipherView) {
       <app-cipher-view
         [cipher]="cipher"
