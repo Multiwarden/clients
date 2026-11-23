@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest an improvement to how Multiwarden works with several accounts
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Multiwarden only changes how the extension works with several unlocked accounts. Ideas
+        for Bitwarden itself belong in the
+        [Bitwarden community forums](https://community.bitwarden.com/c/feature-requests/).
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: The solution you would like
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered

@@ -1,0 +1,102 @@
+name: Bug report
+description: Something in Multiwarden does not work as it should
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please check that it does **not** also happen in the
+        official Bitwarden extension; if it does, report it to
+        [Bitwarden](https://github.com/bitwarden/clients/issues) instead.
+
+        Never include passwords, vault contents or other personal data in an issue.
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1. Go to '...'
+        2. Click on '...'
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: dropdown
+    id: accounts
+    attributes:
+      label: Unlocked accounts
+      description: How many accounts were unlocked when it happened?
+      options:
+        - "1"
+        - "2"
+        - "3 or more"
+    validations:
+      required: true
+  - type: dropdown
+    id: combined
+    attributes:
+      label: Combined view
+      options:
+        - "On"
+        - "Off"
+        - Not sure
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Browser
+      multiple: true
+      options:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - Opera
+        - Brave
+        - Vivaldi
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Multiwarden version
+      description: Settings → Multiwarden shows the version.
+      placeholder: e.g. 2026.11.0.2
+    validations:
+      required: true
+  - type: dropdown
+    id: upstream
+    attributes:
+      label: Does the official Bitwarden extension have the same problem?
+      options:
+        - "No"
+        - Not tested
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Screenshots or other context
+      description: Remove any personal data before uploading.

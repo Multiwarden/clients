@@ -1,11 +1,18 @@
-## 🎟️ Tracking
+## What this changes
 
-<!-- Paste the link to the Jira or GitHub issue or otherwise describe / point to where this change is coming from. -->
+<!-- What does this pull request do, and why? Link the issue it fixes, e.g. "Fixes #12". -->
 
-## 📔 Objective
+## How it was tested
 
-<!-- Describe what the purpose of this PR is, for example what bug you're fixing or new feature you're adding. -->
+<!-- Browsers and versions, and the steps you followed. -->
 
-## 📸 Screenshots
+## Screenshots
 
-<!-- Required for any UI changes; delete if not applicable. Use fixed width images for better display. -->
+<!-- For visible changes. Delete this section if there are none. -->
+
+## Checklist
+
+- [ ] New logic is in Multiwarden-only files; upstream files only have marked `Multiwarden:` hooks
+- [ ] `multiwarden/hooks.json` is updated if hooks were added, moved or removed
+- [ ] Lint and tests pass
+- [ ] No vault data, keys or personal data are logged
