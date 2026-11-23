@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Tallenna tiliin"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Tallenna uutena kirjautumistietona tiliin $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Tili"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwardenin asetukset"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Tilit"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Ulkoasu"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Muista, mille tilille tallennetaan"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Kun tallennat uuden kirjautumistiedon, Multiwarden valitsee tilin, jota käytit viimeksi tällä sivustolla. Voit aina valita toisen tilin."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Piilota Premium-ilmoitukset"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Piilottaa Premium-päivityksen bannerit, vinkit ja merkit."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden on epävirallinen avoimen lähdekoodin haara Bitwardenin selainlaajennuksesta. Se ei liity Bitwarden, Inc.:iin."
+  },
+  "multiwardenCombined": {
+    "message": "Yhdistetty"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Kaikki avatut tilit yhdessä"
+  },
+  "multiwardenCurrentView": {
+    "message": "Nykyinen näkymä"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Hallitse tilejä"
+  },
+  "multiwardenChooseVault": {
+    "message": "Mihin holviin tallennetaan?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Valitse tili, johon tämä kohde tallennetaan."
+  },
+  "multiwardenVault": {
+    "message": "Holvi:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Tietoja Multiwardenista"
+  },
+  "multiwardenVersion": {
+    "message": "Versio"
+  },
+  "multiwardenBasedOn": {
+    "message": "Perustuu Bitwardeniin"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Näytä GitHubissa"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Julkaisutiedot"
+  },
+  "multiwardenReportIssue": {
+    "message": "Ilmoita ongelmasta"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generaattori tilille"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Asetukset tilille"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Automaattinen täyttö latauksessa käyttää"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Mitä tiliä automaattinen täyttö sivun latautuessa saa käyttää, kun useita tilejä on avattu."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Sivustolla viimeksi käytetty tili, muuten yksiselitteinen osuma"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Vain kirjautumistieto, joka on yksilöllinen kaikissa tileissä"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Vain aktiivinen tili"
+  }
+}

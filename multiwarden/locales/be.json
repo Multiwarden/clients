@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Захаваць ва ўліковы запіс"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Захаваць як новы ўваход у $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Уліковы запіс"
+  },
+  "multiwardenSettings": {
+    "message": "Налады Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Уліковыя запісы"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Выгляд"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Запамінаць, у які ўліковы запіс захоўваць"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Калі вы захоўваеце новы ўваход, Multiwarden выбірае ўліковы запіс, які вы выкарыстоўвалі на гэтым сайце ў мінулы раз. Вы заўсёды можаце выбраць іншы."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Хаваць апавяшчэнні пра Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Хавае банеры, падказкі і значкі пра пераход на Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden — неафіцыйны форк пашырэння браўзера Bitwarden з адкрытым зыходным кодам. Ён не звязаны з Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Агульны"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Усе разблакіраваныя ўліковыя запісы разам"
+  },
+  "multiwardenCurrentView": {
+    "message": "Бягучы выгляд"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Кіраваць уліковымі запісамі"
+  },
+  "multiwardenChooseVault": {
+    "message": "У якое сховішча захаваць?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Выберыце ўліковы запіс, у якім будзе захаваны гэты элемент."
+  },
+  "multiwardenVault": {
+    "message": "Сховішча:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Пра Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Версія"
+  },
+  "multiwardenBasedOn": {
+    "message": "На аснове Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Паглядзець на GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Нататкі да выпуску"
+  },
+  "multiwardenReportIssue": {
+    "message": "Паведаміць пра праблему"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Генератар для"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Налады для"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Аўтазапаўненне пры загрузцы выкарыстоўвае"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Які ўліковы запіс можа выкарыстоўваць аўтазапаўненне пры загрузцы старонкі, калі разблакіравана некалькі ўліковых запісаў."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Уліковы запіс, апошнім выкарыстаны на сайце, інакш адназначнае супадзенне"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Толькі ўваход, унікальны сярод усіх уліковых запісаў"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Толькі актыўны ўліковы запіс"
+  }
+}

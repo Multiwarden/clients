@@ -1,0 +1,57 @@
+# Multiwarden: checks the Chrome Web Store secrets without uploading anything.
+# Run it from the Actions tab after adding or renewing the CWS_* secrets
+# (see multiwarden/store/chrome-web-store.md). It signs in with the refresh token and reads the
+# store item's status, which shows whether the IDs and credentials are right.
+name: Multiwarden store check
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  chrome-web-store:
+    name: Chrome Web Store credentials
+    runs-on: ubuntu-latest
+    env:
+      CWS_CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
+      CWS_CLIENT_SECRET: ${{ secrets.CWS_CLIENT_SECRET }}
+      CWS_REFRESH_TOKEN: ${{ secrets.CWS_REFRESH_TOKEN }}
+      CWS_PUBLISHER_ID: ${{ secrets.CWS_PUBLISHER_ID }}
+      CWS_EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
+    steps:
+      - name: Check secrets are set
+        run: |
+          missing=0
+          for name in CWS_CLIENT_ID CWS_CLIENT_SECRET CWS_REFRESH_TOKEN CWS_PUBLISHER_ID CWS_EXTENSION_ID; do
+            if [ -z "${!name}" ]; then
+              echo "::error::Secret $name is not set"
+              missing=1
+            fi
+          done
+          exit "$missing"
+
+      - name: Sign in and read the item status
+        run: |
+          set -uo pipefail
+          curl -sS https://oauth2.googleapis.com/token \
+            --data-urlencode "client_id=$CWS_CLIENT_ID" \
+            --data-urlencode "client_secret=$CWS_CLIENT_SECRET" \
+            --data-urlencode "refresh_token=$CWS_REFRESH_TOKEN" \
+            --data-urlencode "grant_type=refresh_token" > /tmp/token.json
+          token="$(jq -r '.access_token // empty' /tmp/token.json)"
+          if [ -z "$token" ]; then
+            echo "::error::Google refused the client ID, secret or refresh token: $(jq -c '{error, error_description}' /tmp/token.json)"
+            exit 1
+          fi
+          echo "::add-mask::$token"
+          echo "Signed in to Google."
+
+          url="https://chromewebstore.googleapis.com/v2/publishers/$CWS_PUBLISHER_ID/items/$CWS_EXTENSION_ID:fetchStatus"
+          code="$(curl -sS -o /tmp/status.json -w '%{http_code}' -H "Authorization: Bearer $token" "$url")"
+          jq . /tmp/status.json
+          if [ "$code" != "200" ]; then
+            echo "::error::The Chrome Web Store refused the request (HTTP $code). Check CWS_PUBLISHER_ID and CWS_EXTENSION_ID, and that the refresh token belongs to the account that owns the item."
+            exit 1
+          fi
+          echo "::notice::Chrome Web Store credentials work for item $CWS_EXTENSION_ID."

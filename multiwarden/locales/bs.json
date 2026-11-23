@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Sačuvaj u račun"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Sačuvaj kao novu prijavu u $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Račun"
+  },
+  "multiwardenSettings": {
+    "message": "Postavke Multiwardena"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Računi"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Izgled"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Zapamti u koji račun spremaš"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Kada sačuvate novu prijavu, Multiwarden bira račun koji ste prošli put koristili na toj stranici. Uvijek možete odabrati drugi račun."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Sakrij obavještenja o Premiumu"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Skriva banere, savjete i oznake za nadogradnju na Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden je nezvanični fork proširenja preglednika Bitwarden otvorenog koda. Nije povezan s Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Kombinovano"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Svi otključani računi zajedno"
+  },
+  "multiwardenCurrentView": {
+    "message": "Trenutni prikaz"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Upravljaj računima"
+  },
+  "multiwardenChooseVault": {
+    "message": "U koji trezor sačuvati?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Izaberite račun u koji se čuva ova stavka."
+  },
+  "multiwardenVault": {
+    "message": "Trezor:"
+  },
+  "multiwardenAboutSection": {
+    "message": "O Multiwardenu"
+  },
+  "multiwardenVersion": {
+    "message": "Verzija"
+  },
+  "multiwardenBasedOn": {
+    "message": "Zasnovano na Bitwardenu"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Pogledaj na GitHubu"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Bilješke o izdanju"
+  },
+  "multiwardenReportIssue": {
+    "message": "Prijavi problem"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator za"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Postavke za"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Auto-popunjavanje pri učitavanju koristi"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Koji račun auto-popunjavanje pri učitavanju stranice smije koristiti kada je otključano više računa."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Račun posljednji korišten na stranici, inače jedinstveno podudaranje"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Samo prijavu jedinstvenu u svim računima"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Samo aktivni račun"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "In Konto speichern"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Als neue Zugangsdaten in $EMAIL$ speichern",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Konto"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden-Einstellungen"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Konten"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Darstellung"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Merken, in welchem Konto gespeichert wird"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Wenn du ein neues Login speicherst, wählt Multiwarden das Konto, das du zuletzt auf dieser Website verwendet hast. Du kannst jederzeit ein anderes wählen."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium-Hinweise ausblenden"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Blendet Premium-Upgrade-Banner, -Hinweise und -Abzeichen aus."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden ist ein inoffizieller Open-Source-Fork der Bitwarden-Browsererweiterung und nicht mit Bitwarden, Inc. verbunden."
+  },
+  "multiwardenCombined": {
+    "message": "Kombiniert"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Alle entsperrten Konten zusammen"
+  },
+  "multiwardenCurrentView": {
+    "message": "Aktuelle Ansicht"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Konten verwalten"
+  },
+  "multiwardenChooseVault": {
+    "message": "In welchem Tresor speichern?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Wähle das Konto, in dem dieser Eintrag gespeichert wird."
+  },
+  "multiwardenVault": {
+    "message": "Tresor:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Über Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Version"
+  },
+  "multiwardenBasedOn": {
+    "message": "Basiert auf Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Auf GitHub ansehen"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Versionshinweise"
+  },
+  "multiwardenReportIssue": {
+    "message": "Problem melden"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator für"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Einstellungen für"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Auto-Ausfüllen beim Laden verwendet"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Welches Konto beim Laden einer Seite automatisch ausfüllen darf, wenn mehrere Konten entsperrt sind."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Das zuletzt auf der Website verwendete Konto, sonst ein eindeutiger Treffer"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Nur Zugangsdaten, die über alle Konten eindeutig sind"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Nur das aktive Konto"
+  }
+}

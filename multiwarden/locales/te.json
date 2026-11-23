@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "ఖాతాలో సేవ్ చేయండి"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ లో కొత్త లాగిన్‌గా సేవ్ చేయండి",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "ఖాతా"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden సెట్టింగ్‌లు"
+  },
+  "multiwardenAccountsSection": {
+    "message": "ఖాతాలు"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "రూపం"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "ఏ ఖాతాలో సేవ్ చేయాలో గుర్తుంచుకోండి"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "కొత్త లాగిన్‌ను సేవ్ చేసేటప్పుడు, ఆ సైట్‌లో మీరు గత సారి ఉపయోగించిన ఖాతాను Multiwarden ఎంచుకుంటుంది. మీరు ఎప్పుడైనా వేరే ఖాతాను ఎంచుకోవచ్చు."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium నోటీసులను దాచండి"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium అప్‌గ్రేడ్ బ్యానర్‌లు, సూచనలు మరియు బ్యాడ్జ్‌లను దాచుతుంది."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden అనేది Bitwarden బ్రౌజర్ ఎక్స్‌టెన్షన్ యొక్క అనధికారిక, ఓపెన్ సోర్స్ fork. దీనికి Bitwarden, Inc. తో సంబంధం లేదు."
+  },
+  "multiwardenCombined": {
+    "message": "కలిపి"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "అన్‌లాక్ చేసిన అన్ని ఖాతాలు కలిపి"
+  },
+  "multiwardenCurrentView": {
+    "message": "ప్రస్తుత వీక్షణ"
+  },
+  "multiwardenManageAccounts": {
+    "message": "ఖాతాలను నిర్వహించండి"
+  },
+  "multiwardenChooseVault": {
+    "message": "ఏ వాల్ట్‌లో సేవ్ చేయాలి?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "ఈ అంశాన్ని సేవ్ చేసే ఖాతాను ఎంచుకోండి."
+  },
+  "multiwardenVault": {
+    "message": "వాల్ట్:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden గురించి"
+  },
+  "multiwardenVersion": {
+    "message": "వెర్షన్"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden ఆధారంగా"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub లో చూడండి"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "రిలీజ్ నోట్స్"
+  },
+  "multiwardenReportIssue": {
+    "message": "సమస్యను నివేదించండి"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "జనరేటర్ ఖాతా"
+  },
+  "multiwardenSettingsFor": {
+    "message": "సెట్టింగ్‌ల ఖాతా"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "పేజీ లోడ్‌లో ఆటోఫిల్ ఉపయోగించేది"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "అనేక ఖాతాలు అన్‌లాక్ అయి ఉన్నప్పుడు పేజీ లోడ్‌లో ఆటోఫిల్ ఏ ఖాతాను ఉపయోగించవచ్చు."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "సైట్‌లో చివరిగా ఉపయోగించిన ఖాతా, లేకపోతే ప్రత్యేక సరిపోలిక"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "అన్ని ఖాతాల్లో ప్రత్యేకమైన లాగిన్ మాత్రమే"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "యాక్టివ్ ఖాతా మాత్రమే"
+  }
+}

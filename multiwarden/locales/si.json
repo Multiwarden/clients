@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "ගිණුමට සුරකින්න"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ හි නව පිවිසුමක් ලෙස සුරකින්න",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "ගිණුම"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden සැකසුම්"
+  },
+  "multiwardenAccountsSection": {
+    "message": "ගිණුම්"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "පෙනුම"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "කුමන ගිණුමට සුරකින්නේද යන්න මතක තබාගන්න"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "නව පිවිසුමක් සුරකින විට, Multiwarden එම අඩවියේ ඔබ පසුගිය වතාවේ භාවිත කළ ගිණුම තෝරයි. ඔබට ඕනෑම වේලාවක වෙනත් ගිණුමක් තෝරාගත හැක."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium දැනුම්දීම් සඟවන්න"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium උත්ශ්‍රේණි බැනර, ඉඟි සහ ලාංඡන සඟවයි."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden යනු Bitwarden බ්‍රව්සර් දිගුවේ නිල නොවන, විවෘත මූලාශ්‍ර fork එකකි. එය Bitwarden, Inc. සමඟ සම්බන්ධ නැත."
+  },
+  "multiwardenCombined": {
+    "message": "ඒකාබද්ධ"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "අගුළු හැරි සියලු ගිණුම් එකට"
+  },
+  "multiwardenCurrentView": {
+    "message": "වත්මන් දසුන"
+  },
+  "multiwardenManageAccounts": {
+    "message": "ගිණුම් කළමනාකරණය"
+  },
+  "multiwardenChooseVault": {
+    "message": "කුමන සුරක්ෂිතාගාරයට සුරකින්නද?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "මෙම අයිතමය සුරැකෙන ගිණුම තෝරන්න."
+  },
+  "multiwardenVault": {
+    "message": "සුරක්ෂිතාගාරය:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden ගැන"
+  },
+  "multiwardenVersion": {
+    "message": "අනුවාදය"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden මත පදනම්ව"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub හි බලන්න"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "නිකුතු සටහන්"
+  },
+  "multiwardenReportIssue": {
+    "message": "ගැටලුවක් වාර්තා කරන්න"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "උත්පාදක ගිණුම"
+  },
+  "multiwardenSettingsFor": {
+    "message": "සැකසුම් ගිණුම"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "පිටුව පූරණය වන විට ස්වයං පිරවීම භාවිත කරන්නේ"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "ගිණුම් කිහිපයක් අගුළු හැර ඇති විට පිටු පූරණයේදී ස්වයං පිරවීමට භාවිත කළ හැකි ගිණුම."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "අඩවියේ අවසන් වරට භාවිත කළ ගිණුම, නැතිනම් අනන්‍ය ගැළපීමක්"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "සියලු ගිණුම් අතර අනන්‍ය පිවිසුමක් පමණි"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "සක්‍රිය ගිණුම පමණි"
+  }
+}

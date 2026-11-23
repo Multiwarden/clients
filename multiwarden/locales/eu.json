@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Gorde kontuan"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Gorde saio-hasiera berri gisa $EMAIL$ kontuan",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Kontua"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden ezarpenak"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Kontuak"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Itxura"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Gogoratu zein kontutan gorde"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Saio-hasiera berri bat gordetzean, Multiwarden-ek gune horretan azken aldiz erabili zenuen kontua hautatzen du. Beti aukera dezakezu beste bat."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Ezkutatu Premium jakinarazpenak"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premiumera eguneratzeko bannerrak, aholkuak eta txapak ezkutatzen ditu."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden Bitwardenen nabigatzaile-gehigarriaren fork ez-ofizial eta kode irekikoa da. Ez dago Bitwarden, Inc.-ekin lotuta."
+  },
+  "multiwardenCombined": {
+    "message": "Konbinatua"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Desblokeatutako kontu guztiak batera"
+  },
+  "multiwardenCurrentView": {
+    "message": "Uneko ikuspegia"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Kudeatu kontuak"
+  },
+  "multiwardenChooseVault": {
+    "message": "Zein kutxa gotorretan gorde?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Aukeratu elementu hau gordeko den kontua."
+  },
+  "multiwardenVault": {
+    "message": "Kutxa gotorra:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden-i buruz"
+  },
+  "multiwardenVersion": {
+    "message": "Bertsioa"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwardenen oinarritua"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Ikusi GitHub-en"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Bertsio-oharrak"
+  },
+  "multiwardenReportIssue": {
+    "message": "Jakinarazi arazo bat"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Sortzailea honentzat"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Ezarpenak honentzat"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Kargatzean auto-betetzeak hau erabiltzen du"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Kontu bat baino gehiago desblokeatuta daudenean, orria kargatzean auto-betetzeak zein kontu erabil dezakeen."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Gunean azkenekoz erabilitako kontua, bestela bat-etortze bakarra"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Kontu guztietan bakarra den saio-hasiera soilik"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Kontu aktiboa soilik"
+  }
+}

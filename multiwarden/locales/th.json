@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "บันทึกลงบัญชี"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "บันทึกเป็นข้อมูลเข้าสู่ระบบใหม่ใน $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "บัญชี"
+  },
+  "multiwardenSettings": {
+    "message": "การตั้งค่า Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "บัญชี"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "การแสดงผล"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "จำบัญชีที่จะใช้บันทึก"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "เมื่อคุณบันทึกข้อมูลเข้าสู่ระบบใหม่ Multiwarden จะเลือกบัญชีที่คุณใช้ครั้งก่อนในเว็บไซต์นั้น คุณเลือกบัญชีอื่นได้เสมอ"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "ซ่อนการแจ้งเตือน Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "ซ่อนแบนเนอร์ คำแนะนำ และป้ายสำหรับอัปเกรดเป็น Premium"
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden เป็นฟอร์กโอเพนซอร์สอย่างไม่เป็นทางการของส่วนขยายเบราว์เซอร์ Bitwarden และไม่มีส่วนเกี่ยวข้องกับ Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "รวม"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "ทุกบัญชีที่ปลดล็อกแล้ว"
+  },
+  "multiwardenCurrentView": {
+    "message": "มุมมองปัจจุบัน"
+  },
+  "multiwardenManageAccounts": {
+    "message": "จัดการบัญชี"
+  },
+  "multiwardenChooseVault": {
+    "message": "บันทึกลงตู้นิรภัยใด?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "เลือกบัญชีที่จะบันทึกรายการนี้"
+  },
+  "multiwardenVault": {
+    "message": "ตู้นิรภัย:"
+  },
+  "multiwardenAboutSection": {
+    "message": "เกี่ยวกับ Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "เวอร์ชัน"
+  },
+  "multiwardenBasedOn": {
+    "message": "อิงจาก Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "ดูบน GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "บันทึกประจำรุ่น"
+  },
+  "multiwardenReportIssue": {
+    "message": "รายงานปัญหา"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "ตัวสร้างสำหรับ"
+  },
+  "multiwardenSettingsFor": {
+    "message": "การตั้งค่าสำหรับ"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "การป้อนอัตโนมัติเมื่อโหลดหน้าใช้"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "บัญชีที่การป้อนอัตโนมัติเมื่อโหลดหน้าใช้ได้ เมื่อมีหลายบัญชีปลดล็อกอยู่"
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "บัญชีที่ใช้ล่าสุดในเว็บไซต์ มิฉะนั้นใช้รายการที่ตรงกันเพียงรายการเดียว"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "เฉพาะข้อมูลเข้าสู่ระบบที่ไม่ซ้ำในทุกบัญชี"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "เฉพาะบัญชีที่ใช้งานอยู่"
+  }
+}

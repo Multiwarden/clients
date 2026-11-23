@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Зберегти в обліковий запис"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Зберегти як новий запис входу в $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Обліковий запис"
+  },
+  "multiwardenSettings": {
+    "message": "Налаштування Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Облікові записи"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Вигляд"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Запам'ятовувати, у який обліковий запис зберігати"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Коли ви зберігаєте новий вхід, Multiwarden вибирає обліковий запис, який ви використовували на цьому сайті минулого разу. Ви завжди можете вибрати інший."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Приховувати сповіщення про Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Приховує банери, підказки та значки про перехід на Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden — неофіційний форк розширення браузера Bitwarden з відкритим кодом. Він не пов'язаний з Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Спільний"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Усі розблоковані облікові записи разом"
+  },
+  "multiwardenCurrentView": {
+    "message": "Поточний перегляд"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Керувати обліковими записами"
+  },
+  "multiwardenChooseVault": {
+    "message": "У яке сховище зберегти?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Виберіть обліковий запис, у якому буде збережено цей запис."
+  },
+  "multiwardenVault": {
+    "message": "Сховище:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Про Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Версія"
+  },
+  "multiwardenBasedOn": {
+    "message": "На основі Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Переглянути на GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Примітки до випуску"
+  },
+  "multiwardenReportIssue": {
+    "message": "Повідомити про проблему"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Генератор для"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Налаштування для"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Автозаповнення під час завантаження використовує"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Який обліковий запис може використовувати автозаповнення під час завантаження сторінки, коли розблоковано кілька облікових записів."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Обліковий запис, востаннє використаний на сайті, інакше однозначний збіг"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Лише запис входу, унікальний серед усіх облікових записів"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Лише активний обліковий запис"
+  }
+}

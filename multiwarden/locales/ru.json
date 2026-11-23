@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Сохранить в аккаунт"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Сохранить как новый логин в $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Аккаунт"
+  },
+  "multiwardenSettings": {
+    "message": "Настройки Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Аккаунты"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Внешний вид"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Запоминать, в какой аккаунт сохранять"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "При сохранении нового входа Multiwarden выбирает аккаунт, который вы использовали на этом сайте в прошлый раз. Вы всегда можете выбрать другой."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Скрывать уведомления о Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Скрывает баннеры, подсказки и значки о переходе на Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden — неофициальный форк расширения браузера Bitwarden с открытым исходным кодом. Он не связан с Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Общий"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Все разблокированные аккаунты вместе"
+  },
+  "multiwardenCurrentView": {
+    "message": "Текущий вид"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Управление аккаунтами"
+  },
+  "multiwardenChooseVault": {
+    "message": "В какое хранилище сохранить?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Выберите аккаунт, в котором будет сохранён этот элемент."
+  },
+  "multiwardenVault": {
+    "message": "Хранилище:"
+  },
+  "multiwardenAboutSection": {
+    "message": "О Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Версия"
+  },
+  "multiwardenBasedOn": {
+    "message": "Основано на Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Открыть на GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Примечания к выпуску"
+  },
+  "multiwardenReportIssue": {
+    "message": "Сообщить о проблеме"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Генератор для"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Настройки для"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Автозаполнение при загрузке использует"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Какой аккаунт может использовать автозаполнение при загрузке страницы, если разблокировано несколько аккаунтов."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Аккаунт, последним использованный на сайте, иначе однозначное совпадение"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Только логин, уникальный среди всех аккаунтов"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Только активный аккаунт"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Salvează în cont"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Salvează ca autentificare nouă în $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Cont"
+  },
+  "multiwardenSettings": {
+    "message": "Setări Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Conturi"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Aspect"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Reține în ce cont salvezi"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Când salvezi o autentificare nouă, Multiwarden alege contul pe care l-ai folosit ultima dată pe acel site. Poți oricând să alegi altul."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Ascunde notificările Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Ascunde bannerele, sfaturile și insignele de upgrade la Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden este un fork neoficial, open source, al extensiei de browser Bitwarden. Nu este afiliat cu Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Combinat"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Toate conturile deblocate împreună"
+  },
+  "multiwardenCurrentView": {
+    "message": "Vizualizarea curentă"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Gestionează conturile"
+  },
+  "multiwardenChooseVault": {
+    "message": "În ce seif salvezi?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Alege contul în care se salvează acest element."
+  },
+  "multiwardenVault": {
+    "message": "Seif:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Despre Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versiune"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bazat pe Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Vezi pe GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Note de lansare"
+  },
+  "multiwardenReportIssue": {
+    "message": "Raportează o problemă"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator pentru"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Setări pentru"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Completarea la încărcare folosește"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Ce cont poate folosi completarea automată la încărcarea paginii când sunt deblocate mai multe conturi."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Contul folosit ultima dată pe site, altfel o potrivire unică"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Doar o autentificare unică în toate conturile"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Doar contul activ"
+  }
+}

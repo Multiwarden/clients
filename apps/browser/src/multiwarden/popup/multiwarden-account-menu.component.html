@@ -1,0 +1,97 @@
+<button
+  id="current-account_button_menu"
+  type="button"
+  class="tw-flex tw-items-center tw-rounded-full tw-border-0 tw-bg-transparent tw-p-0 hover:tw-outline hover:tw-outline-1 hover:tw-outline-primary-600"
+  [bitMenuTriggerFor]="accountMenu"
+  data-testid="current-account-button"
+>
+  @if (combinedOn()) {
+    <span class="tw-sr-only">{{ "multiwardenCombined" | i18n }}</span>
+    <span class="tw-flex tw-items-center" aria-hidden="true">
+      @for (account of combinedAvatars(); track account.userId; let first = $first) {
+        <bit-avatar
+          [class.-tw-ms-2]="!first"
+          [id]="account.userId"
+          [text]="account.name"
+          [color]="account.avatarColor ?? undefined"
+          [size]="size()"
+        ></bit-avatar>
+      }
+    </span>
+  } @else if (activeAccount(); as account) {
+    <span class="tw-sr-only">{{ "bitwardenAccount" | i18n }} {{ account.email }}</span>
+    <bit-avatar
+      [id]="account.userId"
+      [text]="account.name"
+      [color]="account.avatarColor ?? undefined"
+      [size]="size()"
+      aria-hidden="true"
+    ></bit-avatar>
+  }
+</button>
+
+<bit-menu #accountMenu>
+  @if (accounts().length > 1) {
+    <button
+      id="account-menu_button_combined"
+      type="button"
+      bitMenuItem
+      (click)="chooseCombined()"
+      data-testid="multiwarden-combined-option"
+    >
+      <span slot="start" class="tw-flex tw-items-center" aria-hidden="true">
+        @for (account of combinedAvatars(); track account.userId; let first = $first) {
+          <bit-avatar
+            [class.-tw-ms-2]="!first"
+            size="sm"
+            [id]="account.userId"
+            [text]="account.name"
+            [color]="account.avatarColor ?? undefined"
+          ></bit-avatar>
+        }
+      </span>
+      {{ "multiwardenCombined" | i18n }}
+      @if (combinedOn()) {
+        <bit-icon
+          slot="end"
+          name="bwi-check"
+          [ariaLabel]="'multiwardenCurrentView' | i18n"
+        ></bit-icon>
+      }
+    </button>
+    <bit-menu-divider></bit-menu-divider>
+  }
+  @for (account of accounts(); track account.userId) {
+    <button
+      [id]="'account-menu_button_account-' + $index"
+      type="button"
+      bitMenuItem
+      [title]="account.email"
+      (click)="chooseAccount(account)"
+    >
+      <bit-avatar
+        slot="start"
+        size="sm"
+        [id]="account.userId"
+        [text]="account.name"
+        [color]="account.avatarColor ?? undefined"
+        aria-hidden="true"
+      ></bit-avatar>
+      {{ account.email }}
+      @if (!account.unlocked) {
+        <bit-icon slot="end" name="bwi-lock" [ariaLabel]="'locked' | i18n"></bit-icon>
+      } @else if (account.active && !combinedOn()) {
+        <bit-icon
+          slot="end"
+          name="bwi-check"
+          [ariaLabel]="'multiwardenCurrentView' | i18n"
+        ></bit-icon>
+      }
+    </button>
+  }
+  <bit-menu-divider></bit-menu-divider>
+  <button id="account-menu_button_manage" type="button" bitMenuItem (click)="manage.emit()">
+    <bit-icon slot="start" name="bwi-cog" aria-hidden="true"></bit-icon>
+    {{ "multiwardenManageAccounts" | i18n }}
+  </button>
+</bit-menu>

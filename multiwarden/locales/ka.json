@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "ანგარიშში შენახვა"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$-ში ახალ შესვლად შენახვა",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "ანგარიში"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden-ის პარამეტრები"
+  },
+  "multiwardenAccountsSection": {
+    "message": "ანგარიშები"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "იერსახე"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "დაიმახსოვრე, რომელ ანგარიშში შეინახო"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "ახალი შესვლის შენახვისას Multiwarden ირჩევს ანგარიშს, რომელიც ამ საიტზე წინა ჯერზე გამოიყენეთ. ყოველთვის შეგიძლიათ სხვა ანგარიშის არჩევა."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium შეტყობინებების დამალვა"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "მალავს Premium-ზე გადასვლის ბანერებს, რჩევებსა და ნიშნებს."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden არის Bitwarden-ის ბრაუზერის გაფართოების არაოფიციალური, ღია კოდის fork. ის არ არის დაკავშირებული Bitwarden, Inc.-თან."
+  },
+  "multiwardenCombined": {
+    "message": "გაერთიანებული"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "ყველა განბლოკილი ანგარიში ერთად"
+  },
+  "multiwardenCurrentView": {
+    "message": "მიმდინარე ხედი"
+  },
+  "multiwardenManageAccounts": {
+    "message": "ანგარიშების მართვა"
+  },
+  "multiwardenChooseVault": {
+    "message": "რომელ საცავში შევინახოთ?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "აირჩიეთ ანგარიში, რომელშიც ეს ელემენტი შეინახება."
+  },
+  "multiwardenVault": {
+    "message": "საცავი:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden-ის შესახებ"
+  },
+  "multiwardenVersion": {
+    "message": "ვერსია"
+  },
+  "multiwardenBasedOn": {
+    "message": "დაფუძნებულია Bitwarden-ზე"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "ნახვა GitHub-ზე"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "გამოშვების შენიშვნები"
+  },
+  "multiwardenReportIssue": {
+    "message": "პრობლემის შეტყობინება"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "გენერატორი ანგარიშისთვის"
+  },
+  "multiwardenSettingsFor": {
+    "message": "პარამეტრები ანგარიშისთვის"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "გვერდის ჩატვირთვისას ავტოშევსება იყენებს"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "რომელი ანგარიში შეუძლია გამოიყენოს ავტოშევსებამ გვერდის ჩატვირთვისას, როცა რამდენიმე ანგარიშია განბლოკილი."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "საიტზე ბოლოს გამოყენებულ ანგარიშს, თორემ ერთადერთ დამთხვევას"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "მხოლოდ ყველა ანგარიშში უნიკალურ შესვლას"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "მხოლოდ აქტიურ ანგარიშს"
+  }
+}

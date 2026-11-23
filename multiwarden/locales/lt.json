@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Išsaugoti paskyroje"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Išsaugoti kaip naują prisijungimą paskyroje $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Paskyra"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden nustatymai"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Paskyros"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Išvaizda"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Įsiminti, į kurią paskyrą išsaugoti"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Kai išsaugote naują prisijungimą, Multiwarden parenka paskyrą, kurią šioje svetainėje naudojote paskutinį kartą. Visada galite pasirinkti kitą."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Slėpti Premium pranešimus"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Slepia Premium naujinimo reklamjuostes, patarimus ir ženklelius."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden – neoficiali atvirojo kodo Bitwarden naršyklės plėtinio atšaka. Ji nesusijusi su Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Bendras"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Visos atrakintos paskyros kartu"
+  },
+  "multiwardenCurrentView": {
+    "message": "Dabartinis rodinys"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Tvarkyti paskyras"
+  },
+  "multiwardenChooseVault": {
+    "message": "Kurioje saugykloje išsaugoti?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Pasirinkite paskyrą, kurioje bus išsaugotas šis elementas."
+  },
+  "multiwardenVault": {
+    "message": "Saugykla:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Apie Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versija"
+  },
+  "multiwardenBasedOn": {
+    "message": "Paremta Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Žiūrėti GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Leidimo pastabos"
+  },
+  "multiwardenReportIssue": {
+    "message": "Pranešti apie problemą"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generatorius paskyrai"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Nustatymai paskyrai"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Automatinis pildymas įkeliant naudoja"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Kurią paskyrą gali naudoti automatinis pildymas įkeliant puslapį, kai atrakintos kelios paskyros."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Paskutinę svetainėje naudotą paskyrą, kitaip unikalų atitikmenį"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Tik prisijungimą, unikalų visose paskyrose"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Tik aktyvią paskyrą"
+  }
+}

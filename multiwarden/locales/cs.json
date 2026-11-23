@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Uložit do účtu"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Uložit jako nové přihlášení do $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Účet"
+  },
+  "multiwardenSettings": {
+    "message": "Nastavení Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Účty"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Vzhled"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Pamatovat si, do kterého účtu ukládat"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Když ukládáte nové přihlášení, Multiwarden vybere účet, který jste na tomto webu použili naposledy. Vždy můžete zvolit jiný."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Skrýt upozornění na Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Skryje bannery, tipy a odznaky pro upgrade na Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden je neoficiální fork rozšíření prohlížeče Bitwarden s otevřeným zdrojovým kódem. Není spojen s Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Kombinované"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Všechny odemčené účty dohromady"
+  },
+  "multiwardenCurrentView": {
+    "message": "Aktuální zobrazení"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Spravovat účty"
+  },
+  "multiwardenChooseVault": {
+    "message": "Do kterého trezoru uložit?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Vyberte účet, do kterého se tato položka uloží."
+  },
+  "multiwardenVault": {
+    "message": "Trezor:"
+  },
+  "multiwardenAboutSection": {
+    "message": "O aplikaci Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Verze"
+  },
+  "multiwardenBasedOn": {
+    "message": "Založeno na Bitwardenu"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Zobrazit na GitHubu"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Poznámky k vydání"
+  },
+  "multiwardenReportIssue": {
+    "message": "Nahlásit problém"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generátor pro"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Nastavení pro"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Automatické vyplnění při načtení používá"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Který účet smí automatické vyplnění při načtení stránky použít, když je odemčeno více účtů."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Účet naposledy použitý na webu, jinak jedinečnou shodu"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Pouze přihlášení jedinečné napříč všemi účty"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Pouze aktivní účet"
+  }
+}

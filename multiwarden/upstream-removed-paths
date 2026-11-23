@@ -1,0 +1,10 @@
+# Bitwarden files that Multiwarden does not carry: Bitwarden's own developer tooling and
+# repository automation (code owners, review and response bots). The upstream sync leaves
+# changes to these paths out, so they stay removed. `*` also matches across folders.
+.claude
+*CLAUDE.md
+.mcp.json
+.github/CODEOWNERS
+.github/workflows/respond.yml
+.github/workflows/review-code.yml
+.github/workflows/sdlc-sdk-update-evaluate.yml

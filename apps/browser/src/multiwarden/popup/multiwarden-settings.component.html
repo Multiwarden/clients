@@ -1,0 +1,128 @@
+<popup-page>
+  <popup-header slot="header" pageTitle="Multiwarden" showBackButton>
+    <ng-container slot="end">
+      <app-pop-out></app-pop-out>
+    </ng-container>
+  </popup-header>
+
+  <bit-section>
+    <bit-section-header>
+      <h2 bitTypography="h6">{{ "multiwardenAccountsSection" | i18n }}</h2>
+    </bit-section-header>
+    <bit-card>
+      <bit-form-control disableMargin>
+        <input
+          bitCheckbox
+          id="multiwarden-settings_input_remember-account"
+          type="checkbox"
+          [checked]="settings().rememberSaveAccountPerSite"
+          (change)="toggle('rememberSaveAccountPerSite', $event)"
+        />
+        <bit-label for="multiwarden-settings_input_remember-account">{{
+          "multiwardenRememberSaveAccount" | i18n
+        }}</bit-label>
+        <bit-hint>{{ "multiwardenRememberSaveAccountHint" | i18n }}</bit-hint>
+      </bit-form-control>
+      <bit-form-field disableMargin class="tw-mt-4">
+        <bit-label>{{ "multiwardenPageLoadAccount" | i18n }}</bit-label>
+        <select
+          bitInput
+          id="multiwarden-settings_select_page-load-account"
+          [value]="settings().pageLoadAutofillAccount"
+          (change)="setPageLoadAccount($event)"
+        >
+          @for (option of pageLoadOptions; track option.value) {
+            <option [value]="option.value">{{ option.labelKey | i18n }}</option>
+          }
+        </select>
+        <bit-hint>{{ "multiwardenPageLoadAccountHint" | i18n }}</bit-hint>
+      </bit-form-field>
+    </bit-card>
+  </bit-section>
+
+  <bit-section>
+    <bit-section-header>
+      <h2 bitTypography="h6">{{ "multiwardenInterfaceSection" | i18n }}</h2>
+    </bit-section-header>
+    <bit-card>
+      <bit-form-control disableMargin>
+        <input
+          bitCheckbox
+          id="multiwarden-settings_input_hide-premium"
+          type="checkbox"
+          [checked]="settings().hidePremiumNotices"
+          (change)="toggle('hidePremiumNotices', $event)"
+        />
+        <bit-label for="multiwarden-settings_input_hide-premium">{{
+          "multiwardenHidePremiumNotices" | i18n
+        }}</bit-label>
+        <bit-hint>{{ "multiwardenHidePremiumNoticesHint" | i18n }}</bit-hint>
+      </bit-form-control>
+    </bit-card>
+  </bit-section>
+
+  <bit-section>
+    <bit-section-header>
+      <h2 bitTypography="h6">{{ "multiwardenAboutSection" | i18n }}</h2>
+    </bit-section-header>
+    <bit-card>
+      <dl class="tw-mb-3 tw-grid tw-grid-cols-2 tw-gap-x-2 tw-gap-y-1 tw-text-sm">
+        <dt class="tw-text-muted">{{ "multiwardenVersion" | i18n }}</dt>
+        <dd class="tw-m-0 tw-text-right" data-testid="multiwarden-version">
+          {{ buildInfo()?.version ?? appVersion() }}
+        </dd>
+        @if (buildInfo(); as info) {
+          <dt class="tw-text-muted">{{ "multiwardenBasedOn" | i18n }}</dt>
+          <dd class="tw-m-0 tw-text-right">
+            {{ info.bitwardenVersion }}
+            <button
+              id="multiwarden-settings_button_upstream-commit"
+              type="button"
+              bitLink
+              class="tw-font-mono tw-text-xs"
+              (click)="open('upstream')"
+            >
+              {{ shortCommit(info.upstreamCommit) }}
+            </button>
+          </dd>
+        }
+      </dl>
+      <div class="tw-flex tw-flex-col tw-gap-2">
+        <button
+          id="multiwarden-settings_button_github"
+          bitButton
+          block
+          buttonType="primary"
+          type="button"
+          endIcon="bwi-external-link"
+          (click)="open('')"
+        >
+          {{ "multiwardenViewOnGithub" | i18n }}
+        </button>
+        <div class="tw-flex tw-gap-2">
+          <button
+            id="multiwarden-settings_button_releases"
+            bitButton
+            block
+            buttonType="secondary"
+            type="button"
+            (click)="open('releases')"
+          >
+            {{ "multiwardenReleaseNotes" | i18n }}
+          </button>
+          <button
+            id="multiwarden-settings_button_issues"
+            bitButton
+            block
+            buttonType="secondary"
+            type="button"
+            (click)="open('issues')"
+          >
+            {{ "multiwardenReportIssue" | i18n }}
+          </button>
+        </div>
+      </div>
+      <p class="tw-mb-0 tw-mt-3 tw-text-xs tw-text-muted">{{ "multiwardenAbout" | i18n }}</p>
+    </bit-card>
+  </bit-section>
+</popup-page>

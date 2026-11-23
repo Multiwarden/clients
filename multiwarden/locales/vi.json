@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Lưu vào tài khoản"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Lưu thành đăng nhập mới trong $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Tài khoản"
+  },
+  "multiwardenSettings": {
+    "message": "Cài đặt Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Tài khoản"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Giao diện"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Ghi nhớ tài khoản để lưu"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Khi bạn lưu một thông tin đăng nhập mới, Multiwarden sẽ chọn tài khoản bạn đã dùng lần trước trên trang web đó. Bạn luôn có thể chọn tài khoản khác."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Ẩn thông báo Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Ẩn các biểu ngữ, gợi ý và huy hiệu nâng cấp Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden là một bản fork mã nguồn mở không chính thức của tiện ích trình duyệt Bitwarden. Nó không liên kết với Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Kết hợp"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Tất cả tài khoản đã mở khóa"
+  },
+  "multiwardenCurrentView": {
+    "message": "Chế độ xem hiện tại"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Quản lý tài khoản"
+  },
+  "multiwardenChooseVault": {
+    "message": "Lưu vào kho nào?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Chọn tài khoản để lưu mục này."
+  },
+  "multiwardenVault": {
+    "message": "Kho:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Giới thiệu Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Phiên bản"
+  },
+  "multiwardenBasedOn": {
+    "message": "Dựa trên Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Xem trên GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Ghi chú phát hành"
+  },
+  "multiwardenReportIssue": {
+    "message": "Báo cáo sự cố"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Trình tạo cho"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Cài đặt cho"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Tự động điền khi tải trang dùng"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Tài khoản mà tự động điền khi tải trang được dùng khi nhiều tài khoản đang mở khóa."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Tài khoản dùng gần nhất trên trang, nếu không thì kết quả duy nhất"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Chỉ đăng nhập duy nhất trên mọi tài khoản"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Chỉ tài khoản đang hoạt động"
+  }
+}

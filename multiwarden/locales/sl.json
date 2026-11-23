@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Shrani v račun"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Shrani kot novo prijavo v $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Račun"
+  },
+  "multiwardenSettings": {
+    "message": "Nastavitve Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Računi"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Videz"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Zapomni si, v kateri račun shranjevati"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Ko shranite novo prijavo, Multiwarden izbere račun, ki ste ga na tem mestu uporabili zadnjič. Vedno lahko izberete drugega."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Skrij obvestila Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Skrije pasice, namige in značke za nadgradnjo na Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden je neuradna odprtokodna različica razširitve brskalnika Bitwarden. Ni povezan z Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Združeno"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Vsi odklenjeni računi skupaj"
+  },
+  "multiwardenCurrentView": {
+    "message": "Trenutni pogled"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Upravljanje računov"
+  },
+  "multiwardenChooseVault": {
+    "message": "V kateri trezor shraniti?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Izberite račun, v katerega se shrani ta element."
+  },
+  "multiwardenVault": {
+    "message": "Trezor:"
+  },
+  "multiwardenAboutSection": {
+    "message": "O Multiwardnu"
+  },
+  "multiwardenVersion": {
+    "message": "Različica"
+  },
+  "multiwardenBasedOn": {
+    "message": "Temelji na Bitwardnu"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Ogled na GitHubu"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Opombe ob izdaji"
+  },
+  "multiwardenReportIssue": {
+    "message": "Prijavi težavo"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator za"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Nastavitve za"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Samodejno izpolnjevanje ob nalaganju uporabi"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Kateri račun lahko uporabi samodejno izpolnjevanje ob nalaganju strani, ko je odklenjenih več računov."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Račun, nazadnje uporabljen na mestu, sicer edinstveno ujemanje"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Samo prijavo, ki je edinstvena v vseh računih"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Samo aktivni račun"
+  }
+}

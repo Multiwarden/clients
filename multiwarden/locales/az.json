@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Hesaba saxla"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ hesabında yeni giriş kimi saxla",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Hesab"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden ayarları"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Hesablar"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Görünüş"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Hansı hesaba saxladığını yadda saxla"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Yeni giriş məlumatını saxlayanda Multiwarden həmin saytda sonuncu dəfə istifadə etdiyiniz hesabı seçir. Həmişə başqa hesab seçə bilərsiniz."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium bildirişlərini gizlət"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium-a yüksəltmə bannerlərini, ipuclarını və nişanlarını gizlədir."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden, Bitwarden brauzer genişləndirməsinin qeyri-rəsmi, açıq mənbəli fork-udur. Bitwarden, Inc. ilə əlaqəsi yoxdur."
+  },
+  "multiwardenCombined": {
+    "message": "Birləşdirilmiş"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Kilidi açıq bütün hesablar birlikdə"
+  },
+  "multiwardenCurrentView": {
+    "message": "Cari görünüş"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Hesabları idarə et"
+  },
+  "multiwardenChooseVault": {
+    "message": "Hansı anbara saxlanılsın?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Bu elementin saxlanılacağı hesabı seçin."
+  },
+  "multiwardenVault": {
+    "message": "Anbar:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden haqqında"
+  },
+  "multiwardenVersion": {
+    "message": "Versiya"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden əsaslı"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub-da bax"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Buraxılış qeydləri"
+  },
+  "multiwardenReportIssue": {
+    "message": "Problem bildir"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator hesabı"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Ayarlar hesabı"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Səhifə yüklənəndə avto-doldurma bunu istifadə edir"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Bir neçə hesabın kilidi açıq olanda səhifə yüklənəndə avto-doldurmanın istifadə edə biləcəyi hesab."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Saytda sonuncu istifadə edilən hesab, yoxdursa unikal uyğunluq"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Yalnız bütün hesablarda unikal olan giriş"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Yalnız aktiv hesab"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "ଖାତାରେ ସେଭ୍ କରନ୍ତୁ"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ ରେ ନୂଆ ଲଗଇନ୍ ଭାବେ ସେଭ୍ କରନ୍ତୁ",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "ଖାତା"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden ସେଟିଂସ୍"
+  },
+  "multiwardenAccountsSection": {
+    "message": "ଖାତାଗୁଡ଼ିକ"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "ରୂପ"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "କେଉଁ ଖାତାରେ ସେଭ୍ କରିବେ ମନେରଖନ୍ତୁ"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "ନୂଆ ଲଗଇନ୍ ସେଭ୍ କଲାବେଳେ, Multiwarden ସେହି ସାଇଟରେ ଆପଣ ଗତଥର ବ୍ୟବହାର କରିଥିବା ଖାତାକୁ ବାଛେ। ଆପଣ ସର୍ବଦା ଅନ୍ୟ ଏକ ଖାତା ବାଛିପାରିବେ।"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium ସୂଚନା ଲୁଚାନ୍ତୁ"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium ଅପଗ୍ରେଡ୍ ବ୍ୟାନର୍, ପରାମର୍ଶ ଓ ବ୍ୟାଜ୍ ଲୁଚାଏ।"
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden ହେଉଛି Bitwarden ବ୍ରାଉଜର୍ ଏକ୍ସଟେନସନ୍‌ର ଏକ ଅନଧିକାରିକ, ଓପନ୍ ସୋର୍ସ fork। ଏହା Bitwarden, Inc. ସହ ସମ୍ପର୍କିତ ନୁହେଁ।"
+  },
+  "multiwardenCombined": {
+    "message": "ମିଳିତ"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "ଅନଲକ୍ ହୋଇଥିବା ସମସ୍ତ ଖାତା ଏକାଠି"
+  },
+  "multiwardenCurrentView": {
+    "message": "ବର୍ତ୍ତମାନର ଦୃଶ୍ୟ"
+  },
+  "multiwardenManageAccounts": {
+    "message": "ଖାତା ପରିଚାଳନା କରନ୍ତୁ"
+  },
+  "multiwardenChooseVault": {
+    "message": "କେଉଁ ଭଲ୍ଟରେ ସେଭ୍ କରିବେ?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "ଏହି ଆଇଟମ୍ ସେଭ୍ ହେବାକୁ ଥିବା ଖାତା ବାଛନ୍ତୁ।"
+  },
+  "multiwardenVault": {
+    "message": "ଭଲ୍ଟ:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden ବିଷୟରେ"
+  },
+  "multiwardenVersion": {
+    "message": "ସଂସ୍କରଣ"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden ଆଧାରିତ"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub ରେ ଦେଖନ୍ତୁ"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "ରିଲିଜ୍ ନୋଟ୍"
+  },
+  "multiwardenReportIssue": {
+    "message": "ସମସ୍ୟା ରିପୋର୍ଟ କରନ୍ତୁ"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "ଜେନେରେଟର୍ ଖାତା"
+  },
+  "multiwardenSettingsFor": {
+    "message": "ସେଟିଂସ୍ ଖାତା"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "ପୃଷ୍ଠା ଲୋଡରେ ଅଟୋଫିଲ୍ ବ୍ୟବହାର କରେ"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "ଏକାଧିକ ଖାତା ଅନଲକ୍ ଥିବାବେଳେ ପୃଷ୍ଠା ଲୋଡରେ ଅଟୋଫିଲ୍ କେଉଁ ଖାତା ବ୍ୟବହାର କରିପାରିବ।"
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "ସାଇଟରେ ଶେଷଥର ବ୍ୟବହୃତ ଖାତା, ନଚେତ୍ ଏକ ଅନନ୍ୟ ମେଳ"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "କେବଳ ସମସ୍ତ ଖାତାରେ ଅନନ୍ୟ ଲଗଇନ୍"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "କେବଳ ସକ୍ରିୟ ଖାତା"
+  }
+}

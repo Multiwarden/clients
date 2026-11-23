@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Spara i konto"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Spara som ny inloggning i $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Konto"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden-inställningar"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Konton"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Utseende"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Kom ihåg vilket konto som sparas i"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "När du sparar en ny inloggning väljer Multiwarden kontot du använde senast på den webbplatsen. Du kan alltid välja ett annat."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Dölj Premium-meddelanden"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Döljer banners, tips och märken för uppgradering till Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden är en inofficiell fork med öppen källkod av Bitwardens webbläsartillägg. Den är inte ansluten till Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Kombinerad"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Alla upplåsta konton tillsammans"
+  },
+  "multiwardenCurrentView": {
+    "message": "Aktuell vy"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Hantera konton"
+  },
+  "multiwardenChooseVault": {
+    "message": "Spara i vilket valv?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Välj kontot som objektet sparas i."
+  },
+  "multiwardenVault": {
+    "message": "Valv:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Om Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Version"
+  },
+  "multiwardenBasedOn": {
+    "message": "Baserad på Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Visa på GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Versionsinformation"
+  },
+  "multiwardenReportIssue": {
+    "message": "Rapportera ett problem"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator för"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Inställningar för"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Autofyll vid sidladdning använder"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Vilket konto autofyll vid sidladdning får använda när flera konton är upplåsta."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Kontot som senast användes på webbplatsen, annars en unik träff"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Bara en inloggning som är unik i alla konton"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Bara det aktiva kontot"
+  }
+}

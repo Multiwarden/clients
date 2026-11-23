@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Gem på konto"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Gem som nyt login i $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Konto"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden-indstillinger"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Konti"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Udseende"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Husk hvilken konto der gemmes i"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Når du gemmer et nyt login, vælger Multiwarden den konto, du brugte sidst på det websted. Du kan altid vælge en anden."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Skjul Premium-meddelelser"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Skjuler bannere, tips og mærker om opgradering til Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden er en uofficiel open source-fork af Bitwardens browserudvidelse. Den er ikke tilknyttet Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Samlet"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Alle oplåste konti samlet"
+  },
+  "multiwardenCurrentView": {
+    "message": "Aktuel visning"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Administrer konti"
+  },
+  "multiwardenChooseVault": {
+    "message": "Gem i hvilken boks?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Vælg den konto, elementet gemmes i."
+  },
+  "multiwardenVault": {
+    "message": "Boks:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Om Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Version"
+  },
+  "multiwardenBasedOn": {
+    "message": "Baseret på Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Se på GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Udgivelsesnoter"
+  },
+  "multiwardenReportIssue": {
+    "message": "Rapportér et problem"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator til"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Indstillinger for"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Autoudfyld ved indlæsning bruger"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Hvilken konto autoudfyld ved sideindlæsning må bruge, når flere konti er oplåst."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Den konto, der sidst blev brugt på webstedet, ellers et unikt match"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Kun et login, der er unikt på tværs af alle konti"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Kun den aktive konto"
+  }
+}

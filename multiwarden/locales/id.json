@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Simpan ke akun"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Simpan sebagai login baru di $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Akun"
+  },
+  "multiwardenSettings": {
+    "message": "Pengaturan Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Akun"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Tampilan"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Ingat akun tempat menyimpan"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Saat Anda menyimpan login baru, Multiwarden memilih akun yang terakhir Anda gunakan di situs tersebut. Anda selalu bisa memilih akun lain."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Sembunyikan pemberitahuan Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Menyembunyikan banner, tips, dan lencana peningkatan ke Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden adalah fork tidak resmi dan sumber terbuka dari ekstensi browser Bitwarden. Tidak berafiliasi dengan Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Gabungan"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Semua akun yang tidak terkunci"
+  },
+  "multiwardenCurrentView": {
+    "message": "Tampilan saat ini"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Kelola akun"
+  },
+  "multiwardenChooseVault": {
+    "message": "Simpan ke brankas mana?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Pilih akun tempat item ini disimpan."
+  },
+  "multiwardenVault": {
+    "message": "Brankas:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Tentang Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versi"
+  },
+  "multiwardenBasedOn": {
+    "message": "Berbasis Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Lihat di GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Catatan rilis"
+  },
+  "multiwardenReportIssue": {
+    "message": "Laporkan masalah"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator untuk"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Pengaturan untuk"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Isi otomatis saat memuat menggunakan"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Akun yang boleh digunakan isi otomatis saat memuat halaman jika beberapa akun tidak terkunci."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Akun yang terakhir digunakan di situs, jika tidak, kecocokan unik"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Hanya login yang unik di semua akun"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Hanya akun aktif"
+  }
+}

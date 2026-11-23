@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "ذخیره در حساب"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "ذخیره به‌عنوان ورود جدید در $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "حساب"
+  },
+  "multiwardenSettings": {
+    "message": "تنظیمات Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "حساب‌ها"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "نمایش"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "به خاطر سپردن حسابی که در آن ذخیره می‌کنید"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "وقتی یک ورود جدید ذخیره می‌کنید، Multiwarden حسابی را انتخاب می‌کند که دفعهٔ قبل در این سایت استفاده کرده‌اید. همیشه می‌توانید حساب دیگری انتخاب کنید."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "پنهان کردن اعلان‌های Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "بنرها، نکته‌ها و نشان‌های ارتقا به Premium را پنهان می‌کند."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden یک انشعاب غیررسمی و متن‌باز از افزونه مرورگر Bitwarden است و وابسته به Bitwarden, Inc. نیست."
+  },
+  "multiwardenCombined": {
+    "message": "ترکیبی"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "همه حساب‌های قفل‌نشده با هم"
+  },
+  "multiwardenCurrentView": {
+    "message": "نمای فعلی"
+  },
+  "multiwardenManageAccounts": {
+    "message": "مدیریت حساب‌ها"
+  },
+  "multiwardenChooseVault": {
+    "message": "در کدام گاوصندوق ذخیره شود؟"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "حسابی را که این مورد در آن ذخیره می‌شود انتخاب کنید."
+  },
+  "multiwardenVault": {
+    "message": "گاوصندوق:"
+  },
+  "multiwardenAboutSection": {
+    "message": "درباره Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "نسخه"
+  },
+  "multiwardenBasedOn": {
+    "message": "بر پایه Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "مشاهده در GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "یادداشت‌های انتشار"
+  },
+  "multiwardenReportIssue": {
+    "message": "گزارش مشکل"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "تولیدکننده برای"
+  },
+  "multiwardenSettingsFor": {
+    "message": "تنظیمات برای"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "پرکردن خودکار هنگام بارگذاری از این استفاده می‌کند"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "وقتی چند حساب باز است، پرکردن خودکار هنگام بارگذاری صفحه از کدام حساب می‌تواند استفاده کند."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "آخرین حساب استفاده‌شده در سایت، وگرنه یک تطابق یکتا"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "فقط ورودی که در همه حساب‌ها یکتاست"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "فقط حساب فعال"
+  }
+}

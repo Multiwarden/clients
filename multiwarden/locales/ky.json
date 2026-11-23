@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Аккаунтка сактоо"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ ичинде жаңы кирүү катары сактоо",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Аккаунт"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden жөндөөлөрү"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Аккаунттар"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Көрүнүш"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Кайсы аккаунтка сакталарын эстеп калуу"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Жаңы кирүүнү сактаганыңызда Multiwarden ошол сайтта акыркы жолу колдонгон аккаунтуңузду тандайт. Каалаган убакта башка аккаунтту тандай аласыз."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium эскертүүлөрүн жашыруу"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium'га өтүү баннерлерин, кеңештерин жана белгилерин жашырат."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden — Bitwarden браузер кеңейтүүсүнүн расмий эмес, ачык булактуу форку. Ал Bitwarden, Inc. менен байланышпайт."
+  },
+  "multiwardenCombined": {
+    "message": "Бириккен"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Кулпусу ачылган бардык аккаунттар чогуу"
+  },
+  "multiwardenCurrentView": {
+    "message": "Учурдагы көрүнүш"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Аккаунттарды башкаруу"
+  },
+  "multiwardenChooseVault": {
+    "message": "Кайсы сейфке сактоо керек?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Бул элемент сактала турган аккаунтту тандаңыз."
+  },
+  "multiwardenVault": {
+    "message": "Сейф:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden жөнүндө"
+  },
+  "multiwardenVersion": {
+    "message": "Версия"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden негизинде"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub'та көрүү"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Чыгарылыш эскертмелери"
+  },
+  "multiwardenReportIssue": {
+    "message": "Көйгөй тууралуу билдирүү"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Генератор аккаунту"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Жөндөөлөр аккаунту"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Барак жүктөлгөндө автотолтуруу колдонот"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Бир нече аккаунттун кулпусу ачык болгондо барак жүктөлгөндө автотолтуруу колдоно ала турган аккаунт."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Сайтта акыркы колдонулган аккаунт, болбосо уникалдуу дал келүү"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Бардык аккаунттарда уникалдуу кирүү гана"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Активдүү аккаунт гана"
+  }
+}

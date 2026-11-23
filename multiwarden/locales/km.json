@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "រក្សាទុកក្នុងគណនី"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "រក្សាទុកជាការចូលថ្មីក្នុង $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "គណនី"
+  },
+  "multiwardenSettings": {
+    "message": "ការកំណត់ Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "គណនី"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "រូបរាង"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "ចងចាំគណនីដែលត្រូវរក្សាទុក"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "នៅពេលអ្នករក្សាទុកការចូលថ្មី Multiwarden ជ្រើសគណនីដែលអ្នកបានប្រើលើកមុននៅគេហទំព័រនោះ។ អ្នកអាចជ្រើសគណនីផ្សេងបានជានិច្ច។"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "លាក់ការជូនដំណឹង Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "លាក់បដា គន្លឹះ និងស្លាកសម្រាប់ដំឡើងទៅ Premium។"
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden គឺជា fork កូដចំហមិនផ្លូវការនៃកម្មវិធីបន្ថែមកម្មវិធីរុករក Bitwarden ហើយមិនពាក់ព័ន្ធនឹង Bitwarden, Inc. ទេ។"
+  },
+  "multiwardenCombined": {
+    "message": "រួម"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "គណនីដែលបានដោះសោទាំងអស់"
+  },
+  "multiwardenCurrentView": {
+    "message": "ទិដ្ឋភាពបច្ចុប្បន្ន"
+  },
+  "multiwardenManageAccounts": {
+    "message": "គ្រប់គ្រងគណនី"
+  },
+  "multiwardenChooseVault": {
+    "message": "រក្សាទុកក្នុងឃ្លាំងណា?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "ជ្រើសគណនីដែលធាតុនេះនឹងត្រូវរក្សាទុក។"
+  },
+  "multiwardenVault": {
+    "message": "ឃ្លាំង:"
+  },
+  "multiwardenAboutSection": {
+    "message": "អំពី Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "កំណែ"
+  },
+  "multiwardenBasedOn": {
+    "message": "ផ្អែកលើ Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "មើលនៅលើ GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "កំណត់ចំណាំការចេញផ្សាយ"
+  },
+  "multiwardenReportIssue": {
+    "message": "រាយការណ៍បញ្ហា"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "កម្មវិធីបង្កើតសម្រាប់"
+  },
+  "multiwardenSettingsFor": {
+    "message": "ការកំណត់សម្រាប់"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "ការបំពេញស្វ័យប្រវត្តិពេលផ្ទុកប្រើ"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "គណនីដែលការបំពេញស្វ័យប្រវត្តិពេលផ្ទុកទំព័រអាចប្រើ នៅពេលគណនីច្រើនត្រូវបានដោះសោ។"
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "គណនីដែលបានប្រើចុងក្រោយនៅគេហទំព័រ បើមិនមានទេ ការផ្គូផ្គងតែមួយ"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "តែការចូលដែលមានតែមួយក្នុងគណនីទាំងអស់"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "តែគណនីសកម្ម"
+  }
+}

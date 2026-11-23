@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Saglabāt kontā"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Saglabāt kā jaunu pieteikšanos kontā $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Konts"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden iestatījumi"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Konti"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Izskats"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Atcerēties, kurā kontā saglabāt"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Kad saglabājat jaunu pieteikšanos, Multiwarden izvēlas kontu, ko iepriekšējo reizi izmantojāt šajā vietnē. Jūs vienmēr varat izvēlēties citu."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Paslēpt Premium paziņojumus"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Paslēpj Premium jaunināšanas reklāmkarogus, padomus un nozīmītes."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden ir neoficiāls atvērtā pirmkoda Bitwarden pārlūka paplašinājuma atzars. Tas nav saistīts ar Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Apvienots"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Visi atslēgtie konti kopā"
+  },
+  "multiwardenCurrentView": {
+    "message": "Pašreizējais skats"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Pārvaldīt kontus"
+  },
+  "multiwardenChooseVault": {
+    "message": "Kurā glabātavā saglabāt?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Izvēlieties kontu, kurā šis vienums tiks saglabāts."
+  },
+  "multiwardenVault": {
+    "message": "Glabātava:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Par Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versija"
+  },
+  "multiwardenBasedOn": {
+    "message": "Balstīts uz Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Skatīt GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Laidiena piezīmes"
+  },
+  "multiwardenReportIssue": {
+    "message": "Ziņot par problēmu"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Ģenerators kontam"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Iestatījumi kontam"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Automātiskā aizpilde lapas ielādē izmanto"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Kuru kontu automātiskā aizpilde lapas ielādē drīkst izmantot, ja ir atslēgti vairāki konti."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Vietnē pēdējo izmantoto kontu, citādi unikālu atbilstību"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Tikai pieteikšanos, kas ir unikāla visos kontos"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Tikai aktīvo kontu"
+  }
+}

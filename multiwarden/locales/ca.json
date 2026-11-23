@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Desa al compte"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Desa com a inici de sessió nou a $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Compte"
+  },
+  "multiwardenSettings": {
+    "message": "Configuració de Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Comptes"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Aparença"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Recorda a quin compte deses"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Quan deseu un inici de sessió nou, Multiwarden tria el compte que vau fer servir l'última vegada en aquest lloc. Sempre en podeu triar un altre."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Amaga els avisos Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Amaga els bàners, consells i insígnies per passar a Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden és un fork no oficial i de codi obert de l'extensió de navegador de Bitwarden. No està afiliat a Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Combinada"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Tots els comptes desbloquejats junts"
+  },
+  "multiwardenCurrentView": {
+    "message": "Vista actual"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Gestiona els comptes"
+  },
+  "multiwardenChooseVault": {
+    "message": "A quina caixa forta voleu desar?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Trieu el compte on es desarà aquest element."
+  },
+  "multiwardenVault": {
+    "message": "Caixa forta:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Quant a Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versió"
+  },
+  "multiwardenBasedOn": {
+    "message": "Basat en Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Mostra a GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Notes de la versió"
+  },
+  "multiwardenReportIssue": {
+    "message": "Informa d'un problema"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generador per a"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Configuració per a"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "L'emplenament en carregar fa servir"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Quin compte pot fer servir l'emplenament automàtic en carregar la pàgina quan hi ha diversos comptes desbloquejats."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "El darrer compte usat al lloc; si no, una coincidència única"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Només un inici de sessió únic entre tots els comptes"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Només el compte actiu"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "അക്കൗണ്ടിൽ സംരക്ഷിക്കുക"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ ൽ പുതിയ ലോഗിൻ ആയി സംരക്ഷിക്കുക",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "അക്കൗണ്ട്"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden ക്രമീകരണങ്ങൾ"
+  },
+  "multiwardenAccountsSection": {
+    "message": "അക്കൗണ്ടുകൾ"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "രൂപം"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "ഏത് അക്കൗണ്ടിലേക്ക് സംരക്ഷിക്കണമെന്ന് ഓർമ്മിക്കുക"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "പുതിയ ലോഗിൻ സംരക്ഷിക്കുമ്പോൾ, ആ സൈറ്റിൽ കഴിഞ്ഞ തവണ നിങ്ങൾ ഉപയോഗിച്ച അക്കൗണ്ട് Multiwarden തിരഞ്ഞെടുക്കുന്നു. നിങ്ങൾക്ക് എപ്പോഴും മറ്റൊരു അക്കൗണ്ട് തിരഞ്ഞെടുക്കാം."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium അറിയിപ്പുകൾ മറയ്ക്കുക"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium അപ്‌ഗ്രേഡ് ബാനറുകൾ, നുറുങ്ങുകൾ, ബാഡ്‌ജുകൾ എന്നിവ മറയ്ക്കുന്നു."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden, Bitwarden ബ്രൗസർ എക്സ്റ്റൻഷന്റെ അനൗദ്യോഗിക, ഓപ്പൺ സോഴ്സ് fork ആണ്. ഇതിന് Bitwarden, Inc. മായി ബന്ധമില്ല."
+  },
+  "multiwardenCombined": {
+    "message": "സംയോജിതം"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "അൺലോക്ക് ചെയ്ത എല്ലാ അക്കൗണ്ടുകളും ഒരുമിച്ച്"
+  },
+  "multiwardenCurrentView": {
+    "message": "നിലവിലെ കാഴ്ച"
+  },
+  "multiwardenManageAccounts": {
+    "message": "അക്കൗണ്ടുകൾ നിയന്ത്രിക്കുക"
+  },
+  "multiwardenChooseVault": {
+    "message": "ഏത് വോൾട്ടിൽ സംരക്ഷിക്കണം?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "ഈ ഇനം സംരക്ഷിക്കുന്ന അക്കൗണ്ട് തിരഞ്ഞെടുക്കുക."
+  },
+  "multiwardenVault": {
+    "message": "വോൾട്ട്:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden-നെ കുറിച്ച്"
+  },
+  "multiwardenVersion": {
+    "message": "പതിപ്പ്"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden അടിസ്ഥാനമാക്കിയത്"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub-ൽ കാണുക"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "റിലീസ് കുറിപ്പുകൾ"
+  },
+  "multiwardenReportIssue": {
+    "message": "പ്രശ്നം റിപ്പോർട്ട് ചെയ്യുക"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "ജനറേറ്റർ അക്കൗണ്ട്"
+  },
+  "multiwardenSettingsFor": {
+    "message": "ക്രമീകരണ അക്കൗണ്ട്"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "പേജ് ലോഡിൽ ഓട്ടോഫിൽ ഉപയോഗിക്കുന്നത്"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "പല അക്കൗണ്ടുകൾ അൺലോക്ക് ചെയ്തിരിക്കുമ്പോൾ പേജ് ലോഡിൽ ഓട്ടോഫിൽ ഏത് അക്കൗണ്ട് ഉപയോഗിക്കാം."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "സൈറ്റിൽ അവസാനം ഉപയോഗിച്ച അക്കൗണ്ട്, അല്ലെങ്കിൽ ഏക പൊരുത്തം"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "എല്ലാ അക്കൗണ്ടുകളിലും ഏകമായ ലോഗിൻ മാത്രം"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "സജീവ അക്കൗണ്ട് മാത്രം"
+  }
+}

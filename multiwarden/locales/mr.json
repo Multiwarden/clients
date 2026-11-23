@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "खात्यात जतन करा"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ मध्ये नवीन लॉगिन म्हणून जतन करा",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "खाते"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden सेटिंग्ज"
+  },
+  "multiwardenAccountsSection": {
+    "message": "खाती"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "स्वरूप"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "कोणत्या खात्यात जतन करायचे ते लक्षात ठेवा"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "नवीन लॉगिन जतन करताना, Multiwarden त्या साइटवर तुम्ही मागच्या वेळी वापरलेले खाते निवडते. तुम्ही नेहमी दुसरे खाते निवडू शकता."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium सूचना लपवा"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium मध्ये अपग्रेड करण्याचे बॅनर, टिपा आणि बॅज लपवते."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden हा Bitwarden ब्राउझर विस्ताराचा अनधिकृत, ओपन-सोर्स फोर्क आहे. त्याचा Bitwarden, Inc. शी संबंध नाही."
+  },
+  "multiwardenCombined": {
+    "message": "एकत्रित"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "सर्व अनलॉक केलेली खाती एकत्र"
+  },
+  "multiwardenCurrentView": {
+    "message": "सध्याचे दृश्य"
+  },
+  "multiwardenManageAccounts": {
+    "message": "खाती व्यवस्थापित करा"
+  },
+  "multiwardenChooseVault": {
+    "message": "कोणत्या व्हॉल्टमध्ये जतन करायचे?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "हा आयटम ज्या खात्यात जतन होईल ते निवडा."
+  },
+  "multiwardenVault": {
+    "message": "व्हॉल्ट:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden बद्दल"
+  },
+  "multiwardenVersion": {
+    "message": "आवृत्ती"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden वर आधारित"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub वर पहा"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "रिलीज नोट्स"
+  },
+  "multiwardenReportIssue": {
+    "message": "समस्या कळवा"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "जनरेटर यासाठी"
+  },
+  "multiwardenSettingsFor": {
+    "message": "सेटिंग्ज यासाठी"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "पेज लोडवेळी ऑटोफिल वापरते"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "अनेक खाती अनलॉक असताना पेज लोडवेळी ऑटोफिल कोणते खाते वापरू शकते."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "साइटवर शेवटचे वापरलेले खाते, अन्यथा एकमेव जुळणी"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "फक्त सर्व खात्यांत एकमेव असलेले लॉगिन"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "फक्त सक्रिय खाते"
+  }
+}

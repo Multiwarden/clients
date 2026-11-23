@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Сачувај на налог"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Сачувај као нову пријаву у $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Налог"
+  },
+  "multiwardenSettings": {
+    "message": "Подешавања Multiwarden-а"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Налози"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Изглед"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Запамти у који налог чуваш"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Када сачувате нову пријаву, Multiwarden бира налог који сте прошли пут користили на том сајту. Увек можете изабрати други."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Сакриј обавештења о Premium-у"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Сакрива банере, савете и ознаке за надоградњу на Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden је незванични fork проширења прегледача Bitwarden отвореног кода. Није повезан са Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Комбиновано"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Сви откључани налози заједно"
+  },
+  "multiwardenCurrentView": {
+    "message": "Тренутни приказ"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Управљај налозима"
+  },
+  "multiwardenChooseVault": {
+    "message": "У који трезор сачувати?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Изаберите налог у који се чува ова ставка."
+  },
+  "multiwardenVault": {
+    "message": "Трезор:"
+  },
+  "multiwardenAboutSection": {
+    "message": "О Multiwarden-у"
+  },
+  "multiwardenVersion": {
+    "message": "Верзија"
+  },
+  "multiwardenBasedOn": {
+    "message": "Засновано на Bitwarden-у"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Погледај на GitHub-у"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Белешке о издању"
+  },
+  "multiwardenReportIssue": {
+    "message": "Пријави проблем"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Генератор за"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Подешавања за"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Ауто-попуњавање при учитавању користи"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Који налог ауто-попуњавање при учитавању странице сме да користи када је откључано више налога."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Налог последњи коришћен на сајту, иначе јединствено подударање"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Само пријаву јединствену у свим налозима"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Само активни налог"
+  }
+}

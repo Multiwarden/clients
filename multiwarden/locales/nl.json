@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Opslaan in account"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Opslaan als nieuwe login in $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Account"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden-instellingen"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Accounts"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Weergave"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Onthoud in welk account je opslaat"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Sla je een nieuwe login op, dan kiest Multiwarden het account dat je de vorige keer op die website gebruikte. Je kunt altijd een ander account kiezen."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium-meldingen verbergen"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Verbergt Premium-upgradebanners, -tips en -labels."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden is een onofficiële, open-source fork van de Bitwarden-browserextensie. Het is niet verbonden aan Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Gecombineerd"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Alle ontgrendelde accounts samen"
+  },
+  "multiwardenCurrentView": {
+    "message": "Huidige weergave"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Accounts beheren"
+  },
+  "multiwardenChooseVault": {
+    "message": "In welke kluis opslaan?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Kies het account waarin dit item wordt opgeslagen."
+  },
+  "multiwardenVault": {
+    "message": "Kluis:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Over Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versie"
+  },
+  "multiwardenBasedOn": {
+    "message": "Gebaseerd op Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Bekijken op GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Release-opmerkingen"
+  },
+  "multiwardenReportIssue": {
+    "message": "Probleem melden"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator voor"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Instellingen voor"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Automatisch invullen bij laden gebruikt"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Welk account automatisch invullen bij het laden van een pagina mag gebruiken als meerdere accounts ontgrendeld zijn."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Het laatst gebruikte account op de website, anders een unieke match"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Alleen een login die uniek is over alle accounts"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Alleen het actieve account"
+  }
+}

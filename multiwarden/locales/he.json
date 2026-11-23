@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "שמירה בחשבון"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "שמירה ככניסה חדשה ב-$EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "חשבון"
+  },
+  "multiwardenSettings": {
+    "message": "הגדרות Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "חשבונות"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "תצוגה"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "לזכור באיזה חשבון לשמור"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "כששומרים פרטי התחברות חדשים, Multiwarden בוחר את החשבון שבו השתמשת בפעם הקודמת באתר זה. תמיד אפשר לבחור חשבון אחר."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "הסתרת הודעות Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "מסתיר באנרים, טיפים ותגים של שדרוג ל-Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden הוא פיצול לא רשמי בקוד פתוח של תוסף הדפדפן של Bitwarden. אין לו קשר ל-Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "משולב"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "כל החשבונות שאינם נעולים יחד"
+  },
+  "multiwardenCurrentView": {
+    "message": "התצוגה הנוכחית"
+  },
+  "multiwardenManageAccounts": {
+    "message": "ניהול חשבונות"
+  },
+  "multiwardenChooseVault": {
+    "message": "באיזו כספת לשמור?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "בחר את החשבון שבו יישמר פריט זה."
+  },
+  "multiwardenVault": {
+    "message": "כספת:"
+  },
+  "multiwardenAboutSection": {
+    "message": "אודות Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "גרסה"
+  },
+  "multiwardenBasedOn": {
+    "message": "מבוסס על Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "הצגה ב-GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "הערות גרסה"
+  },
+  "multiwardenReportIssue": {
+    "message": "דיווח על בעיה"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "מחולל עבור"
+  },
+  "multiwardenSettingsFor": {
+    "message": "הגדרות עבור"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "מילוי אוטומטי בטעינה משתמש ב"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "באיזה חשבון יכול המילוי האוטומטי בטעינת דף להשתמש כשכמה חשבונות אינם נעולים."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "החשבון האחרון שבו השתמשת באתר, ואחרת התאמה יחידה"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "רק כניסה ייחודית בכל החשבונות"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "רק החשבון הפעיל"
+  }
+}

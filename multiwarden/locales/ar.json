@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "الحفظ في الحساب"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "الحفظ كتسجيل دخول جديد في $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "الحساب"
+  },
+  "multiwardenSettings": {
+    "message": "إعدادات Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "الحسابات"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "المظهر"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "تذكّر الحساب الذي تحفظ فيه"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "عند حفظ تسجيل دخول جديد، يختار Multiwarden الحساب الذي استخدمته في المرة السابقة على هذا الموقع. يمكنك دائمًا اختيار حساب آخر."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "إخفاء إشعارات Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "يخفي لافتات وتلميحات وشارات الترقية إلى Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden هو تفرع غير رسمي ومفتوح المصدر من إضافة متصفح Bitwarden. وهو غير تابع لشركة Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "مدمج"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "جميع الحسابات غير المقفلة معًا"
+  },
+  "multiwardenCurrentView": {
+    "message": "العرض الحالي"
+  },
+  "multiwardenManageAccounts": {
+    "message": "إدارة الحسابات"
+  },
+  "multiwardenChooseVault": {
+    "message": "في أي خزنة يتم الحفظ؟"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "اختر الحساب الذي يُحفظ فيه هذا العنصر."
+  },
+  "multiwardenVault": {
+    "message": "الخزنة:"
+  },
+  "multiwardenAboutSection": {
+    "message": "حول Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "الإصدار"
+  },
+  "multiwardenBasedOn": {
+    "message": "مبني على Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "عرض على GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "ملاحظات الإصدار"
+  },
+  "multiwardenReportIssue": {
+    "message": "الإبلاغ عن مشكلة"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "المولّد لـ"
+  },
+  "multiwardenSettingsFor": {
+    "message": "الإعدادات لـ"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "الملء التلقائي عند التحميل يستخدم"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "الحساب الذي يمكن للملء التلقائي عند تحميل الصفحة استخدامه عندما تكون عدة حسابات غير مقفلة."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "آخر حساب استُخدم على الموقع، وإلا تطابقًا فريدًا"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "فقط تسجيل دخول فريد عبر جميع الحسابات"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "الحساب النشط فقط"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Запазване в акаунт"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Запазване като нов вход в $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Акаунт"
+  },
+  "multiwardenSettings": {
+    "message": "Настройки на Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Акаунти"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Изглед"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Запомняне в кой акаунт да се запазва"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Когато запазвате нов вход, Multiwarden избира акаунта, който сте използвали последния път на този сайт. Винаги можете да изберете друг."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Скриване на известията за Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Скрива банери, съвети и значки за надграждане до Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden е неофициален форк с отворен код на разширението за браузър на Bitwarden. Не е свързан с Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Обединен"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Всички отключени акаунти заедно"
+  },
+  "multiwardenCurrentView": {
+    "message": "Текущ изглед"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Управление на акаунтите"
+  },
+  "multiwardenChooseVault": {
+    "message": "В кой трезор да се запази?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Изберете акаунта, в който да се запази този елемент."
+  },
+  "multiwardenVault": {
+    "message": "Трезор:"
+  },
+  "multiwardenAboutSection": {
+    "message": "За Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Версия"
+  },
+  "multiwardenBasedOn": {
+    "message": "Базирано на Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Преглед в GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Бележки по изданието"
+  },
+  "multiwardenReportIssue": {
+    "message": "Докладване на проблем"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Генератор за"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Настройки за"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Автоматичното попълване при зареждане използва"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Кой акаунт може да използва автоматичното попълване при зареждане на страница, когато са отключени няколко акаунта."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Акаунтът, използван последно на сайта, иначе уникално съвпадение"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Само вход, уникален във всички акаунти"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Само активният акаунт"
+  }
+}

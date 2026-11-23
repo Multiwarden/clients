@@ -1,0 +1,335 @@
+# Multiwarden: tests the Multiwarden changes and builds the extension for every browser.
+# It publishes a GitHub release with one zip per browser, plus the source package Firefox
+# Add-ons asks for, when started from the Actions tab with "release" ticked (it then creates the
+# tag itself), or when a tag like v2026.11.0.1 is pushed. A release is also uploaded to the
+# Chrome Web Store when its secrets are set (see the "Chrome Web Store" job).
+#
+# On an upstream sync branch (sync/bitwarden-*) that passes every check, the "Merge sync" job
+# merges the sync PR and starts a release, so new Bitwarden versions ship without manual steps.
+#
+# Release checklist: bump "release" in multiwarden/version.json and commit, then run this
+# workflow on main with "release" ticked. The tag is v<bitwarden version>.<release>.
+name: Multiwarden CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "Publish a release (creates the version tag)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    name: Lint and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        # Upstream's lock file is occasionally out of step with package.json.
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Check translations
+        run: node multiwarden/scripts/check-translations.mjs
+
+      - name: Check Multiwarden hooks in Bitwarden's files
+        run: node multiwarden/scripts/check-hooks.mjs
+
+      - name: Lint Multiwarden code
+        run: |
+          npx eslint libs/common/src/multiwarden libs/angular/src/multiwarden \
+            apps/browser/src/multiwarden apps/browser/src/autofill/multiwarden
+          npx prettier --check libs/common/src/multiwarden libs/angular/src/multiwarden \
+            apps/browser/src/multiwarden apps/browser/src/autofill/multiwarden multiwarden/scripts
+
+      - name: Test Multiwarden changes
+        run: |
+          (cd libs/common && npx jest src/multiwarden src/platform/services/fido2)
+          (cd libs/angular && npx jest src/multiwarden)
+          (cd libs/tools/send/send-ui && npx jest)
+          (cd apps/browser && npx jest --runInBand \
+            src/multiwarden \
+            src/autofill/multiwarden \
+            src/autofill/browser \
+            src/autofill/services/autofill-badge-updater.service.spec.ts \
+            src/vault/popup/services \
+            src/tools/popup \
+            src/vault/popup/components/vault/vault-list-items-container \
+            src/vault/popup/components/vault/vault-popup-list-table \
+            src/vault/popup/components/vault/view \
+            src/vault/popup/components/vault/add-edit \
+            src/auth/popup/account-switching \
+            src/popup \
+            src/autofill/background/notification.background.spec.ts \
+            src/autofill/background/overlay.background.spec.ts \
+            src/autofill/background/autofill-orchestrator.spec.ts \
+            src/autofill/services/autofill.service.spec.ts \
+            src/autofill/notification \
+            src/autofill/content/components/notification \
+            src/autofill/fido2 \
+            src/autofill/popup/fido2)
+
+  build:
+    name: Build ${{ matrix.browser }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - browser: chrome
+            manifest: "3"
+          - browser: edge
+            manifest: "3"
+          - browser: opera
+            manifest: "3"
+          - browser: firefox
+            manifest: "2"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Build (open-source build only)
+        working-directory: apps/browser
+        env:
+          NODE_ENV: production
+          BROWSER: ${{ matrix.browser }}
+          MANIFEST_VERSION: ${{ matrix.manifest }}
+          NODE_OPTIONS: --max-old-space-size=8192
+        run: npx webpack
+
+      - name: Apply Multiwarden branding and package
+        env:
+          BROWSER: ${{ matrix.browser }}
+        run: |
+          node multiwarden/scripts/brand-build.mjs apps/browser/build
+          version="$(node -p "require('./apps/browser/build/manifest.json').version")"
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+          (cd apps/browser/build && zip -qr "../../../multiwarden-$BROWSER-$version.zip" .)
+          # Stores refuse the manifest "key" that fixes the ID of the GitHub builds.
+          node multiwarden/scripts/brand-build.mjs apps/browser/build --store
+          (cd apps/browser/build && zip -qr "../../../store-$BROWSER-$version.zip" .)
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: multiwarden-${{ matrix.browser }}
+          path: multiwarden-${{ matrix.browser }}-${{ env.VERSION }}.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: store-${{ matrix.browser }}
+          path: store-${{ matrix.browser }}-${{ env.VERSION }}.zip
+
+  build-safari:
+    name: Build safari (unsigned)
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Build (open-source build only)
+        working-directory: apps/browser
+        env:
+          NODE_ENV: production
+          BROWSER: safari
+          NODE_OPTIONS: --max-old-space-size=8192
+        run: npx webpack
+
+      - name: Apply Multiwarden branding
+        env:
+          BROWSER: safari
+        run: |
+          node multiwarden/scripts/brand-build.mjs apps/browser/build
+          version="$(node -p "require('./apps/browser/build/manifest.json').version")"
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Package unsigned Safari app
+        run: |
+          bash multiwarden/scripts/package-safari-unsigned.sh \
+            "$GITHUB_WORKSPACE/multiwarden-safari-unsigned-$VERSION.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: multiwarden-safari
+          path: multiwarden-safari-unsigned-${{ env.VERSION }}.zip
+
+  release:
+    name: Publish release
+    if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.release)
+    needs: [test, build, build-safari]
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.release.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          pattern: multiwarden-*
+          merge-multiple: true
+
+      - name: Package the source for Firefox Add-ons
+        run: |
+          version="$(ls dist/multiwarden-chrome-*.zip | sed -E 's/.*multiwarden-chrome-(.*)\.zip/\1/')"
+          git archive --format=zip --prefix="multiwarden-$version-source/" \
+            --add-file=multiwarden/store/AMO-BUILD.md \
+            -o "dist/multiwarden-source-$version.zip" HEAD
+
+      - name: Create release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # The version is in the zip names: multiwarden-<browser>-<version>.zip
+          version="$(ls dist/multiwarden-chrome-*.zip | sed -E 's/.*multiwarden-chrome-(.*)\.zip/\1/')"
+          tag="v${version}"
+          if gh release view "$tag" --repo "${GITHUB_REPOSITORY}" > /dev/null 2>&1; then
+            echo "::error::Release $tag already exists. Bump \"release\" in multiwarden/version.json first."
+            exit 1
+          fi
+          gh release create "$tag" dist/*.zip \
+            --repo "${GITHUB_REPOSITORY}" \
+            --target "${GITHUB_SHA}" \
+            --title "Multiwarden ${version}" --generate-notes
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+  chrome-web-store:
+    name: Chrome Web Store
+    needs: [release]
+    runs-on: ubuntu-latest
+    # The secrets are described in multiwarden/store/chrome-web-store.md. Without them this
+    # job does nothing, so releases still work before the store listing exists.
+    env:
+      CWS_CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
+      CWS_CLIENT_SECRET: ${{ secrets.CWS_CLIENT_SECRET }}
+      CWS_REFRESH_TOKEN: ${{ secrets.CWS_REFRESH_TOKEN }}
+      CWS_PUBLISHER_ID: ${{ secrets.CWS_PUBLISHER_ID }}
+      CWS_EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
+    steps:
+      - name: Check for store credentials
+        id: check
+        run: |
+          for name in CWS_CLIENT_ID CWS_CLIENT_SECRET CWS_REFRESH_TOKEN CWS_PUBLISHER_ID CWS_EXTENSION_ID; do
+            if [ -z "${!name}" ]; then
+              echo "::notice::Secret $name is not set, so this release is not uploaded to the Chrome Web Store."
+              echo "ready=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/download-artifact@v4
+        if: steps.check.outputs.ready == 'true'
+        with:
+          name: store-chrome
+          path: dist
+
+      - name: Upload and submit for review
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          set -euo pipefail
+          api="https://chromewebstore.googleapis.com"
+          item="publishers/$CWS_PUBLISHER_ID/items/$CWS_EXTENSION_ID"
+          token="$(curl -sSf https://oauth2.googleapis.com/token \
+            --data-urlencode "client_id=$CWS_CLIENT_ID" \
+            --data-urlencode "client_secret=$CWS_CLIENT_SECRET" \
+            --data-urlencode "refresh_token=$CWS_REFRESH_TOKEN" \
+            --data-urlencode "grant_type=refresh_token" | jq -r .access_token)"
+          echo "::add-mask::$token"
+          auth="Authorization: Bearer $token"
+
+          zip="$(ls dist/store-chrome-*.zip)"
+          echo "Uploading $zip"
+          curl -sS -H "$auth" -X POST -T "$zip" "$api/upload/v2/$item:upload" | tee /tmp/upload.json
+          echo
+          state="$(jq -r '.uploadState // empty' /tmp/upload.json)"
+          for attempt in $(seq 1 30); do
+            [ "$state" = "IN_PROGRESS" ] || break
+            sleep 10
+            curl -sS -H "$auth" "$api/v2/$item:fetchStatus" | tee /tmp/status.json
+            echo
+            state="$(jq -r '.lastAsyncUploadState // .uploadState // empty' /tmp/status.json)"
+          done
+          if [ "$state" != "SUCCEEDED" ]; then
+            echo "::error::Chrome Web Store upload did not succeed (state: ${state:-unknown})"
+            exit 1
+          fi
+
+          curl -sS -H "$auth" -H "Content-Type: application/json" -X POST -d '{}' \
+            "$api/v2/$item:publish" | tee /tmp/publish.json
+          echo
+          if jq -e '.error' /tmp/publish.json > /dev/null; then
+            echo "::error::Chrome Web Store did not accept the submission"
+            exit 1
+          fi
+          echo "::notice::Multiwarden ${{ needs.release.outputs.version }} is submitted for Chrome Web Store review."
+
+  merge-sync:
+    name: Merge sync
+    # Only for the upstream sync branches, started by multiwarden-upstream-sync.yml.
+    if: github.event_name == 'workflow_dispatch' && startsWith(github.ref, 'refs/heads/sync/bitwarden-')
+    needs: [test, build, build-safari]
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Merge the sync PR and start a release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          pr="$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH" --state open \
+            --json number,title,headRefOid --jq '.[0]')"
+          if [ -z "$pr" ]; then
+            echo "No open PR for $BRANCH"
+            exit 0
+          fi
+          number="$(jq -r .number <<< "$pr")"
+          case "$(jq -r .title <<< "$pr")" in
+            "[conflicts]"*)
+              echo "::notice::PR #$number has conflicts; resolve them and merge it by hand."
+              exit 0
+              ;;
+          esac
+          if [ "$(jq -r .headRefOid <<< "$pr")" != "$GITHUB_SHA" ]; then
+            echo "::notice::PR #$number has newer commits than this run; not merging."
+            exit 0
+          fi
+          gh pr merge "$number" --repo "$GITHUB_REPOSITORY" --squash --delete-branch \
+            --match-head-commit "$GITHUB_SHA"
+          # Merges made with the workflow token start no workflows, so start the release here.
+          # The sync reset "release" to 1 for the new Bitwarden version, so the tag is new.
+          gh workflow run multiwarden-ci.yml --repo "$GITHUB_REPOSITORY" --ref main -f release=true

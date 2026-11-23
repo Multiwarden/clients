@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Hesaba kaydet"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ hesabına yeni hesap bilgisi olarak kaydet",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Hesap"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden ayarları"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Hesaplar"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Görünüm"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Hangi hesaba kaydedileceğini hatırla"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Yeni bir giriş bilgisini kaydettiğinizde Multiwarden, o sitede en son kullandığınız hesabı seçer. Her zaman başka bir hesap seçebilirsiniz."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium bildirimlerini gizle"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium yükseltme afişlerini, ipuçlarını ve rozetlerini gizler."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden, Bitwarden tarayıcı uzantısının resmi olmayan, açık kaynaklı bir çatalıdır. Bitwarden, Inc. ile bağlantılı değildir."
+  },
+  "multiwardenCombined": {
+    "message": "Birleşik"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Kilidi açık tüm hesaplar birlikte"
+  },
+  "multiwardenCurrentView": {
+    "message": "Geçerli görünüm"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Hesapları yönet"
+  },
+  "multiwardenChooseVault": {
+    "message": "Hangi kasaya kaydedilsin?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Bu kaydın saklanacağı hesabı seçin."
+  },
+  "multiwardenVault": {
+    "message": "Kasa:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden hakkında"
+  },
+  "multiwardenVersion": {
+    "message": "Sürüm"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden tabanlı"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub'da görüntüle"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Sürüm notları"
+  },
+  "multiwardenReportIssue": {
+    "message": "Sorun bildir"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Oluşturucu hesabı"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Ayarlar hesabı"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Sayfa yüklenince otomatik doldurma şunu kullanır"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Birden fazla hesabın kilidi açıkken sayfa yüklenince otomatik doldurmanın kullanabileceği hesap."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Sitede en son kullanılan hesap, yoksa benzersiz bir eşleşme"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Yalnızca tüm hesaplarda benzersiz olan bir hesap bilgisi"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Yalnızca etkin hesap"
+  }
+}

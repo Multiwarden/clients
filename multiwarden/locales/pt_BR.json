@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Salvar na conta"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Salvar como novo login em $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Conta"
+  },
+  "multiwardenSettings": {
+    "message": "Configurações do Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Contas"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Aparência"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Lembrar em qual conta salvar"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Quando você salva um novo login, o Multiwarden escolhe a conta que você usou da última vez naquele site. Você sempre pode escolher outra."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Ocultar avisos do Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Oculta banners, dicas e selos de upgrade para o Premium."
+  },
+  "multiwardenAbout": {
+    "message": "O Multiwarden é um fork não oficial e de código aberto da extensão de navegador do Bitwarden. Não é afiliado à Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Combinada"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Todas as contas desbloqueadas juntas"
+  },
+  "multiwardenCurrentView": {
+    "message": "Visualização atual"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Gerenciar contas"
+  },
+  "multiwardenChooseVault": {
+    "message": "Salvar em qual cofre?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Escolha a conta em que este item será salvo."
+  },
+  "multiwardenVault": {
+    "message": "Cofre:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Sobre o Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versão"
+  },
+  "multiwardenBasedOn": {
+    "message": "Baseado no Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Ver no GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Notas da versão"
+  },
+  "multiwardenReportIssue": {
+    "message": "Relatar um problema"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Gerador para"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Configurações para"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "O preenchimento ao carregar usa"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Qual conta o preenchimento automático ao carregar a página pode usar quando várias contas estão desbloqueadas."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "A última conta usada no site; senão, uma correspondência única"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Somente um login único entre todas as contas"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Somente a conta ativa"
+  }
+}

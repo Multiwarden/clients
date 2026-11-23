@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "儲存至帳戶"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "以新登入資訊儲存至 $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "帳戶"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden 設定"
+  },
+  "multiwardenAccountsSection": {
+    "message": "帳戶"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "外觀"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "記住要儲存到哪個帳戶"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "儲存新的登入資訊時，Multiwarden 會選擇你上次在該網站使用的帳戶。你隨時可以選擇其他帳戶。"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "隱藏 Premium 提示"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "隱藏 Premium 升級橫幅、提示和徽章。"
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden 是 Bitwarden 瀏覽器擴充功能的非官方開源分支，與 Bitwarden, Inc. 無關。"
+  },
+  "multiwardenCombined": {
+    "message": "合併"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "所有已解鎖帳戶"
+  },
+  "multiwardenCurrentView": {
+    "message": "目前檢視"
+  },
+  "multiwardenManageAccounts": {
+    "message": "管理帳戶"
+  },
+  "multiwardenChooseVault": {
+    "message": "要儲存至哪個密碼庫？"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "選擇要儲存此項目的帳戶。"
+  },
+  "multiwardenVault": {
+    "message": "密碼庫："
+  },
+  "multiwardenAboutSection": {
+    "message": "關於 Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "版本"
+  },
+  "multiwardenBasedOn": {
+    "message": "基於 Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "在 GitHub 上查看"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "版本資訊"
+  },
+  "multiwardenReportIssue": {
+    "message": "回報問題"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "產生器帳戶"
+  },
+  "multiwardenSettingsFor": {
+    "message": "設定帳戶"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "頁面載入時自動填入使用"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "當多個帳戶已解鎖時，頁面載入時自動填入可使用哪個帳戶。"
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "該網站上次使用的帳戶，否則使用唯一相符項目"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "僅限在所有帳戶中唯一的登入資訊"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "僅限使用中的帳戶"
+  }
+}

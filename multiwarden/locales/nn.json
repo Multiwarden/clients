@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Lagre i konto"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Lagre som ny pålogging i $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Konto"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden-innstillingar"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Kontoar"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Utsjånad"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Hugs kva konto det blir lagra i"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Når du lagrar ei ny pålogging, vel Multiwarden kontoen du brukte sist på den nettstaden. Du kan alltid velje ein annan."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Gøym Premium-meldingar"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Gøymer bannerar, tips og merke om oppgradering til Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden er ein uoffisiell fork med open kjeldekode av nettlesartillegget til Bitwarden. Han er ikkje tilknytt Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Kombinert"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Alle opplåste kontoar saman"
+  },
+  "multiwardenCurrentView": {
+    "message": "Gjeldande vising"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Administrer kontoar"
+  },
+  "multiwardenChooseVault": {
+    "message": "Lagre i kva kvelv?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Vel kontoen elementet blir lagra i."
+  },
+  "multiwardenVault": {
+    "message": "Kvelv:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Om Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versjon"
+  },
+  "multiwardenBasedOn": {
+    "message": "Basert på Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Sjå på GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Versjonsmerknader"
+  },
+  "multiwardenReportIssue": {
+    "message": "Rapporter eit problem"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator for"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Innstillingar for"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Autofyll ved lasting brukar"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Kva konto autofyll ved sidelasting kan bruke når fleire kontoar er låste opp."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Kontoen sist brukt på nettstaden, elles eit unikt treff"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Berre ei pålogging som er unik på tvers av alle kontoar"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Berre den aktive kontoen"
+  }
+}

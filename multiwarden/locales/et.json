@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Salvesta kontole"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Salvesta uue sisselogimisena kontole $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Konto"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwardeni seaded"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Kontod"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Välimus"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Jäta meelde, millisesse kontosse salvestada"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Kui salvestad uue sisselogimise, valib Multiwarden konto, mida sellel saidil eelmisel korral kasutasid. Alati saad valida ka teise konto."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Peida Premiumi teated"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Peidab Premiumile üleminekut pakkuvad bännerid, nõuanded ja märgid."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden on Bitwardeni brauserilaienduse mitteametlik avatud lähtekoodiga fork. See ei ole seotud ettevõttega Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Ühendatud"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Kõik lukust avatud kontod koos"
+  },
+  "multiwardenCurrentView": {
+    "message": "Praegune vaade"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Halda kontosid"
+  },
+  "multiwardenChooseVault": {
+    "message": "Millisesse hoidlasse salvestada?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Vali konto, kuhu see kirje salvestatakse."
+  },
+  "multiwardenVault": {
+    "message": "Hoidla:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwardeni teave"
+  },
+  "multiwardenVersion": {
+    "message": "Versioon"
+  },
+  "multiwardenBasedOn": {
+    "message": "Põhineb Bitwardenil"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Vaata GitHubis"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Väljalaskemärkmed"
+  },
+  "multiwardenReportIssue": {
+    "message": "Teata probleemist"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generaator kontole"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Seaded kontole"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Lehe laadimisel automaatne täitmine kasutab"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Millist kontot võib automaatne täitmine lehe laadimisel kasutada, kui mitu kontot on lukust avatud."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Saidil viimati kasutatud kontot, muidu unikaalset vastet"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Ainult kõigi kontode lõikes unikaalset sisselogimist"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Ainult aktiivset kontot"
+  }
+}

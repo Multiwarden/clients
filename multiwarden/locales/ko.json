@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "계정에 저장"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$에 새 로그인으로 저장",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "계정"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden 설정"
+  },
+  "multiwardenAccountsSection": {
+    "message": "계정"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "보기"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "저장할 계정 기억"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "새 로그인을 저장할 때 Multiwarden이 해당 사이트에서 지난번에 사용한 계정을 선택합니다. 언제든지 다른 계정을 선택할 수 있습니다."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium 안내 숨기기"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium 업그레이드 배너, 팁, 배지를 숨깁니다."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden은 Bitwarden 브라우저 확장 프로그램의 비공식 오픈 소스 포크이며 Bitwarden, Inc.와 관련이 없습니다."
+  },
+  "multiwardenCombined": {
+    "message": "통합"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "잠금 해제된 모든 계정"
+  },
+  "multiwardenCurrentView": {
+    "message": "현재 보기"
+  },
+  "multiwardenManageAccounts": {
+    "message": "계정 관리"
+  },
+  "multiwardenChooseVault": {
+    "message": "어느 보관함에 저장할까요?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "이 항목을 저장할 계정을 선택하세요."
+  },
+  "multiwardenVault": {
+    "message": "보관함:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden 정보"
+  },
+  "multiwardenVersion": {
+    "message": "버전"
+  },
+  "multiwardenBasedOn": {
+    "message": "기반 Bitwarden 버전"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub에서 보기"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "릴리스 노트"
+  },
+  "multiwardenReportIssue": {
+    "message": "문제 신고"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "생성기 대상"
+  },
+  "multiwardenSettingsFor": {
+    "message": "설정 대상"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "페이지 로드 시 자동 완성 사용"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "여러 계정이 잠금 해제되어 있을 때 페이지 로드 시 자동 완성이 사용할 수 있는 계정입니다."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "해당 사이트에서 마지막으로 사용한 계정, 없으면 유일하게 일치하는 항목"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "모든 계정에서 유일한 로그인만"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "활성 계정만"
+  }
+}

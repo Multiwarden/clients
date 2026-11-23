@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "ಖಾತೆಗೆ ಉಳಿಸಿ"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ ನಲ್ಲಿ ಹೊಸ ಲಾಗಿನ್ ಆಗಿ ಉಳಿಸಿ",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "ಖಾತೆ"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  },
+  "multiwardenAccountsSection": {
+    "message": "ಖಾತೆಗಳು"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "ಗೋಚರತೆ"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "ಯಾವ ಖಾತೆಗೆ ಉಳಿಸಬೇಕೆಂದು ನೆನಪಿಡಿ"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "ಹೊಸ ಲಾಗಿನ್ ಉಳಿಸುವಾಗ, ಆ ಸೈಟ್‌ನಲ್ಲಿ ನೀವು ಕಳೆದ ಬಾರಿ ಬಳಸಿದ ಖಾತೆಯನ್ನು Multiwarden ಆಯ್ಕೆ ಮಾಡುತ್ತದೆ. ನೀವು ಯಾವಾಗಲೂ ಬೇರೆ ಖಾತೆಯನ್ನು ಆರಿಸಬಹುದು."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium ಸೂಚನೆಗಳನ್ನು ಮರೆಮಾಡಿ"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium ಅಪ್‌ಗ್ರೇಡ್ ಬ್ಯಾನರ್‌ಗಳು, ಸಲಹೆಗಳು ಮತ್ತು ಬ್ಯಾಡ್ಜ್‌ಗಳನ್ನು ಮರೆಮಾಡುತ್ತದೆ."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden ಎಂಬುದು Bitwarden ಬ್ರೌಸರ್ ವಿಸ್ತರಣೆಯ ಅನಧಿಕೃತ, ಓಪನ್ ಸೋರ್ಸ್ fork. ಇದು Bitwarden, Inc. ಜೊತೆ ಸಂಬಂಧ ಹೊಂದಿಲ್ಲ."
+  },
+  "multiwardenCombined": {
+    "message": "ಸಂಯೋಜಿತ"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "ಅನ್‌ಲಾಕ್ ಆದ ಎಲ್ಲಾ ಖಾತೆಗಳು ಒಟ್ಟಿಗೆ"
+  },
+  "multiwardenCurrentView": {
+    "message": "ಪ್ರಸ್ತುತ ನೋಟ"
+  },
+  "multiwardenManageAccounts": {
+    "message": "ಖಾತೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ"
+  },
+  "multiwardenChooseVault": {
+    "message": "ಯಾವ ವಾಲ್ಟ್‌ಗೆ ಉಳಿಸಬೇಕು?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "ಈ ಐಟಂ ಉಳಿಸಲಾಗುವ ಖಾತೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
+  },
+  "multiwardenVault": {
+    "message": "ವಾಲ್ಟ್:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden ಕುರಿತು"
+  },
+  "multiwardenVersion": {
+    "message": "ಆವೃತ್ತಿ"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden ಆಧಾರಿತ"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub ನಲ್ಲಿ ನೋಡಿ"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳು"
+  },
+  "multiwardenReportIssue": {
+    "message": "ಸಮಸ್ಯೆ ವರದಿ ಮಾಡಿ"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "ಜನರೇಟರ್ ಖಾತೆ"
+  },
+  "multiwardenSettingsFor": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಖಾತೆ"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "ಪುಟ ಲೋಡ್‌ನಲ್ಲಿ ಸ್ವಯಂ ಭರ್ತಿ ಬಳಸುವುದು"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "ಹಲವು ಖಾತೆಗಳು ಅನ್‌ಲಾಕ್ ಆಗಿರುವಾಗ ಪುಟ ಲೋಡ್‌ನಲ್ಲಿ ಸ್ವಯಂ ಭರ್ತಿ ಯಾವ ಖಾತೆ ಬಳಸಬಹುದು."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "ಸೈಟ್‌ನಲ್ಲಿ ಕೊನೆಯದಾಗಿ ಬಳಸಿದ ಖಾತೆ, ಇಲ್ಲದಿದ್ದರೆ ಅನನ್ಯ ಹೊಂದಾಣಿಕೆ"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "ಎಲ್ಲಾ ಖಾತೆಗಳಲ್ಲಿ ಅನನ್ಯ ಲಾಗಿನ್ ಮಾತ್ರ"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "ಸಕ್ರಿಯ ಖಾತೆ ಮಾತ್ರ"
+  }
+}

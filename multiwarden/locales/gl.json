@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Gardar na conta"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Gardar como novo inicio de sesión en $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Conta"
+  },
+  "multiwardenSettings": {
+    "message": "Axustes de Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Contas"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Aparencia"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Lembrar en que conta gardar"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Cando gardas un novo inicio de sesión, Multiwarden escolle a conta que usaches a última vez nese sitio. Sempre podes escoller outra."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Ocultar avisos Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Oculta os banners, consellos e insignias para pasar a Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden é un fork non oficial e de código aberto da extensión de navegador de Bitwarden. Non está afiliado a Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Combinada"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Todas as contas desbloqueadas xuntas"
+  },
+  "multiwardenCurrentView": {
+    "message": "Vista actual"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Xestionar contas"
+  },
+  "multiwardenChooseVault": {
+    "message": "En que caixa forte gardar?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Escolle a conta na que se garda este elemento."
+  },
+  "multiwardenVault": {
+    "message": "Caixa forte:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Acerca de Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versión"
+  },
+  "multiwardenBasedOn": {
+    "message": "Baseado en Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Ver en GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Notas da versión"
+  },
+  "multiwardenReportIssue": {
+    "message": "Informar dun problema"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Xerador para"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Axustes para"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "O autocompletado ao cargar usa"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Que conta pode usar o autocompletado ao cargar a páxina cando hai varias contas desbloqueadas."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "A última conta usada no sitio; se non, unha coincidencia única"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Só un inicio de sesión único entre todas as contas"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Só a conta activa"
+  }
+}

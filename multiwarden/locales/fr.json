@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Enregistrer dans le compte"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Enregistrer comme nouvel identifiant dans $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Compte"
+  },
+  "multiwardenSettings": {
+    "message": "Paramètres de Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Comptes"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Affichage"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Mémoriser le compte d'enregistrement"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Lorsque vous enregistrez un nouvel identifiant, Multiwarden choisit le compte utilisé la dernière fois sur ce site. Vous pouvez toujours en choisir un autre."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Masquer les annonces Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Masque les bannières, suggestions et badges de mise à niveau Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden est un fork non officiel et open source de l'extension de navigateur Bitwarden. Il n'est pas affilié à Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Combiné"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Tous les comptes déverrouillés ensemble"
+  },
+  "multiwardenCurrentView": {
+    "message": "Vue actuelle"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Gérer les comptes"
+  },
+  "multiwardenChooseVault": {
+    "message": "Enregistrer dans quel coffre ?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Choisissez le compte dans lequel cet élément est enregistré."
+  },
+  "multiwardenVault": {
+    "message": "Coffre :"
+  },
+  "multiwardenAboutSection": {
+    "message": "À propos de Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Version"
+  },
+  "multiwardenBasedOn": {
+    "message": "Basé sur Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Voir sur GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Notes de version"
+  },
+  "multiwardenReportIssue": {
+    "message": "Signaler un problème"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Générateur pour"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Paramètres pour"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "La saisie automatique au chargement utilise"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Le compte que la saisie automatique au chargement peut utiliser lorsque plusieurs comptes sont déverrouillés."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Le dernier compte utilisé sur le site, sinon une correspondance unique"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Uniquement un identifiant unique parmi tous les comptes"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Uniquement le compte actif"
+  }
+}

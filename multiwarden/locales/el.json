@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Αποθήκευση σε λογαριασμό"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Αποθήκευση ως νέα σύνδεση στο $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Λογαριασμός"
+  },
+  "multiwardenSettings": {
+    "message": "Ρυθμίσεις Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Λογαριασμοί"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Εμφάνιση"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Απομνημόνευση του λογαριασμού αποθήκευσης"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Όταν αποθηκεύετε μια νέα σύνδεση, το Multiwarden επιλέγει τον λογαριασμό που χρησιμοποιήσατε την προηγούμενη φορά σε αυτόν τον ιστότοπο. Μπορείτε πάντα να επιλέξετε άλλον."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Απόκρυψη ειδοποιήσεων Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Αποκρύπτει πανό, συμβουλές και σήματα αναβάθμισης σε Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Το Multiwarden είναι ένα ανεπίσημο fork ανοιχτού κώδικα της επέκτασης περιηγητή του Bitwarden. Δεν συνδέεται με την Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Συνδυαστικά"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Όλοι οι ξεκλείδωτοι λογαριασμοί μαζί"
+  },
+  "multiwardenCurrentView": {
+    "message": "Τρέχουσα προβολή"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Διαχείριση λογαριασμών"
+  },
+  "multiwardenChooseVault": {
+    "message": "Σε ποιο θησαυροφυλάκιο να αποθηκευτεί;"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Επιλέξτε τον λογαριασμό στον οποίο αποθηκεύεται αυτό το στοιχείο."
+  },
+  "multiwardenVault": {
+    "message": "Θησαυροφυλάκιο:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Σχετικά με το Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Έκδοση"
+  },
+  "multiwardenBasedOn": {
+    "message": "Βασισμένο στο Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Προβολή στο GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Σημειώσεις έκδοσης"
+  },
+  "multiwardenReportIssue": {
+    "message": "Αναφορά προβλήματος"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Γεννήτρια για"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Ρυθμίσεις για"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Η αυτόματη συμπλήρωση κατά τη φόρτωση χρησιμοποιεί"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Ποιον λογαριασμό μπορεί να χρησιμοποιεί η αυτόματη συμπλήρωση κατά τη φόρτωση σελίδας όταν είναι ξεκλείδωτοι πολλοί λογαριασμοί."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Τον λογαριασμό που χρησιμοποιήθηκε τελευταία στον ιστότοπο, αλλιώς μοναδική αντιστοίχιση"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Μόνο σύνδεση μοναδική σε όλους τους λογαριασμούς"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Μόνο τον ενεργό λογαριασμό"
+  }
+}

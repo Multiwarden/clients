@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "အကောင့်တွင် သိမ်းရန်"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ တွင် လော့ဂ်အင်အသစ်အဖြစ် သိမ်းရန်",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "အကောင့်"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden ဆက်တင်များ"
+  },
+  "multiwardenAccountsSection": {
+    "message": "အကောင့်များ"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "အသွင်အပြင်"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "မည်သည့်အကောင့်တွင် သိမ်းမည်ကို မှတ်ထားရန်"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "လော့ဂ်အင်အသစ်ကို သိမ်းသည့်အခါ Multiwarden သည် ထိုဆိုက်တွင် ယခင်က သုံးခဲ့သော အကောင့်ကို ရွေးပေးသည်။ အခြားအကောင့်ကို အချိန်မရွေး ရွေးနိုင်သည်။"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium အသိပေးချက်များကို ဝှက်ရန်"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium အဆင့်မြှင့်ရန် ဘန်နာ၊ အကြံပြုချက်နှင့် တံဆိပ်များကို ဝှက်သည်။"
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden သည် Bitwarden ဘရောက်ဇာ တိုးချဲ့မှု၏ တရားဝင်မဟုတ်သော open source fork ဖြစ်ပြီး Bitwarden, Inc. နှင့် မသက်ဆိုင်ပါ။"
+  },
+  "multiwardenCombined": {
+    "message": "ပေါင်းစပ်"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "သော့ဖွင့်ထားသော အကောင့်အားလုံး"
+  },
+  "multiwardenCurrentView": {
+    "message": "လက်ရှိမြင်ကွင်း"
+  },
+  "multiwardenManageAccounts": {
+    "message": "အကောင့်များကို စီမံရန်"
+  },
+  "multiwardenChooseVault": {
+    "message": "မည်သည့် vault တွင် သိမ်းမလဲ?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "ဤအရာကို သိမ်းမည့် အကောင့်ကို ရွေးပါ။"
+  },
+  "multiwardenVault": {
+    "message": "Vault:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden အကြောင်း"
+  },
+  "multiwardenVersion": {
+    "message": "ဗားရှင်း"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden အပေါ်အခြေခံသည်"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub တွင် ကြည့်ရန်"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "ထုတ်ဝေမှုမှတ်စု"
+  },
+  "multiwardenReportIssue": {
+    "message": "ပြဿနာ တိုင်ကြားရန်"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "ထုတ်ပေးစက် အကောင့်"
+  },
+  "multiwardenSettingsFor": {
+    "message": "ဆက်တင် အကောင့်"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "စာမျက်နှာဖွင့်ချိန် အလိုအလျောက်ဖြည့်ရာတွင် သုံးသည်"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "အကောင့်များစွာ သော့ဖွင့်ထားချိန် စာမျက်နှာဖွင့်ချိန် အလိုအလျောက်ဖြည့်ခြင်း သုံးနိုင်သည့် အကောင့်။"
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "ဆိုက်တွင် နောက်ဆုံးသုံးခဲ့သော အကောင့်၊ မရှိလျှင် တစ်ခုတည်းကိုက်ညီမှု"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "အကောင့်အားလုံးတွင် တစ်ခုတည်းဖြစ်သော လော့ဂ်အင်သာ"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "လက်ရှိအကောင့်သာ"
+  }
+}

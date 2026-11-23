@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Cadw i gyfrif"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Cadw fel mewngofnod newydd yn $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Cyfrif"
+  },
+  "multiwardenSettings": {
+    "message": "Gosodiadau Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Cyfrifon"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Golwg"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Cofio pa gyfrif i gadw iddo"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Pan fyddwch yn cadw manylion mewngofnodi newydd, mae Multiwarden yn dewis y cyfrif a ddefnyddioch y tro diwethaf ar y wefan honno. Gallwch ddewis cyfrif arall bob amser."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Cuddio hysbysiadau Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Yn cuddio baneri, awgrymiadau a bathodynnau uwchraddio i Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Mae Multiwarden yn fforc answyddogol, cod agored o estyniad porwr Bitwarden. Nid yw'n gysylltiedig â Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Cyfunol"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Pob cyfrif wedi'i ddatgloi gyda'i gilydd"
+  },
+  "multiwardenCurrentView": {
+    "message": "Golwg gyfredol"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Rheoli cyfrifon"
+  },
+  "multiwardenChooseVault": {
+    "message": "Cadw ym mha gell?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Dewiswch y cyfrif y caiff yr eitem hon ei chadw ynddo."
+  },
+  "multiwardenVault": {
+    "message": "Cell:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Ynghylch Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Fersiwn"
+  },
+  "multiwardenBasedOn": {
+    "message": "Yn seiliedig ar Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Gweld ar GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Nodiadau rhyddhau"
+  },
+  "multiwardenReportIssue": {
+    "message": "Adrodd problem"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generadur ar gyfer"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Gosodiadau ar gyfer"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Mae awtolenwi wrth lwytho yn defnyddio"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Pa gyfrif y caiff awtolenwi wrth lwytho tudalen ei ddefnyddio pan fydd sawl cyfrif wedi'u datgloi."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Y cyfrif a ddefnyddiwyd ddiwethaf ar y wefan, neu fel arall un cyfatebiaeth unigryw"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Dim ond mewngofnod sy'n unigryw ar draws pob cyfrif"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Y cyfrif gweithredol yn unig"
+  }
+}

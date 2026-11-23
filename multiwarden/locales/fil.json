@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "I-save sa account"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "I-save bilang bagong login sa $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Account"
+  },
+  "multiwardenSettings": {
+    "message": "Mga setting ng Multiwarden"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Mga account"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Itsura"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Tandaan kung saang account magse-save"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Kapag nag-save ka ng bagong login, pinipili ng Multiwarden ang account na ginamit mo noong huli sa site na iyon. Puwede kang pumili ng ibang account anumang oras."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Itago ang mga paalala ng Premium"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Itinatago ang mga banner, tip at badge para mag-upgrade sa Premium."
+  },
+  "multiwardenAbout": {
+    "message": "Ang Multiwarden ay hindi opisyal at open-source na fork ng browser extension ng Bitwarden. Hindi ito kaugnay ng Bitwarden, Inc."
+  },
+  "multiwardenCombined": {
+    "message": "Pinagsama"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Lahat ng naka-unlock na account"
+  },
+  "multiwardenCurrentView": {
+    "message": "Kasalukuyang view"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Pamahalaan ang mga account"
+  },
+  "multiwardenChooseVault": {
+    "message": "Saang vault ise-save?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Piliin ang account kung saan ise-save ang item na ito."
+  },
+  "multiwardenVault": {
+    "message": "Vault:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Tungkol sa Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Bersyon"
+  },
+  "multiwardenBasedOn": {
+    "message": "Batay sa Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Tingnan sa GitHub"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Mga tala sa release"
+  },
+  "multiwardenReportIssue": {
+    "message": "Mag-ulat ng problema"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator para sa"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Mga setting para sa"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Ginagamit ng autofill sa page load"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Aling account ang puwedeng gamitin ng autofill sa page load kapag maraming account ang naka-unlock."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "Ang account na huling ginamit sa site, kung wala ay ang natatanging tugma"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Login lang na natatangi sa lahat ng account"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Ang aktibong account lang"
+  }
+}

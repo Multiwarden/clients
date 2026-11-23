@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "アカウントに保存"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$ に新しいログインとして保存",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "アカウント"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden の設定"
+  },
+  "multiwardenAccountsSection": {
+    "message": "アカウント"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "表示"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "保存先のアカウントを記憶"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "新しいログインを保存するとき、Multiwarden はそのサイトで前回使ったアカウントを選択します。いつでも別のアカウントを選べます。"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium の案内を非表示"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium へのアップグレードを促すバナー、ヒント、バッジを非表示にします。"
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden は Bitwarden ブラウザ拡張機能の非公式なオープンソースのフォークです。Bitwarden, Inc. とは関係ありません。"
+  },
+  "multiwardenCombined": {
+    "message": "統合"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "ロック解除済みのすべてのアカウント"
+  },
+  "multiwardenCurrentView": {
+    "message": "現在のビュー"
+  },
+  "multiwardenManageAccounts": {
+    "message": "アカウントを管理"
+  },
+  "multiwardenChooseVault": {
+    "message": "どの保管庫に保存しますか？"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "このアイテムを保存するアカウントを選択してください。"
+  },
+  "multiwardenVault": {
+    "message": "保管庫:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden について"
+  },
+  "multiwardenVersion": {
+    "message": "バージョン"
+  },
+  "multiwardenBasedOn": {
+    "message": "ベースの Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub で見る"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "リリースノート"
+  },
+  "multiwardenReportIssue": {
+    "message": "問題を報告"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "ジェネレーターの対象"
+  },
+  "multiwardenSettingsFor": {
+    "message": "設定の対象"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "ページ読み込み時の自動入力で使用"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "複数のアカウントがロック解除されているとき、ページ読み込み時の自動入力に使うアカウント。"
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "そのサイトで最後に使ったアカウント、なければ一意に一致するもの"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "すべてのアカウントで一意のログインのみ"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "アクティブなアカウントのみ"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "apps/browser/src/auth/popup/account-switching/account-switcher.component.html": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/browser/src/auth/popup/account-switching/account.component.ts": {
+    "markers": 1,
+    "references": 5
+  },
+  "apps/browser/src/auth/popup/account-switching/current-account.component.html": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/browser/src/autofill/background/abstractions/notification.background.ts": {
+    "markers": 2,
+    "references": 3
+  },
+  "apps/browser/src/autofill/background/autofill-orchestrator.ts": {
+    "markers": 4,
+    "references": 12
+  },
+  "apps/browser/src/autofill/background/notification.background.ts": {
+    "markers": 13,
+    "references": 28
+  },
+  "apps/browser/src/autofill/background/overlay.background.ts": {
+    "markers": 4,
+    "references": 5
+  },
+  "apps/browser/src/autofill/browser/cipher-context-menu-handler.ts": {
+    "markers": 3,
+    "references": 4
+  },
+  "apps/browser/src/autofill/browser/context-menu-clicked-handler.ts": {
+    "markers": 2,
+    "references": 3
+  },
+  "apps/browser/src/autofill/content/components/notification/button-row.ts": {
+    "markers": 2,
+    "references": 4
+  },
+  "apps/browser/src/autofill/content/components/signals/selected-account.ts": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/browser/src/autofill/fido2/services/browser-fido2-user-interface.service.ts": {
+    "markers": 1,
+    "references": 1
+  },
+  "apps/browser/src/autofill/notification/bar.ts": {
+    "markers": 2,
+    "references": 17
+  },
+  "apps/browser/src/autofill/popup/fido2/fido2-cipher-row.component.ts": {
+    "markers": 1,
+    "references": 1
+  },
+  "apps/browser/src/autofill/popup/fido2/fido2.component.html": {
+    "markers": 1,
+    "references": 6
+  },
+  "apps/browser/src/autofill/popup/fido2/fido2.component.ts": {
+    "markers": 7,
+    "references": 9
+  },
+  "apps/browser/src/autofill/services/autofill-badge-updater.service.ts": {
+    "markers": 1,
+    "references": 2
+  },
+  "apps/browser/src/autofill/services/autofill.service.ts": {
+    "markers": 2,
+    "references": 4
+  },
+  "apps/browser/src/background/main.background.ts": {
+    "markers": 2,
+    "references": 3
+  },
+  "apps/browser/src/background/runtime.background.ts": {
+    "markers": 1,
+    "references": 2
+  },
+  "apps/browser/src/platform/popup/layout/popup-header.component.ts": {
+    "markers": 1,
+    "references": 5
+  },
+  "apps/browser/src/popup/app-routing.module.ts": {
+    "markers": 1,
+    "references": 19
+  },
+  "apps/browser/src/popup/app.component.ts": {
+    "markers": 1,
+    "references": 6
+  },
+  "apps/browser/src/popup/components/extension-anon-layout-wrapper/extension-anon-layout-wrapper.component.ts": {
+    "markers": 1,
+    "references": 5
+  },
+  "apps/browser/src/popup/services/services.module.ts": {
+    "markers": 1,
+    "references": 8
+  },
+  "apps/browser/src/tools/popup/generator/credential-generator-history.component.html": {
+    "markers": 1,
+    "references": 4
+  },
+  "apps/browser/src/tools/popup/generator/credential-generator.component.html": {
+    "markers": 1,
+    "references": 4
+  },
+  "apps/browser/src/tools/popup/settings/settings-v2.component.html": {
+    "markers": 2,
+    "references": 10
+  },
+  "apps/browser/src/vault/popup/components/vault/add-edit/add-edit.component.html": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/browser/src/vault/popup/components/vault/vault-list-items-container/vault-list-items-container.component.html": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/browser/src/vault/popup/components/vault/vault-popup-list-table/vault-popup-list-table.component.html": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/browser/src/vault/popup/components/vault/view/view.component.html": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/browser/src/vault/popup/services/vault-popup-items.service.ts": {
+    "markers": 2,
+    "references": 10
+  },
+  "apps/browser/src/vault/popup/services/vault-popup-list-filters.service.ts": {
+    "markers": 3,
+    "references": 22
+  },
+  "libs/common/src/platform/services/fido2/fido2-authenticator.service.ts": {
+    "markers": 5,
+    "references": 6
+  },
+  "libs/common/src/platform/services/fido2/fido2-client.service.ts": {
+    "markers": 2,
+    "references": 2
+  },
+  "libs/tools/send/send-ui/src/send-list-items-container/send-list-items-container.component.html": {
+    "markers": 1,
+    "references": 3
+  },
+  "libs/tools/send/send-ui/src/services/send-items.service.ts": {
+    "markers": 2,
+    "references": 9
+  }
+}

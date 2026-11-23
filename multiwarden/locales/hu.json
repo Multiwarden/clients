@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Mentés fiókba"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Mentés új bejelentkezésként ide: $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Fiók"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden beállítások"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Fiókok"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Megjelenés"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Mentési fiók megjegyzése"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Új bejelentkezés mentésekor a Multiwarden azt a fiókot választja, amelyet legutóbb ezen a webhelyen használtál. Bármikor választhatsz másikat."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium értesítések elrejtése"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Elrejti a Premium frissítési szalagcímeket, tippeket és jelvényeket."
+  },
+  "multiwardenAbout": {
+    "message": "A Multiwarden a Bitwarden böngészőbővítmény nem hivatalos, nyílt forráskódú forkja. Nem áll kapcsolatban a Bitwarden, Inc.-vel."
+  },
+  "multiwardenCombined": {
+    "message": "Összevont"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "Az összes feloldott fiók együtt"
+  },
+  "multiwardenCurrentView": {
+    "message": "Jelenlegi nézet"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Fiókok kezelése"
+  },
+  "multiwardenChooseVault": {
+    "message": "Melyik széfbe mentsük?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Válaszd ki a fiókot, amelybe ez az elem mentésre kerül."
+  },
+  "multiwardenVault": {
+    "message": "Széf:"
+  },
+  "multiwardenAboutSection": {
+    "message": "A Multiwardenről"
+  },
+  "multiwardenVersion": {
+    "message": "Verzió"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden alapú"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Megtekintés a GitHubon"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Kiadási megjegyzések"
+  },
+  "multiwardenReportIssue": {
+    "message": "Hiba bejelentése"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generátor ehhez:"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Beállítások ehhez:"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Kitöltés betöltéskor ezt használja"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Melyik fiókot használhatja az automatikus kitöltés oldalbetöltéskor, ha több fiók is fel van oldva."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "A webhelyen legutóbb használt fiókot, egyébként egyedi találatot"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Csak az összes fiókban egyedi bejelentkezést"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Csak az aktív fiókot"
+  }
+}

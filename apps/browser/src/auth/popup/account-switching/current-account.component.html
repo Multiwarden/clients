@@ -1,0 +1,25 @@
+<div [class]="wrapperClasses()">
+  <!-- Multiwarden: the avatar opens a dropdown (Combined / accounts / manage accounts) -->
+  <app-multiwarden-account-menu
+    *ngIf="currentAccount$ | async; else defaultButton"
+    [size]="vfo1Enabled() ? 'sm' : 'base'"
+    (manage)="currentAccountClicked()"
+  ></app-multiwarden-account-menu>
+  <ng-template #defaultButton>
+    <button
+      type="button"
+      routerLink="/account-switcher"
+      class="tw-rounded-full hover:tw-outline hover:tw-outline-1 hover:tw-outline-offset-1"
+    >
+      <span class="tw-sr-only">{{ "switchAccounts" | i18n }}</span>
+      <!-- TODO: remove size binding and lock to "sm" when VFO1Foundation flag is removed -->
+      <bit-avatar
+        [text]="'&hellip;'"
+        [color]="'#6795E8'"
+        [size]="vfo1Enabled() ? 'sm' : 'base'"
+        aria-hidden="true"
+        class="[&>img]:tw-block"
+      ></bit-avatar>
+    </button>
+  </ng-template>
+</div>

@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "অ্যাকাউন্টে সংরক্ষণ করুন"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "$EMAIL$-এ নতুন লগইন হিসেবে সংরক্ষণ করুন",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "অ্যাকাউন্ট"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden সেটিংস"
+  },
+  "multiwardenAccountsSection": {
+    "message": "অ্যাকাউন্টসমূহ"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "চেহারা"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "কোন অ্যাকাউন্টে সংরক্ষণ করবেন তা মনে রাখুন"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "নতুন লগইন সংরক্ষণ করার সময় Multiwarden সেই অ্যাকাউন্টটি বেছে নেয় যা আপনি ওই সাইটে গতবার ব্যবহার করেছিলেন। আপনি সবসময় অন্য অ্যাকাউন্ট বেছে নিতে পারেন।"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium বিজ্ঞপ্তি লুকান"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Premium-এ আপগ্রেডের ব্যানার, পরামর্শ ও ব্যাজ লুকায়।"
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden হলো Bitwarden ব্রাউজার এক্সটেনশনের একটি অনানুষ্ঠানিক, ওপেন-সোর্স ফর্ক। এটি Bitwarden, Inc.-এর সাথে যুক্ত নয়।"
+  },
+  "multiwardenCombined": {
+    "message": "সম্মিলিত"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "সব আনলক করা অ্যাকাউন্ট একসাথে"
+  },
+  "multiwardenCurrentView": {
+    "message": "বর্তমান দৃশ্য"
+  },
+  "multiwardenManageAccounts": {
+    "message": "অ্যাকাউন্ট পরিচালনা করুন"
+  },
+  "multiwardenChooseVault": {
+    "message": "কোন ভল্টে সংরক্ষণ করবেন?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "যে অ্যাকাউন্টে এই আইটেম সংরক্ষিত হবে তা বেছে নিন।"
+  },
+  "multiwardenVault": {
+    "message": "ভল্ট:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Multiwarden সম্পর্কে"
+  },
+  "multiwardenVersion": {
+    "message": "সংস্করণ"
+  },
+  "multiwardenBasedOn": {
+    "message": "Bitwarden ভিত্তিক"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "GitHub-এ দেখুন"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "রিলিজ নোট"
+  },
+  "multiwardenReportIssue": {
+    "message": "সমস্যা জানান"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "জেনারেটর যার জন্য"
+  },
+  "multiwardenSettingsFor": {
+    "message": "সেটিংস যার জন্য"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "পেজ লোডে অটোফিল ব্যবহার করে"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "একাধিক অ্যাকাউন্ট আনলক থাকলে পেজ লোডে অটোফিল কোন অ্যাকাউন্ট ব্যবহার করতে পারে।"
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "সাইটে শেষবার ব্যবহৃত অ্যাকাউন্ট, নইলে একটি অনন্য মিল"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "শুধু সব অ্যাকাউন্টে অনন্য লগইন"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "শুধু সক্রিয় অ্যাকাউন্ট"
+  }
+}

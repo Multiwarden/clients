@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "保存到账户"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "作为新登录保存到 $EMAIL$",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "账户"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden 设置"
+  },
+  "multiwardenAccountsSection": {
+    "message": "账户"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "外观"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "记住保存到哪个账户"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "保存新的登录信息时，Multiwarden 会选择你上次在该网站使用的账户。你随时可以选择其他账户。"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "隐藏 Premium 提示"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "隐藏 Premium 升级横幅、提示和徽章。"
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden 是 Bitwarden 浏览器扩展的非官方开源分支，与 Bitwarden, Inc. 无关。"
+  },
+  "multiwardenCombined": {
+    "message": "合并"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "所有已解锁账户"
+  },
+  "multiwardenCurrentView": {
+    "message": "当前视图"
+  },
+  "multiwardenManageAccounts": {
+    "message": "管理账户"
+  },
+  "multiwardenChooseVault": {
+    "message": "保存到哪个密码库？"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "选择保存此项目的账户。"
+  },
+  "multiwardenVault": {
+    "message": "密码库："
+  },
+  "multiwardenAboutSection": {
+    "message": "关于 Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "版本"
+  },
+  "multiwardenBasedOn": {
+    "message": "基于 Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "在 GitHub 上查看"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "发行说明"
+  },
+  "multiwardenReportIssue": {
+    "message": "报告问题"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "生成器账户"
+  },
+  "multiwardenSettingsFor": {
+    "message": "设置账户"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "页面加载时自动填充使用"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "当多个账户已解锁时，页面加载时自动填充可使用哪个账户。"
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "该网站上次使用的账户，否则使用唯一匹配项"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "仅限在所有账户中唯一的登录"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "仅限活动账户"
+  }
+}

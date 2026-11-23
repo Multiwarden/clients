@@ -1,0 +1,101 @@
+{
+  "multiwardenSaveToAccount": {
+    "message": "Am Kont späicheren"
+  },
+  "multiwardenSaveNewLoginInAccount": {
+    "message": "Als neien Login an $EMAIL$ späicheren",
+    "placeholders": {
+      "email": {
+        "content": "$1",
+        "example": "name@example.com"
+      }
+    }
+  },
+  "multiwardenAccount": {
+    "message": "Kont"
+  },
+  "multiwardenSettings": {
+    "message": "Multiwarden-Astellungen"
+  },
+  "multiwardenAccountsSection": {
+    "message": "Konten"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Ausgesinn"
+  },
+  "multiwardenRememberSaveAccount": {
+    "message": "Erënneren, a wéi engem Kont gespäichert gëtt"
+  },
+  "multiwardenRememberSaveAccountHint": {
+    "message": "Wann s de en neie Login späichers, wielt Multiwarden de Kont, deen s de déi leschte Kéier op där Websäit benotzt hues. Du kanns ëmmer en anere wielen."
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Premium-Hiwäiser verstoppen"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Verstoppt Premium-Upgrade-Banneren, -Tipps an -Badges."
+  },
+  "multiwardenAbout": {
+    "message": "Multiwarden ass en inoffizielle Open-Source-Fork vun der Bitwarden-Browserextensioun an ass net mat Bitwarden, Inc. verbonnen."
+  },
+  "multiwardenCombined": {
+    "message": "Kombinéiert"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "All entspaart Konten zesummen"
+  },
+  "multiwardenCurrentView": {
+    "message": "Aktuell Usiicht"
+  },
+  "multiwardenManageAccounts": {
+    "message": "Konte verwalten"
+  },
+  "multiwardenChooseVault": {
+    "message": "A wéi engem Tresor späicheren?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Wiel de Kont, an deem dëst Element gespäichert gëtt."
+  },
+  "multiwardenVault": {
+    "message": "Tresor:"
+  },
+  "multiwardenAboutSection": {
+    "message": "Iwwer Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Versioun"
+  },
+  "multiwardenBasedOn": {
+    "message": "Baséiert op Bitwarden"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "Op GitHub ukucken"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Versiounsnotizen"
+  },
+  "multiwardenReportIssue": {
+    "message": "Problem mellen"
+  },
+  "multiwardenGeneratorFor": {
+    "message": "Generator fir"
+  },
+  "multiwardenSettingsFor": {
+    "message": "Astellunge fir"
+  },
+  "multiwardenPageLoadAccount": {
+    "message": "Autofill beim Lueden benotzt"
+  },
+  "multiwardenPageLoadAccountHint": {
+    "message": "Wéi ee Kont den Autofill beim Lueden vun enger Säit benotze dierf, wann e puer Konten entspaart sinn."
+  },
+  "multiwardenPageLoadRemembered": {
+    "message": "De Kont, deen op der Websäit fir d'lescht benotzt gouf, soss en eendeitegen Treffer"
+  },
+  "multiwardenPageLoadUnique": {
+    "message": "Nëmmen e Login, deen iwwer all Konten eendeiteg ass"
+  },
+  "multiwardenPageLoadActive": {
+    "message": "Nëmmen den aktive Kont"
+  }
+}
