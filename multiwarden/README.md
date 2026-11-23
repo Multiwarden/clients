@@ -72,6 +72,21 @@ fewer. After adding, moving or removing a hook on purpose, run
 Branding is **not** done in upstream files: `multiwarden/scripts/brand-build.mjs` rewrites the
 built extension's name, description, manifest fields and icons after the build.
 
+## Feature parity
+
+Every Multiwarden feature has a spec page in
+[multiwarden/multiwarden](https://github.com/multiwarden/multiwarden/tree/main/spec), shared with
+the other apps, and a feature issue there with one sub-issue per platform. The
+[Multiwarden parity](https://github.com/orgs/Multiwarden/projects/1) board tracks them.
+
+- New work for a feature: open an issue with the **Platform work for a feature** form and add it
+  as a sub-issue of the feature issue.
+- Pull requests for a feature keep the `Feature: <id>` line from the PR template. The release
+  job turns those lines into a "Multiwarden features" section in the release notes, with links
+  to the spec pages.
+- When a release ships a feature, update its row in
+  [spec/parity.md](https://github.com/multiwarden/multiwarden/blob/main/spec/parity.md).
+
 ## Staying in sync with upstream
 
 Multiwarden follows Bitwarden's **released** browser extension (tags `browser-v<version>`), not

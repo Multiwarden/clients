@@ -1,5 +1,11 @@
 ## 🎟️ Tracking
 
+<!-- Multiwarden: for a feature from https://github.com/multiwarden/multiwarden/tree/main/spec/features,
+     keep these lines (one "Feature:" line per feature) so the release notes link to its spec page. -->
+
+Feature: <!-- spec ID, for example save-account-picker; delete the line if none -->
+Closes <!-- this platform's sub-issue, for example #12; delete the line if none -->
+
 <!-- Paste the link to the Jira or GitHub issue or otherwise describe / point to where this change is coming from. -->
 
 ## 📔 Objective
