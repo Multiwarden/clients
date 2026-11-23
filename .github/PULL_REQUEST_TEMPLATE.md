@@ -1,17 +1,23 @@
-## 🎟️ Tracking
+## What this changes
+
+<!-- What does this pull request do, and why? Link the issue it fixes, e.g. "Fixes #12". -->
 
 <!-- Multiwarden: for a feature from https://github.com/multiwarden/multiwarden/tree/main/spec/features,
-     keep these lines (one "Feature:" line per feature) so the release notes link to its spec page. -->
+     keep this line (one per feature) so the release notes link to its spec page. -->
 
 Feature: <!-- spec ID, for example save-account-picker; delete the line if none -->
-Closes <!-- this platform's sub-issue, for example #12; delete the line if none -->
 
-<!-- Paste the link to the Jira or GitHub issue or otherwise describe / point to where this change is coming from. -->
+## How it was tested
 
-## 📔 Objective
+<!-- Browsers and versions, and the steps you followed. -->
 
-<!-- Describe what the purpose of this PR is, for example what bug you're fixing or new feature you're adding. -->
+## Screenshots
 
-## 📸 Screenshots
+<!-- For visible changes. Delete this section if there are none. -->
 
-<!-- Required for any UI changes; delete if not applicable. Use fixed width images for better display. -->
+## Checklist
+
+- [ ] New logic is in Multiwarden-only files; upstream files only have marked `Multiwarden:` hooks
+- [ ] `multiwarden/hooks.json` is updated if hooks were added, moved or removed
+- [ ] Lint and tests pass
+- [ ] No vault data, keys or personal data are logged
