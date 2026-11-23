@@ -11,7 +11,8 @@ import {
 import { BrowserApi } from "../browser/browser-api";
 import { ExtensionInstallType } from "../browser/extension-install-type";
 
-const WELCOME_PAGE_URL = "https://bitwarden.com/browser-start/";
+// Multiwarden: open Multiwarden's own welcome page instead of Bitwarden's browser-start page
+const WELCOME_PAGE_URL = "https://multiwarden.com/welcome/";
 
 const EXTENSION_INSTALLED = new KeyDefinition<boolean>(
   EXTENSION_INITIAL_INSTALL_DISK,
