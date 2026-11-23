@@ -1,0 +1,40 @@
+Multiwarden
+https://multiwarden.com
+
+Multiwarden is a modified version of the Bitwarden client applications
+(https://github.com/bitwarden/clients), Copyright (C) Bitwarden Inc., which are
+licensed under the GNU General Public License v3.0 (see LICENSE_GPL.txt).
+
+Multiwarden's changes are Copyright (C) 2026 Michiel Eijpe and are licensed under
+the same GNU General Public License v3.0.
+
+Modifications
+-------------
+Multiwarden's own code lives in files under multiwarden/ directories and in
+.github/workflows/multiwarden-*.yml. Every place where an upstream Bitwarden file
+was changed is marked with a "Multiwarden:" comment; run
+
+    git grep -n "Multiwarden:"
+
+to list them. multiwarden/upstream-commit records the upstream commit this
+version is based on, and the git history records the date of every change.
+
+Bitwarden License code
+----------------------
+The bitwarden_license/ directory contains code under the Bitwarden License
+Agreement (LICENSE_BITWARDEN.txt), not the GPL. It is kept only so that the
+repository stays close to upstream. Multiwarden is built from the GPL code
+alone: none of its builds or releases include or use bitwarden_license/.
+
+Trademarks
+----------
+Multiwarden is an independent project. It is not affiliated with, endorsed by
+or supported by Bitwarden Inc. "Bitwarden" is a registered trademark of
+Bitwarden Inc., used here only to describe where the code comes from and what
+it is compatible with. No rights in Bitwarden's trademarks, service marks or
+logos are granted; see Bitwarden's trademark guidelines at
+https://github.com/bitwarden/server/blob/main/TRADEMARK_GUIDELINES.md.
+
+Under section 7(e) of the GPL, the license does not grant rights to use the
+Multiwarden name or logo to identify other or modified versions of this
+software.
