@@ -118,7 +118,8 @@ their `main` branch.
 
 - `multiwarden/upstream-commit` holds the last upstream commit Multiwarden includes.
 - `multiwarden/upstream-removed-paths` lists upstream files Multiwarden does not carry
-  (Bitwarden's developer tooling and repository automation). The sync leaves them out.
+  (Bitwarden's developer tooling and repository automation, including all of Bitwarden's GitHub
+  Actions workflows). The sync leaves them out.
 - `.github/workflows/multiwarden-upstream-sync.yml` runs nightly (or on demand from the Actions
   tab, optionally with a specific version). When Bitwarden has released a newer browser
   version, it applies upstream's changes from that commit to the release tag with a 3-way merge,
@@ -195,7 +196,10 @@ To release:
    Firefox Add-ons asks for, with build steps in `AMO-BUILD.md`). It refuses to publish a version
    that already exists.
 4. The Chrome Web Store job uploads `store-chrome-<version>.zip` and submits it for review, once
-   its secrets are set ([store/chrome-web-store.md](store/chrome-web-store.md)).
+   its secrets are set ([store/chrome-web-store.md](store/chrome-web-store.md)). When the store
+   is still reviewing an earlier version, or refuses to submit until something in the listing is
+   fixed, the job ends with a warning instead of failing: fix it in the Developer Dashboard and
+   submit from there (or re-run the job after the review).
 
 Releases after an upstream sync happen automatically (see above).
 
