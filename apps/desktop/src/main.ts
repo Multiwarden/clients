@@ -67,6 +67,7 @@ import { OnePasswordSsoMain } from "./main/tools/import/onepassword-sso.main";
 import { TrayMain } from "./main/tray.main";
 import { UpdaterMain } from "./main/updater.main";
 import { WindowMain } from "./main/window.main";
+import { multiwardenMayHandleBitwardenLinks } from "./multiwarden/main/multiwarden-main";
 import { flagEnabled } from "./platform/flags";
 import { ClipboardMain } from "./platform/main/clipboard.main";
 import { DesktopCredentialStorageListener } from "./platform/main/desktop-credential-storage-listener";
@@ -472,14 +473,18 @@ export class Main {
           this.logService.error("Error while setting up native messaging:", err);
         }
 
-        app.removeAsDefaultProtocolClient("bitwarden");
-        if (process.env.NODE_ENV === "development" && process.platform === "win32") {
+        // Multiwarden: leave bitwarden:// links to Bitwarden when it is installed.
+        if (!multiwardenMayHandleBitwardenLinks()) {
+          this.logService.info("bitwarden:// links stay with Bitwarden's desktop app.");
+        } else if (process.env.NODE_ENV === "development" && process.platform === "win32") {
+          app.removeAsDefaultProtocolClient("bitwarden");
           // Fix development build on Windows requiring a different protocol client
           app.setAsDefaultProtocolClient("bitwarden", process.execPath, [
             process.argv[1],
             path.resolve(process.argv[2]),
           ]);
         } else {
+          app.removeAsDefaultProtocolClient("bitwarden");
           app.setAsDefaultProtocolClient("bitwarden");
         }
 

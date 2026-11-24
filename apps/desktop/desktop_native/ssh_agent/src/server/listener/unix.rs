@@ -14,7 +14,8 @@ const ENV_BITWARDEN_SSH_AUTH_SOCK: &str = "BITWARDEN_SSH_AUTH_SOCK";
 
 const FLATPAK_DATA_DIR: &str = ".var/app/com.bitwarden.desktop/data";
 
-const SOCKFILE_NAME: &str = ".bitwarden-ssh-agent.sock";
+// Multiwarden: its own socket, so it runs next to Bitwarden's SSH agent.
+const SOCKFILE_NAME: &str = ".multiwarden-ssh-agent.sock";
 
 /// Unix domain socket listener for the SSH agent server
 pub(crate) struct UnixListener {
@@ -25,7 +26,7 @@ impl UnixListener {
     /// Creates a new [`UnixListener`], binding to the resolved socket path.
     ///
     /// The socket path is resolved from the `BITWARDEN_SSH_AUTH_SOCK` environment variable if set,
-    /// otherwise it defaults to `$HOME/.bitwarden-ssh-agent.sock`.
+    /// otherwise it defaults to `$HOME/.multiwarden-ssh-agent.sock`.
     /// Any stale socket file at that path is removed before binding.
     /// Permissions are set to `0o600` so only the current user can access the socket.
     ///

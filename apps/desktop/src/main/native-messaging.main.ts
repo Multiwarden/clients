@@ -15,6 +15,12 @@ import {
 } from "@bitwarden/common/platform/ipc";
 import { ipc, windows_registry } from "@bitwarden/desktop-napi";
 
+import {
+  MULTIWARDEN_CHROME_ORIGINS,
+  MULTIWARDEN_FIREFOX_IDS,
+  MULTIWARDEN_NATIVE_HOST,
+  MULTIWARDEN_NATIVE_MANIFEST,
+} from "../multiwarden/main/multiwarden-main";
 import { isDev } from "../utils";
 
 import { isWindowsStore } from "./platform-utils.main";
@@ -171,7 +177,7 @@ export class NativeMessagingMain {
 
   private async generateChromeJson(binaryPath: string) {
     return {
-      name: "com.8bit.bitwarden",
+      name: MULTIWARDEN_NATIVE_HOST,
       description: "Bitwarden desktop <-> browser bridge",
       path: binaryPath,
       type: "stdio",
@@ -181,11 +187,11 @@ export class NativeMessagingMain {
 
   private async generateFirefoxJson(binaryPath: string) {
     return {
-      name: "com.8bit.bitwarden",
+      name: MULTIWARDEN_NATIVE_HOST,
       description: "Bitwarden desktop <-> browser bridge",
       path: binaryPath,
       type: "stdio",
-      allowed_extensions: ["{446900e4-71c2-419f-a6a7-df9c091e268b}"],
+      allowed_extensions: MULTIWARDEN_FIREFOX_IDS,
     };
   }
 
@@ -235,7 +241,7 @@ export class NativeMessagingMain {
             )
           ) {
             const nmhsPath = path.join(browserDirectory, "NativeMessagingHosts");
-            const manifestPath = path.join(nmhsPath, "com.8bit.bitwarden.json");
+            const manifestPath = path.join(nmhsPath, MULTIWARDEN_NATIVE_MANIFEST);
 
             try {
               let manifest: any = await this.generateChromeJson(binaryPath);
@@ -283,12 +289,12 @@ export class NativeMessagingMain {
 
             if (key === "Firefox") {
               await this.writeManifest(
-                path.join(nhmsPath, "com.8bit.bitwarden.json"),
+                path.join(nhmsPath, MULTIWARDEN_NATIVE_MANIFEST),
                 await this.generateFirefoxJson(browserBinaryPath),
               );
             } else {
               await this.writeManifest(
-                path.join(nhmsPath, "com.8bit.bitwarden.json"),
+                path.join(nhmsPath, MULTIWARDEN_NATIVE_MANIFEST),
                 await this.generateChromeJson(browserBinaryPath),
               );
             }
@@ -311,12 +317,12 @@ export class NativeMessagingMain {
 
             if (key === "Firefox") {
               await this.writeManifest(
-                path.join(value, "com.8bit.bitwarden.json"),
+                path.join(value, MULTIWARDEN_NATIVE_MANIFEST),
                 await this.generateFirefoxJson(sandboxedProxyBinaryPath),
               );
             } else if (key === "Chrome" || key === "Chromium" || key === "Microsoft Edge") {
               await this.writeManifest(
-                path.join(value, "com.8bit.bitwarden.json"),
+                path.join(value, MULTIWARDEN_NATIVE_MANIFEST),
                 await this.generateChromeJson(sandboxedProxyBinaryPath),
               );
             } else {
@@ -366,14 +372,14 @@ export class NativeMessagingMain {
     await fs.mkdir(nmhsPath, { recursive: true });
 
     await this.writeManifest(
-      path.join(nmhsPath, "com.8bit.bitwarden.json"),
+      path.join(nmhsPath, MULTIWARDEN_NATIVE_MANIFEST),
       await this.generateChromeJson(binaryPath),
     );
   }
 
   async generateDdgManifests() {
     const manifest = {
-      name: "com.8bit.bitwarden",
+      name: MULTIWARDEN_NATIVE_HOST,
       description: "Bitwarden desktop <-> DuckDuckGo bridge",
       path: this.binaryPath(),
       type: "stdio",
@@ -386,7 +392,7 @@ export class NativeMessagingMain {
     switch (process.platform) {
       case "darwin": {
         /* eslint-disable-next-line no-useless-escape */
-        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.8bit.bitwarden.json`;
+        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/${MULTIWARDEN_NATIVE_MANIFEST}`;
         await this.writeManifest(path, manifest);
         break;
       }
@@ -412,7 +418,7 @@ export class NativeMessagingMain {
         const nmhs = this.getDarwinNMHS();
         for (const [, value] of Object.entries(nmhs)) {
           await this.removeIfExists(
-            path.join(value, "NativeMessagingHosts", "com.8bit.bitwarden.json"),
+            path.join(value, "NativeMessagingHosts", MULTIWARDEN_NATIVE_MANIFEST),
           );
         }
         break;
@@ -421,17 +427,17 @@ export class NativeMessagingMain {
         for (const [key, value] of Object.entries(this.getLinuxNMHS())) {
           if (key === "Firefox") {
             await this.removeIfExists(
-              path.join(value, "native-messaging-hosts", "com.8bit.bitwarden.json"),
+              path.join(value, "native-messaging-hosts", MULTIWARDEN_NATIVE_MANIFEST),
             );
           } else {
             await this.removeIfExists(
-              path.join(value, "NativeMessagingHosts", "com.8bit.bitwarden.json"),
+              path.join(value, "NativeMessagingHosts", MULTIWARDEN_NATIVE_MANIFEST),
             );
           }
         }
 
         for (const [, value] of Object.entries(this.getFlatpakNMHS())) {
-          await this.removeIfExists(path.join(value, "com.8bit.bitwarden.json"));
+          await this.removeIfExists(path.join(value, MULTIWARDEN_NATIVE_MANIFEST));
           await this.removeIfExists(path.join(value, ".bitwarden_desktop_proxy"));
         }
 
@@ -446,7 +452,7 @@ export class NativeMessagingMain {
     switch (process.platform) {
       case "darwin": {
         /* eslint-disable-next-line no-useless-escape */
-        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/com.8bit.bitwarden.json`;
+        const path = `${this.homedir()}/Library/Containers/com.duckduckgo.macos.browser/Data/Library/Application\ Support/NativeMessagingHosts/${MULTIWARDEN_NATIVE_MANIFEST}`;
         await this.removeIfExists(path);
         break;
       }
@@ -470,17 +476,20 @@ export class NativeMessagingMain {
 
   private getWindowsNMHS() {
     return {
-      Firefox: ["HKCU", "SOFTWARE\\Mozilla\\NativeMessagingHosts\\com.8bit.bitwarden"],
-      Chrome: ["HKCU", "SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\com.8bit.bitwarden"],
-      Chromium: ["HKCU", "SOFTWARE\\Chromium\\NativeMessagingHosts\\com.8bit.bitwarden"],
+      Firefox: ["HKCU", `SOFTWARE\\Mozilla\\NativeMessagingHosts\\${MULTIWARDEN_NATIVE_HOST}`],
+      Chrome: [
+        "HKCU",
+        `SOFTWARE\\Google\\Chrome\\NativeMessagingHosts\\${MULTIWARDEN_NATIVE_HOST}`,
+      ],
+      Chromium: ["HKCU", `SOFTWARE\\Chromium\\NativeMessagingHosts\\${MULTIWARDEN_NATIVE_HOST}`],
       "Microsoft Edge": [
         "HKCU",
-        "SOFTWARE\\Microsoft\\Edge\\NativeMessagingHosts\\com.8bit.bitwarden",
+        `SOFTWARE\\Microsoft\\Edge\\NativeMessagingHosts\\${MULTIWARDEN_NATIVE_HOST}`,
       ],
-      Vivaldi: ["HKCU", "SOFTWARE\\Vivaldi\\NativeMessagingHosts\\com.8bit.bitwarden"],
+      Vivaldi: ["HKCU", `SOFTWARE\\Vivaldi\\NativeMessagingHosts\\${MULTIWARDEN_NATIVE_HOST}`],
       Brave: [
         "HKCU",
-        "SOFTWARE\\BraveSoftware\\Brave-Browser\\NativeMessagingHosts\\com.8bit.bitwarden",
+        `SOFTWARE\\BraveSoftware\\Brave-Browser\\NativeMessagingHosts\\${MULTIWARDEN_NATIVE_HOST}`,
       ],
     };
   }
@@ -561,16 +570,8 @@ export class NativeMessagingMain {
   }
 
   private async loadChromeIds(): Promise<string[]> {
-    const ids: Set<string> = new Set([
-      // Chrome extension
-      "chrome-extension://nngceckbapebfimnlniiiahkandclblb/",
-      // Chrome beta extension
-      "chrome-extension://hccnnhgbibccigepcmlgppchkpfdophk/",
-      // Edge extension
-      "chrome-extension://jbkfoedolllekgbhcbcoahefnbanhhlh/",
-      // Opera extension
-      "chrome-extension://ccnckbpmaceehanjmeomladnmlffdjgn/",
-    ]);
+    // Multiwarden: only the Multiwarden extension, never Bitwarden's.
+    const ids: Set<string> = new Set(MULTIWARDEN_CHROME_ORIGINS);
 
     if (!isDev()) {
       return Array.from(ids);

@@ -35,7 +35,8 @@ use zbus::Connection;
 use zbus_polkit::policykit1::{AuthorityProxy, CheckAuthorizationFlags, Subject};
 
 /// Secret Service collection entry name holding the persistently enrolled user keys.
-const KEYRING_SERVICE_NAME: &str = "BitwardenBiometricsV2";
+// Multiwarden: its own keyring entries, so it never replaces or deletes Bitwarden's.
+const KEYRING_SERVICE_NAME: &str = "MultiwardenBiometricsV2";
 
 /// Biometric lock system using Polkit for authentication and secure memory to hold the key on
 /// Linux.

@@ -79,6 +79,7 @@ import { DesktopAutotypeMvpService } from "../../autofill/services/desktop-autot
 import { DesktopAutotypeService } from "../../autofill/services/desktop-autotype.service";
 import { DesktopPremiumUpgradePromptService } from "../../billing/services/desktop-premium-upgrade-prompt.service";
 import { DesktopBiometricsService } from "../../key-management/biometrics/desktop.biometrics.service";
+import { MultiwardenSettingsTabComponent } from "../../multiwarden/multiwarden-settings-tab.component";
 import { DesktopSettingsService } from "../../platform/services/desktop-settings.service";
 import { NativeMessagingManifestService } from "../services/native-messaging-manifest.service";
 
@@ -115,6 +116,8 @@ import { NativeMessagingManifestService } from "../services/native-messaging-man
     PermitCipherDetailsPopoverComponent,
     PremiumBadgeComponent,
     ShowQuickCopyActionsDetailsPopoverComponent,
+    // Multiwarden: the Multiwarden tab.
+    MultiwardenSettingsTabComponent,
   ],
 })
 export class SettingsDialogComponent implements OnInit {

@@ -14,7 +14,8 @@ use super::AutostartConfig;
 /// The snap package name, used as the autostart Exec command under Snap confinement.
 const SNAP_COMMAND: &str = "bitwarden";
 /// The autostart file name we write under both plain Linux and Snap.
-const DESKTOP_FILE_NAME: &str = "bitwarden.desktop";
+// Multiwarden: its own autostart entry, next to Bitwarden's.
+const DESKTOP_FILE_NAME: &str = "multiwarden.desktop";
 
 /// Plain-Linux autostart: write/remove `~/.config/autostart/bitwarden.desktop`.
 pub fn set_autostart_linux(enabled: bool, config: &AutostartConfig) -> Result<()> {
@@ -85,8 +86,8 @@ fn desktop_file_contents(exec: &str) -> String {
     format!(
         "[Desktop Entry]
 Type=Application
-Name=Bitwarden
-Comment=Bitwarden startup script
+Name=Multiwarden
+Comment=Multiwarden startup script
 Exec={exec}
 StartupNotify=false
 Terminal=false
@@ -160,7 +161,7 @@ mod tests {
     #[test]
     fn linux_enable_writes_file_with_exec_and_flag() {
         let dir = TempDir::new();
-        let target = dir.path.join("bitwarden.desktop");
+        let target = dir.path.join(DESKTOP_FILE_NAME);
 
         set_autostart_in_dir(true, &config(), &dir.path).unwrap();
 
@@ -171,7 +172,7 @@ mod tests {
     #[test]
     fn linux_disable_removes_file() {
         let dir = TempDir::new();
-        let target = dir.path.join("bitwarden.desktop");
+        let target = dir.path.join(DESKTOP_FILE_NAME);
 
         set_autostart_in_dir(true, &config(), &dir.path).unwrap();
         assert!(target.exists());
@@ -183,7 +184,7 @@ mod tests {
     #[test]
     fn linux_enable_rejects_relative_exec_path() {
         let dir = TempDir::new();
-        let target = dir.path.join("bitwarden.desktop");
+        let target = dir.path.join(DESKTOP_FILE_NAME);
         let cfg = AutostartConfig {
             exec_path: "bitwarden".to_string(),
             autostart_flag: "--autostart".to_string(),
@@ -211,7 +212,7 @@ mod tests {
         fs::create_dir_all(&autostart_dir).unwrap();
 
         fs::write(autostart_dir.join("com.bitwarden.desktop.desktop"), "stale").unwrap();
-        fs::write(autostart_dir.join("bitwarden.desktop"), "old contents").unwrap();
+        fs::write(autostart_dir.join(DESKTOP_FILE_NAME), "old contents").unwrap();
 
         set_autostart_snap(true, &cfg, &snap.path).unwrap();
 
@@ -219,9 +220,9 @@ mod tests {
             .unwrap()
             .map(|e| e.unwrap().file_name().to_string_lossy().into_owned())
             .collect();
-        assert_eq!(remaining, vec!["bitwarden.desktop".to_string()]);
+        assert_eq!(remaining, vec![DESKTOP_FILE_NAME.to_string()]);
 
-        let contents = fs::read_to_string(autostart_dir.join("bitwarden.desktop")).unwrap();
+        let contents = fs::read_to_string(autostart_dir.join(DESKTOP_FILE_NAME)).unwrap();
         assert!(contents.contains("Exec=bitwarden --autostart"));
         assert!(!contents.contains("old contents"));
     }
@@ -233,7 +234,7 @@ mod tests {
         let autostart_dir = snap.path.join(".config/autostart");
         fs::create_dir_all(&autostart_dir).unwrap();
         fs::write(autostart_dir.join("com.bitwarden.desktop.desktop"), "stale").unwrap();
-        fs::write(autostart_dir.join("bitwarden.desktop"), "old").unwrap();
+        fs::write(autostart_dir.join(DESKTOP_FILE_NAME), "old").unwrap();
 
         set_autostart_snap(false, &cfg, &snap.path).unwrap();
 
@@ -249,7 +250,7 @@ mod tests {
         // No .config/autostart directory exists yet; enabling should create it and place our file.
         set_autostart_snap(true, &cfg, &snap.path).unwrap();
 
-        let target = snap.path.join(".config/autostart/bitwarden.desktop");
+        let target = snap.path.join(".config/autostart").join(DESKTOP_FILE_NAME);
         assert!(target.exists());
         assert!(fs::read_to_string(&target)
             .unwrap()

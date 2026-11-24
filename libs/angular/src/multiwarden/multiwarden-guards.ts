@@ -28,9 +28,6 @@ export const multiwardenCipherOwnerGuard: CanActivateFn = async (route: Activate
 export const multiwardenNewItemTargetGuard: CanActivateFn = async (
   route: ActivatedRouteSnapshot,
 ) => {
-  const combined = inject(MultiwardenCombinedService);
-  const dialogService = inject(DialogService);
-
   // Passkey and clone flows already know their account.
   if (
     route.queryParamMap.has("sessionId") ||
@@ -39,6 +36,18 @@ export const multiwardenNewItemTargetGuard: CanActivateFn = async (
   ) {
     return true;
   }
+  return multiwardenChooseNewItemAccount(inject(MultiwardenCombinedService), inject(DialogService));
+};
+
+/**
+ * Multiwarden: in combined mode, asks which account a new item goes into and makes it active.
+ * Resolves to false when the user cancels; true when there was nothing to ask or an account
+ * was chosen. For clients that open the new-item form without a route (desktop).
+ */
+export async function multiwardenChooseNewItemAccount(
+  combined: MultiwardenCombinedService,
+  dialogService: DialogService,
+): Promise<boolean> {
   if (!(await firstValueFrom(combined.enabled$))) {
     return true;
   }
@@ -60,4 +69,4 @@ export const multiwardenNewItemTargetGuard: CanActivateFn = async (
   }
   await combined.activate(userId);
   return true;
-};
+}

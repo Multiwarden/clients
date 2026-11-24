@@ -1,0 +1,42 @@
+<bit-section>
+  <bit-section-header>
+    <h2 bitTypography="h6">{{ "multiwardenInterfaceSection" | i18n }}</h2>
+  </bit-section-header>
+  <bit-form-control>
+    <input
+      id="multiwarden-settings_checkbox_hide-premium"
+      type="checkbox"
+      bitCheckbox
+      [ngModel]="settings()?.hidePremiumNotices ?? false"
+      (ngModelChange)="setHidePremiumNotices($event)"
+    />
+    <bit-label>{{ "multiwardenHidePremiumNotices" | i18n }}</bit-label>
+    <bit-hint>{{ "multiwardenHidePremiumNoticesHint" | i18n }}</bit-hint>
+  </bit-form-control>
+</bit-section>
+
+<bit-section disableMargin>
+  <bit-section-header>
+    <h2 bitTypography="h6">{{ "multiwardenAboutSection" | i18n }}</h2>
+  </bit-section-header>
+  <p bitTypography="body2" class="tw-text-fg-body-subtle">{{ "multiwardenAboutDesktop" | i18n }}</p>
+  @if (versions(); as versions) {
+    <dl bitTypography="body2" class="tw-grid tw-grid-cols-[auto_1fr] tw-gap-x-4 tw-gap-y-1">
+      <dt class="tw-text-fg-body-subtle">{{ "multiwardenVersion" | i18n }}</dt>
+      <dd class="tw-m-0" data-testid="multiwarden-version">{{ versions.multiwarden }}</dd>
+      <dt class="tw-text-fg-body-subtle">{{ "multiwardenBasedOn" | i18n }}</dt>
+      <dd class="tw-m-0">{{ versions.bitwarden }}</dd>
+    </dl>
+  }
+  <div class="tw-mt-3 tw-flex tw-flex-wrap tw-gap-4">
+    <button type="button" bitLink (click)="open(links.releases)">
+      {{ "multiwardenReleaseNotes" | i18n }}
+    </button>
+    <button type="button" bitLink (click)="open(links.source)">
+      {{ "multiwardenViewOnGithub" | i18n }}
+    </button>
+    <button type="button" bitLink (click)="open(links.issues)">
+      {{ "multiwardenReportIssue" | i18n }}
+    </button>
+  </div>
+</bit-section>

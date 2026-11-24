@@ -34,6 +34,10 @@ import {
 import { filter, map, shareReplay, concatMap, tap } from "rxjs/operators";
 
 import { CollectionService } from "@bitwarden/admin-console/common";
+import {
+  MultiwardenCombinedService,
+  multiwardenChooseNewItemAccount,
+} from "@bitwarden/angular/multiwarden";
 import { SearchPipe } from "@bitwarden/angular/pipes/search.pipe";
 import {
   NoResults,
@@ -95,6 +99,7 @@ import {
 } from "@bitwarden/components";
 import { isGuid } from "@bitwarden/guid";
 import { importQueryParamsForVault } from "@bitwarden/importer-ui";
+import { CipherListView } from "@bitwarden/sdk-internal";
 import {
   AddEditFolderDialogComponent,
   AddEditFolderDialogResult,
@@ -163,6 +168,7 @@ import {
 
 import { DesktopHeaderComponent } from "../../../app/layout/header/desktop-header.component";
 import { ImportDesktopComponent } from "../../../app/tools/import/import-desktop.component";
+import { multiwardenEventItemId } from "../../../multiwarden/multiwarden-vault-events";
 import { AssignCollectionsDesktopComponent } from "../vault/assign-collections";
 
 import { AssignCollectionsDesktopDialogAdapter } from "./bulk-action-dialogs/assign-collections-desktop-dialog.adapter";
@@ -238,6 +244,8 @@ export class VaultComponent<C extends CipherViewLike> implements OnInit, OnDestr
   private searchPipe = inject(SearchPipe);
   private passwordRepromptService = inject(PasswordRepromptService);
   private dialogService = inject(DialogService);
+  // Multiwarden: combined mode (see multiwarden/README.md).
+  private multiwardenCombined = inject(MultiwardenCombinedService);
   private billingAccountProfileStateService = inject(BillingAccountProfileStateService);
   private toastService = inject(ToastService);
   private accountService = inject(AccountService);
@@ -732,7 +740,10 @@ export class VaultComponent<C extends CipherViewLike> implements OnInit, OnDestr
       ),
     );
 
-    const allCollections$ = this.collectionService.decryptedCollections$(activeUserId);
+    // Multiwarden: in combined mode, the collections and ciphers of every unlocked account.
+    const allCollections$ = this.multiwardenCombined.mergeForUsers((userId) =>
+      this.collectionService.decryptedCollections$(userId),
+    );
     const nestedCollections$ = allCollections$.pipe(
       map((collections) => getNestedCollectionTree(collections)),
     );
@@ -754,9 +765,11 @@ export class VaultComponent<C extends CipherViewLike> implements OnInit, OnDestr
         }),
       );
 
-    const _ciphers = vaultListCiphers$(this.cipherService, activeUserId, this.vfo1Foundation$).pipe(
-      filter((c) => c !== null),
-    );
+    const _ciphers = this.multiwardenCombined
+      .mergeForUsers<CipherListView | CipherView>((userId) =>
+        vaultListCiphers$(this.cipherService, userId, this.vfo1Foundation$),
+      )
+      .pipe(filter((c) => c !== null));
 
     /**
      * This observable filters the ciphers based on the active user ID and the restricted item types.
@@ -952,6 +965,8 @@ export class VaultComponent<C extends CipherViewLike> implements OnInit, OnDestr
   }
 
   async onVaultItemsEvent(event: VaultItemEvent<C>) {
+    // Multiwarden: act on the item in its own account.
+    await this.multiwardenCombined.prepareFor(multiwardenEventItemId(event));
     switch (event.type) {
       case "viewCipher":
         await this.viewCipher(event.item);
@@ -996,6 +1011,8 @@ export class VaultComponent<C extends CipherViewLike> implements OnInit, OnDestr
   }
 
   async viewCipher(c: CipherViewLike) {
+    // Multiwarden: open the item from its own account.
+    await this.multiwardenCombined.prepareFor(String(c.id));
     if (CipherViewLikeUtils.decryptionFailure(c)) {
       DecryptionFailureDialogComponent.open(this.dialogService, {
         cipherIds: [c.id as CipherId],
@@ -1077,6 +1094,10 @@ export class VaultComponent<C extends CipherViewLike> implements OnInit, OnDestr
   }
 
   async addCipher(type?: CipherType) {
+    // Multiwarden: in combined mode, ask which account the new item goes into.
+    if (!(await multiwardenChooseNewItemAccount(this.multiwardenCombined, this.dialogService))) {
+      return;
+    }
     const activeFilter = this.activeFilter();
     const cipherType = type ?? activeFilter.cipherType;
 

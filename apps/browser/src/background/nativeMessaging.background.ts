@@ -13,6 +13,7 @@ import {
   SymmetricCryptoKey,
 } from "@bitwarden/legacy-crypto";
 
+import { MULTIWARDEN_NATIVE_HOST } from "../multiwarden/multiwarden-native-host";
 import { BrowserApi } from "../platform/browser/browser-api";
 
 const MessageValidTimeout = 10 * 1000;
@@ -109,7 +110,8 @@ export class NativeMessagingBackground {
     this.appId = appId;
 
     return new Promise<void>((resolve, reject) => {
-      this.port = BrowserApi.connectNative("com.8bit.bitwarden");
+      // Multiwarden: the Multiwarden desktop app's host, not Bitwarden's.
+      this.port = BrowserApi.connectNative(MULTIWARDEN_NATIVE_HOST);
 
       this.connecting = true;
 

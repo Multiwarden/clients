@@ -146,6 +146,8 @@
       (click)="onCellActivate(row, $event)"
     >
       <app-vault-icon slot="start" [cipher]="row" />
+      <!-- Multiwarden: the item's account, in combined mode. -->
+      <app-multiwarden-account-badge [cipherId]="row.id" />
 
       <span class="tw-flex tw-min-w-0 tw-items-center tw-gap-1.5">
         @if (itemAction()) {

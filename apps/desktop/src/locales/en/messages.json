@@ -7869,5 +7869,53 @@
   "secureCheckoutViaStripe": {
     "message": "Secure checkout via Stripe",
     "description": "Shown with the Premium price where checkout opens in the browser"
+  },
+  "multiwardenCombined": {
+    "message": "Combined"
+  },
+  "multiwardenCombinedDesc": {
+    "message": "All unlocked accounts together"
+  },
+  "multiwardenCurrentView": {
+    "message": "Current view"
+  },
+  "multiwardenChooseVault": {
+    "message": "Save to which vault?"
+  },
+  "multiwardenChooseVaultDesc": {
+    "message": "Choose the account this item is saved in."
+  },
+  "multiwardenVault": {
+    "message": "Vault:"
+  },
+  "multiwardenInterfaceSection": {
+    "message": "Interface"
+  },
+  "multiwardenHidePremiumNotices": {
+    "message": "Hide Premium notices"
+  },
+  "multiwardenHidePremiumNoticesHint": {
+    "message": "Hides Premium upgrade banners, spotlights and badges."
+  },
+  "multiwardenAboutSection": {
+    "message": "About Multiwarden"
+  },
+  "multiwardenVersion": {
+    "message": "Version"
+  },
+  "multiwardenBasedOn": {
+    "message": "Based on Bitwarden"
+  },
+  "multiwardenReleaseNotes": {
+    "message": "Release notes"
+  },
+  "multiwardenViewOnGithub": {
+    "message": "View on GitHub"
+  },
+  "multiwardenReportIssue": {
+    "message": "Report an issue"
+  },
+  "multiwardenAboutDesktop": {
+    "message": "Multiwarden is an unofficial, open-source fork of the Bitwarden desktop app. It is not affiliated with Bitwarden, Inc."
   }
 }

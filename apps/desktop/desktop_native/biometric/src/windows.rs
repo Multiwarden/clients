@@ -68,8 +68,9 @@ use self::encryption::{
 use super::windows_focus::{focus_security_prompt, restore_focus};
 
 const AUTHENTICATE_AVAILABLE_CACHE_TTL: Duration = Duration::from_secs(30);
-const KEYCHAIN_SERVICE_NAME: &str = "BitwardenBiometricsV2";
-const CREDENTIAL_NAME: &HSTRING = h!("BitwardenBiometricsV2");
+// Multiwarden: its own credential entries, so it never replaces or deletes Bitwarden's.
+const KEYCHAIN_SERVICE_NAME: &str = "MultiwardenBiometricsV2";
+const CREDENTIAL_NAME: &HSTRING = h!("MultiwardenBiometricsV2");
 
 /// The Windows OS implementation of the biometric trait.
 pub struct BiometricLockSystem {

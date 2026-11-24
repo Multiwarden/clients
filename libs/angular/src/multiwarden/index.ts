@@ -5,3 +5,4 @@ export * from "./multiwarden-vault-banner.component";
 export * from "./multiwarden-choose-account-dialog.component";
 export * from "./multiwarden-guards";
 export * from "./multiwarden-account-chip.component";
+export * from "./multiwarden-premium-notices";
