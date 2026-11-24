@@ -311,7 +311,7 @@ jobs:
           gh release create "$tag" dist/* \
             --repo "${GITHUB_REPOSITORY}" \
             --target "${GITHUB_SHA}" \
-            --title "Multiwarden ${version}" --generate-notes
+            --title "Multiwarden for Browsers ${version}" --generate-notes
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
   chrome-web-store:

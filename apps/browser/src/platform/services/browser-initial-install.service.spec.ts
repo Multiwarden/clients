@@ -52,7 +52,8 @@ describe("BrowserInitialInstallService", () => {
       await service.displayWelcomePage();
 
       expect(createNewTabSpy).toHaveBeenCalledTimes(1);
-      expect(createNewTabSpy).toHaveBeenCalledWith("https://bitwarden.com/browser-start/");
+      // Multiwarden: the welcome page is on multiwarden.com
+      expect(createNewTabSpy).toHaveBeenCalledWith("https://multiwarden.com/welcome/");
     });
 
     it.each([

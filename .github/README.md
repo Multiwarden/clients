@@ -122,9 +122,16 @@ Build steps, the file map and the sync process are in the
 | [multiwarden/android](https://github.com/multiwarden/android)         | The Android app                                         |
 | [multiwarden/multiwarden](https://github.com/multiwarden/multiwarden) | The website, logos and store screenshots                |
 
+## Contributing and security
+
+Bug reports and pull requests are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Please report
+security problems privately, as described in the [security policy](SECURITY.md).
+
 ## License and trademarks
 
-Multiwarden is licensed under the GNU GPL v3, like the upstream code it is based on.
+Multiwarden is licensed under the GNU GPL v3, like the upstream code it is based on. See
+[NOTICE](../NOTICE) for attribution and for the Bitwarden-licensed code that Multiwarden does not
+use.
 
 Multiwarden is **not affiliated with, endorsed by, or supported by Bitwarden, Inc.** "Bitwarden"
 is a registered trademark of Bitwarden Inc., used here only to describe compatibility. Please

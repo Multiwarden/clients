@@ -1,10 +1,16 @@
 # Bitwarden files that Multiwarden does not carry: Bitwarden's own developer tooling and
 # repository automation (code owners, review and response bots). The upstream sync leaves
-# changes to these paths out, so they stay removed. `*` also matches across folders.
-.claude
-*CLAUDE.md
+# changes to these paths out, so they stay removed. `*` also matches across folders, and
+# `[x]` matches the letter x (used for the AI assistant configuration folder and files).
+.[c]laude/*
+*[C]LAUDE.md
 .mcp.json
 .github/CODEOWNERS
 .github/workflows/respond.yml
 .github/workflows/review-code.yml
 .github/workflows/sdlc-sdk-update-evaluate.yml
+# Multiwarden's own community files replace Bitwarden's (issue and pull request templates,
+# discussion categories).
+.github/ISSUE_TEMPLATE
+.github/DISCUSSION_TEMPLATE
+.github/PULL_REQUEST_TEMPLATE.md

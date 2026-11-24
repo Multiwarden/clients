@@ -91,6 +91,14 @@
     "markers": 1,
     "references": 3
   },
+  "apps/browser/src/platform/services/browser-initial-install.service.spec.ts": {
+    "markers": 1,
+    "references": 3
+  },
+  "apps/browser/src/platform/services/browser-initial-install.service.ts": {
+    "markers": 1,
+    "references": 3
+  },
   "apps/browser/src/popup/app-routing.module.ts": {
     "markers": 1,
     "references": 19
