@@ -1,5 +1,6 @@
 @if (showPremiumCallout()) {
-  <div class="tw-mx-8">
+  <!-- Multiwarden: data-multiwarden-premium hides this with "Hide Premium notices". -->
+  <div class="tw-mx-8" data-multiwarden-premium>
     <bit-callout type="subtle" [title]="'premiumSubscriptionEnded' | i18n">
       <div>{{ "premiumSubscriptionEndedDesc" | i18n }}</div>
       <a bitLink href="#" appStopClick (click)="navigateToGetPremium()">

@@ -7,9 +7,11 @@
   (mainContentClicked)="selectArchive()"
 >
   @if (showArchivePremiumBadge()) {
+    <!-- Multiwarden: data-multiwarden-premium hides this with "Hide Premium notices". -->
     <button
       type="button"
       slot="end"
+      data-multiwarden-premium
       bit-chip-action
       startIcon="bwi-diamond"
       [label]="'upgrade' | i18n"
