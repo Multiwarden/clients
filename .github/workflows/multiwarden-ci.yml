@@ -313,7 +313,7 @@ jobs:
           gh release create "$tag" dist/* \
             --repo "${GITHUB_REPOSITORY}" \
             --target "${GITHUB_SHA}" \
-            --title "Multiwarden for Browsers ${version}" --generate-notes
+            --title "Multiwarden ${version}" --generate-notes
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
       - name: Link spec pages in the release notes
@@ -384,10 +384,30 @@ jobs:
           echo "::add-mask::$token"
           auth="Authorization: Bearer $token"
 
+          # Refusals that need the Developer Dashboard rather than a code change: the store is
+          # still reviewing an earlier version (NOT_UPDATEABLE), or the listing needs attention
+          # before it can be submitted (INVALID_ITEM_METADATA). They end the job with a warning, so
+          # a release doesn't show as failed; the version can be submitted from the dashboard.
+          store_side() {
+            local reason
+            reason="$(jq -r '.error.details[]? | select(.reason) | .reason' "$1" | head -n1)"
+            case "$reason" in
+              NOT_UPDATEABLE)
+                echo "::warning::The Chrome Web Store is still reviewing an earlier version, so $2 was not uploaded. Re-run this job after the review ends."
+                return 0 ;;
+              INVALID_ITEM_METADATA)
+                echo "::warning::$2 is uploaded to the Chrome Web Store as a draft, but the store refused to submit it: the listing needs attention in the Developer Dashboard. Submit it for review from there."
+                return 0 ;;
+            esac
+            return 1
+          }
+
           zip="$(ls dist/store-chrome-*.zip)"
+          version="${{ needs.release.outputs.version }}"
           echo "Uploading $zip"
           curl -sS -H "$auth" -X POST -T "$zip" "$api/upload/v2/$item:upload" | tee /tmp/upload.json
           echo
+          if store_side /tmp/upload.json "$version"; then exit 0; fi
           state="$(jq -r '.uploadState // empty' /tmp/upload.json)"
           for attempt in $(seq 1 30); do
             [ "$state" = "IN_PROGRESS" ] || break
@@ -405,10 +425,11 @@ jobs:
             "$api/v2/$item:publish" | tee /tmp/publish.json
           echo
           if jq -e '.error' /tmp/publish.json > /dev/null; then
+            if store_side /tmp/publish.json "$version"; then exit 0; fi
             echo "::error::Chrome Web Store did not accept the submission"
             exit 1
           fi
-          echo "::notice::Multiwarden ${{ needs.release.outputs.version }} is submitted for Chrome Web Store review."
+          echo "::notice::Multiwarden $version is submitted for Chrome Web Store review."
 
   merge-sync:
     name: Merge sync

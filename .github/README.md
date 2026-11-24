@@ -15,6 +15,7 @@
 
 <p align="center">
   <a href="https://multiwarden.com">Website</a> ·
+  <a href="https://chromewebstore.google.com/detail/multiwarden-multi-account/cdigmfigoadangkckfadcmhabplleakc">Chrome Web Store</a> ·
   <a href="https://github.com/multiwarden/clients/releases">Releases</a> ·
   <a href="../multiwarden/README.md">Maintainer notes</a>
 </p>
@@ -76,13 +77,20 @@ the Multiwarden settings tab, and installs next to Bitwarden's desktop app.
 It is a separate app with its own data, so Bitwarden's desktop app can stay installed. It does
 not update itself; new versions are on the releases page.
 
+Its version number follows Bitwarden's desktop app (for example `2026.11.1.4` in a release
+tagged `v2026.11.0.4`), because Bitwarden's servers turn some features on by app version. The last
+number is the same Multiwarden release number as the extension's.
+
 ## Install
 
-Download the package for your browser from the
+**Chrome, Brave, Vivaldi and other Chromium browsers**: install Multiwarden from the
+[Chrome Web Store](https://chromewebstore.google.com/detail/multiwarden-multi-account/cdigmfigoadangkckfadcmhabplleakc). It updates itself from there.
+
+For the other browsers, download the package for your browser from the
 [latest release](https://github.com/multiwarden/clients/releases/latest) and unzip it. Disable the
 official Bitwarden extension first.
 
-**Chromium browsers**
+**Chromium browsers (without the store)**
 
 1. Open the extensions page (`chrome://extensions`, `edge://extensions`, `opera://extensions`, …).
 2. Turn on **Developer mode**, choose **Load unpacked** and select the unzipped folder.
