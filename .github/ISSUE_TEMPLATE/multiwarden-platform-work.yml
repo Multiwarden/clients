@@ -1,0 +1,32 @@
+name: Platform work for a feature
+description: This platform's part of a Multiwarden feature. Add it as a sub-issue of the feature issue.
+title: "<feature-id>: "
+labels: ["platform"]
+body:
+  - type: input
+    id: feature-issue
+    attributes:
+      label: Feature issue
+      description: The feature issue in multiwarden/multiwarden, for example multiwarden/multiwarden#12.
+    validations:
+      required: true
+  - type: input
+    id: feature-id
+    attributes:
+      label: Feature ID
+      placeholder: save-account-picker
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: How this platform does it
+      description: Where it hooks in, and any rule from the spec this platform can't follow (change the spec for those).
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      value: |
+        - [ ] Every rule on the spec page works, or the spec has a platform note
+        - [ ] Pull request description has `Feature: <id>`
+        - [ ] Parity table updated
