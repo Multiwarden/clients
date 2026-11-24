@@ -2,7 +2,10 @@
 ("multi" bold, "warden" light) set in Open Sans (SIL Open Font License), as plain paths.
 
 Run: python3 multiwarden/branding/generate-logo.py <OpenSans variable font .ttf>
-Writes libs/assets/src/svg/svgs/multiwarden/multiwarden-logo.icon.ts
+Writes libs/assets/src/svg/svgs/multiwarden/multiwarden-logo.icon.ts with three logos:
+- MultiwardenLogo: mark and wordmark in the marketing colour (headers, sign-in pages);
+- MultiwardenSideNavLogo: the same in the side navigation's text colour (desktop side nav);
+- MultiwardenShield: the mark alone, for the collapsed side navigation.
 """
 import sys
 from pathlib import Path
@@ -84,12 +87,23 @@ def main():
     warden, x = text_path(light, "warden", x + 0.5, baseline, size)
     width = round(x + 1)
 
-    svg = (
-        f'<svg viewBox="0 0 {width} {int(HEIGHT)}" xmlns="http://www.w3.org/2000/svg">\n'
+    front_path = poly_to_path(front)
+
+    def logo(fill):
+        return (
+            f'<svg viewBox="0 0 {width} {int(HEIGHT)}" xmlns="http://www.w3.org/2000/svg">\n'
+            "    <title>Multiwarden</title>\n"
+            f'    <path class="{fill}" fill-rule="evenodd" d="{front_path}"/>\n'
+            f'    <path class="{fill}" d="{multi}"/>\n'
+            f'    <path class="{fill}" d="{warden}"/>\n'
+            "  </svg>"
+        )
+
+    svg = logo("tw-fill-marketing-logo")
+    shield = (
+        f'<svg viewBox="0 0 {int(icon)} {int(icon)}" xmlns="http://www.w3.org/2000/svg">\n'
         "    <title>Multiwarden</title>\n"
-        f'    <path class="tw-fill-marketing-logo" fill-rule="evenodd" d="{poly_to_path(front)}"/>\n'
-        f'    <path class="tw-fill-marketing-logo" d="{multi}"/>\n'
-        f'    <path class="tw-fill-marketing-logo" d="{warden}"/>\n'
+        f'    <path class="tw-fill-fg-nav" fill-rule="evenodd" d="{poly_to_path(mark(icon))}"/>\n'
         "  </svg>"
     )
     OUT.write_text(
@@ -99,9 +113,12 @@ def main():
         " * multiwarden/branding/generate-logo.py (Open Sans, SIL Open Font License); edit the script, not\n"
         " * this file.\n"
         " */\n"
-        f"export const MultiwardenLogo = svg`\n  {svg}\n`;\n"
+        f"export const MultiwardenLogo = svg`\n  {svg}\n`;\n\n"
+        "/** The logo in the side navigation's text colour (desktop side nav, open). */\n"
+        f"export const MultiwardenSideNavLogo = svg`\n  {logo('tw-fill-fg-nav')}\n`;\n\n"
+        "/** The mark alone, for the collapsed side navigation. */\n"
+        f"export const MultiwardenShield = svg`\n  {shield}\n`;\n"
     )
-    Path("/tmp/logo/mw-logo.svg").write_text(svg.replace('class="tw-fill-marketing-logo"', 'fill="#fff"'))
     print("wrote", OUT, "width", width)
 
 

@@ -3,7 +3,7 @@ import { toSignal } from "@angular/core/rxjs-interop";
 import { Router, RouterModule } from "@angular/router";
 import { map } from "rxjs";
 
-import { PasswordManagerLogo } from "@bitwarden/assets/svg";
+import { MultiwardenSideNavLogo } from "@bitwarden/assets/svg";
 import { DeviceType } from "@bitwarden/common/enums";
 import { FeatureFlag } from "@bitwarden/common/enums/feature-flag.enum";
 import { ConfigService } from "@bitwarden/common/platform/abstractions/config/config.service";
@@ -45,7 +45,8 @@ export class DesktopLayoutComponent {
   private platformUtilsService = inject(PlatformUtilsService);
   private router = inject(Router);
 
-  protected readonly logo = PasswordManagerLogo;
+  // Multiwarden: own logo (upstream: PasswordManagerLogo).
+  protected readonly logo = MultiwardenSideNavLogo;
 
   protected readonly sendEnabled = toSignal(
     this.sendPolicyService.disableSend$.pipe(map((disableSend) => !disableSend)),
