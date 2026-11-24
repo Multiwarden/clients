@@ -77,6 +77,10 @@ the Multiwarden settings tab, and installs next to Bitwarden's desktop app.
 It is a separate app with its own data, so Bitwarden's desktop app can stay installed. It does
 not update itself; new versions are on the releases page.
 
+Its version number follows Bitwarden's desktop app (for example `2026.11.1.4` in a release
+tagged `v2026.11.0.4`), because Bitwarden's servers turn some features on by app version. The last
+number is the same Multiwarden release number as the extension's.
+
 ## Install
 
 **Chrome, Brave, Vivaldi and other Chromium browsers**: install Multiwarden from the
