@@ -6,14 +6,7 @@ import { app } from "electron";
  * list of what to carry over.
  */
 
-/** GitHub releases of Multiwarden; "Check for updates" opens it. */
-export const MULTIWARDEN_RELEASES_URL = "https://github.com/multiwarden/clients/releases";
-
-/**
- * Multiwarden does not update itself: Bitwarden's update feed would replace it with Bitwarden.
- * "Check for updates" opens the releases page instead.
- */
-export const MULTIWARDEN_AUTO_UPDATE = false;
+// Updates: see multiwarden-updates.ts.
 
 /**
  * Bitwarden's web pages send some sign-in steps back through `bitwarden://` links (Duo, SSO

@@ -18,8 +18,8 @@
  * 2. build/index.html, menu strings in build/locales: "Multiwarden" instead of "Bitwarden".
  * 3. build/images: Multiwarden's app and tray icons (multiwarden/branding/desktop).
  * 4. multiwarden/.build/electron-builder.json: own app ID, name, icons and artifact names; unsigned;
- *    no Bitwarden update feed, App Group, provisioning profiles, store targets or Windows
- *    passkey plugin.
+ *    Multiwarden's update feed instead of Bitwarden's; no App Group, provisioning profiles, store
+ *    targets or Windows passkey plugin.
  * 5. build/multiwarden.json: version information, like the extension.
  */
 import {
@@ -113,8 +113,13 @@ config.productName = NAME;
 config.appId = APP_ID;
 config.copyright = "Copyright © 2015-2026 Bitwarden Inc. and Multiwarden contributors";
 config.buildVersion = version;
-// No update feed: Bitwarden's would replace Multiwarden with Bitwarden (see multiwarden-main.ts).
-config.publish = null;
+// Multiwarden's own update feed, never Bitwarden's (which would replace Multiwarden with Bitwarden).
+// electron-builder writes the update files (latest*.yml) next to the packages; CI then puts the
+// Multiwarden version in them (desktop-update-info.mjs) and attaches them to the release.
+config.publish = {
+  provider: "generic",
+  url: "https://github.com/multiwarden/clients/releases/latest/download",
+};
 config.generateUpdatesFilesForAllChannels = false;
 // Our afterPack runs Bitwarden's for Windows and Linux and handles unsigned macOS builds.
 config.afterPack = "../../multiwarden/scripts/desktop-after-pack.cjs";

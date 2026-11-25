@@ -3,17 +3,21 @@ import log from "electron-log";
 import { autoUpdater, UpdateDownloadedEvent, VerifyUpdateSupport } from "electron-updater";
 
 import { I18nService } from "@bitwarden/common/platform/abstractions/i18n.service";
-import { UrlType } from "@bitwarden/common/platform/misc/safe-urls";
 import { LogService } from "@bitwarden/logging";
 
 import {
-  MULTIWARDEN_AUTO_UPDATE,
-  MULTIWARDEN_RELEASES_URL,
-} from "../multiwarden/main/multiwarden-main";
+  MultiwardenUpdateNotifier,
+  multiwardenUseOwnUpdateFeed,
+} from "../multiwarden/main/multiwarden-updates";
 import { SafeShell } from "../platform/main/safe-shell.main";
 import { isDev } from "../utils";
 
-import { isMacAppStore, isWindowsPortable, isWindowsStore } from "./platform-utils.main";
+import {
+  isAppImage,
+  isMacAppStore,
+  isWindowsPortable,
+  isWindowsStore,
+} from "./platform-utils.main";
 import { WindowMain } from "./window.main";
 
 const UpdaterCheckInitialDelay = 5 * 1000; // 5 seconds
@@ -38,6 +42,9 @@ export class UpdaterMain {
   // interact with the notification in a reasonable time, we will prompt them again.
   private initialUpdateNotificationTime: number | null = null;
 
+  // Multiwarden: announces new releases where the app cannot update itself.
+  private readonly multiwardenNotifier: MultiwardenUpdateNotifier;
+
   constructor(
     private i18nService: I18nService,
     private logService: LogService,
@@ -57,8 +64,18 @@ export class UpdaterMain {
     const macCanUpdate = process.platform === "darwin" && !isMacAppStore();
     this.canUpdate =
       !this.userDisabledUpdates() && (linuxCanUpdate || windowsCanUpdate || macCanUpdate);
-    // Multiwarden: no self-update from Bitwarden's feed (see multiwarden-main.ts).
-    this.canUpdate &&= MULTIWARDEN_AUTO_UPDATE;
+    // Multiwarden: Multiwarden's own releases. The Windows installer and the AppImage update
+    // themselves; macOS (unsigned), .deb and portable builds are told (multiwarden-updates.ts).
+    this.canUpdate = !this.userDisabledUpdates() && (windowsCanUpdate || isAppImage());
+    if (this.canUpdate) {
+      multiwardenUseOwnUpdateFeed(autoUpdater);
+    }
+    this.multiwardenNotifier = new MultiwardenUpdateNotifier(
+      i18nService,
+      logService,
+      shell,
+      () => this.windowMain.win,
+    );
   }
 
   async init() {
@@ -146,12 +163,9 @@ export class UpdaterMain {
     }
 
     if (!this.canUpdate) {
-      if (withFeedback) {
-        void this.shell.openExternal(
-          // Multiwarden: its own releases.
-          MULTIWARDEN_RELEASES_URL,
-          UrlType.WebUrl,
-        );
+      // Multiwarden: say when a new release is out and open the downloads page.
+      if (withFeedback || !this.userDisabledUpdates()) {
+        await this.multiwardenNotifier.check(withFeedback);
       }
 
       return;

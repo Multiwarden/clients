@@ -228,8 +228,8 @@
     "references": 31
   },
   "apps/desktop/src/main/updater.main.ts": {
-    "markers": 2,
-    "references": 9
+    "markers": 3,
+    "references": 15
   },
   "apps/desktop/src/vault/app/vault-v3/vault-items/vault-cipher-row.component.html": {
     "markers": 1,
