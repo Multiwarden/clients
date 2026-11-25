@@ -1,6 +1,7 @@
 import { Injectable, inject } from "@angular/core";
 import { firstValueFrom, lastValueFrom } from "rxjs";
 
+import { MultiwardenCombinedService } from "@bitwarden/angular/multiwarden";
 import { AccountService } from "@bitwarden/common/auth/abstractions/account.service";
 import { getUserId } from "@bitwarden/common/auth/services/account.service";
 import { I18nService } from "@bitwarden/common/platform/abstractions/i18n.service";
@@ -32,9 +33,13 @@ export class MyFolderActionsService {
   private readonly i18nService = inject(I18nService);
   private readonly logService = inject(LogService);
   private readonly toastService = inject(ToastService);
+  // Multiwarden: combined mode (see multiwarden/README.md).
+  private readonly multiwardenCombined = inject(MultiwardenCombinedService);
 
   /** Opens the edit dialog for a folder. Does nothing for a folder the user does not hold. */
   async edit(folderId: string): Promise<void> {
+    // Multiwarden: edit the folder in its own account.
+    await this.multiwardenCombined.prepareFor(folderId);
     const userId = await firstValueFrom(this.accountService.activeAccount$.pipe(getUserId));
     const folder = await firstValueFrom(this.folderService.getDecrypted$(folderId, userId));
 
@@ -71,6 +76,20 @@ export class MyFolderActionsService {
    * Resolves to whether they were deleted, after showing an error toast when they were not.
    */
   async deleteFolders(ids: string[], successMessageKey: string): Promise<boolean> {
+    // Multiwarden: in combined mode, delete each folder from its own account.
+    const deleted = await this.multiwardenCombined.forEachOwner(ids, (group) =>
+      this.deleteFoldersOfActiveAccount(group),
+    );
+    if (deleted) {
+      this.toastService.showToast({
+        variant: "success",
+        message: this.i18nService.t(successMessageKey),
+      });
+    }
+    return deleted;
+  }
+
+  private async deleteFoldersOfActiveAccount(ids: string[]): Promise<boolean> {
     const userId = await firstValueFrom(this.accountService.activeAccount$.pipe(getUserId));
 
     try {
@@ -88,10 +107,6 @@ export class MyFolderActionsService {
       return false;
     }
 
-    this.toastService.showToast({
-      variant: "success",
-      message: this.i18nService.t(successMessageKey),
-    });
     return true;
   }
 }

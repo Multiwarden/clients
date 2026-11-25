@@ -17,10 +17,15 @@ import { toSignal } from "@angular/core/rxjs-interop";
 import { Router, RouterLink } from "@angular/router";
 import { combineLatest, lastValueFrom, map, switchMap } from "rxjs";
 
+import {
+  MultiwardenCombinedService,
+  multiwardenChooseNewItemAccount,
+} from "@bitwarden/angular/multiwarden";
 import { AccountService } from "@bitwarden/common/auth/abstractions/account.service";
 import { getUserId } from "@bitwarden/common/auth/services/account.service";
 import { CipherService } from "@bitwarden/common/vault/abstractions/cipher.service";
 import { FolderService } from "@bitwarden/common/vault/abstractions/folder/folder.service.abstraction";
+import { CipherViewLike } from "@bitwarden/common/vault/utils/cipher-view-like-utils";
 import { filterOutNullish } from "@bitwarden/common/vault/utils/observable-utilities";
 import {
   BitCellComponent,
@@ -110,6 +115,8 @@ export class MyFoldersComponent {
   private readonly viewContainerRef = inject(ViewContainerRef);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
+  // Multiwarden: combined mode (see multiwarden/README.md).
+  private readonly multiwardenCombined = inject(MultiwardenCombinedService);
 
   private readonly bulkBarTemplate = viewChild.required<TemplateRef<unknown>>("bulkBar");
 
@@ -120,8 +127,11 @@ export class MyFoldersComponent {
       getUserId,
       switchMap((userId) =>
         combineLatest([
-          this.folderService.folderViews$(userId),
-          this.cipherService.cipherListViewsIncludingRestricted$(userId).pipe(filterOutNullish()),
+          // Multiwarden: in combined mode, the folders and items of every unlocked account.
+          this.multiwardenCombined.folders$(userId, (id) => this.folderService.folderViews$(id)),
+          this.multiwardenCombined.mergeForUsers<CipherViewLike>((id) =>
+            this.cipherService.cipherListViewsIncludingRestricted$(id).pipe(filterOutNullish()),
+          ),
         ]),
       ),
       map(([folders, ciphers]) => buildFolderRows(folders, ciphers)),
@@ -214,6 +224,10 @@ export class MyFoldersComponent {
   }
 
   protected async addFolder(): Promise<void> {
+    // Multiwarden: in combined mode, ask which account the new folder goes into.
+    if (!(await multiwardenChooseNewItemAccount(this.multiwardenCombined, this.dialogService))) {
+      return;
+    }
     await lastValueFrom(AddEditFolderDialogComponent.open(this.dialogService).closed);
   }
 

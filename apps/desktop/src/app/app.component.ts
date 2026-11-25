@@ -1,6 +1,6 @@
 // FIXME: Update this file to be type safe and remove this and next line
 // @ts-strict-ignore
-import { Component, DestroyRef, NgZone, OnDestroy, OnInit } from "@angular/core";
+import { Component, DestroyRef, NgZone, OnDestroy, OnInit, inject } from "@angular/core";
 import { takeUntilDestroyed, toSignal } from "@angular/core/rxjs-interop";
 import { Router } from "@angular/router";
 import { filter, firstValueFrom, lastValueFrom, map, Subject, takeUntil, timeout } from "rxjs";
@@ -9,6 +9,10 @@ import { AccountDeletionDialogService } from "@bitwarden/angular/auth/account-de
 import { FingerprintDialogComponent } from "@bitwarden/angular/auth/fingerprint-dialog";
 import { LoginApprovalDialogComponent } from "@bitwarden/angular/auth/login-approval";
 import { DeviceTrustToastService } from "@bitwarden/angular/auth/services/device-trust-toast.service.abstraction";
+import {
+  MultiwardenCombinedService,
+  multiwardenChooseNewItemAccount,
+} from "@bitwarden/angular/multiwarden";
 import { DocumentLangSetter } from "@bitwarden/angular/platform/i18n";
 import { ModalService } from "@bitwarden/angular/services/modal.service";
 import {
@@ -99,6 +103,8 @@ export class AppComponent implements OnInit, OnDestroy {
   private isIdle = false;
   private activeUserId: UserId = null;
   private activeSimpleDialog: DialogRef<boolean> = null;
+  // Multiwarden: combined mode (asks which account a new folder goes into).
+  private readonly multiwardenCombined = inject(MultiwardenCombinedService);
   private processingPendingAuthRequests = false;
   private shouldRerunAuthRequestProcessing = false;
 
@@ -569,6 +575,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   async addFolder() {
     this.modalService.closeAll();
+
+    // Multiwarden: in combined mode, ask which account the new folder goes into.
+    if (!(await multiwardenChooseNewItemAccount(this.multiwardenCombined, this.dialogService))) {
+      return;
+    }
 
     const dialogRef = AddEditFolderDialogComponent.open(this.dialogService);
     const result = await lastValueFrom(dialogRef.closed);

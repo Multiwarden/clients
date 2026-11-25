@@ -307,7 +307,10 @@ export class VaultComponent<C extends CipherViewLike> implements OnInit, OnDestr
     this.accountService.activeAccount$.pipe(
       map((a) => a?.id),
       filterOutNullish(),
-      switchMap((userId) => this.folderService.folderViews$(userId)),
+      // Multiwarden: in combined mode, the folders of every unlocked account.
+      switchMap((userId) =>
+        this.multiwardenCombined.folders$(userId, (id) => this.folderService.folderViews$(id)),
+      ),
       // Filter out "No folder" option, the table provides it by default.
       map((folders) => folders.filter((f) => f.id)),
     ),
@@ -1225,6 +1228,10 @@ export class VaultComponent<C extends CipherViewLike> implements OnInit, OnDestr
 
   async addFolder() {
     if (await this.configService.getFeatureFlag(FeatureFlag.PM32009NewItemTypes)) {
+      // Multiwarden: in combined mode, ask which account the new folder goes into.
+      if (!(await multiwardenChooseNewItemAccount(this.multiwardenCombined, this.dialogService))) {
+        return;
+      }
       const folderRef = AddEditFolderDialogComponent.open(this.dialogService);
       const folderResult = await firstValueFrom(folderRef.closed);
       if (folderResult === AddEditFolderDialogResult.Created) {

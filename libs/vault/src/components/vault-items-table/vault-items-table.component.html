@@ -146,8 +146,6 @@
       (click)="onCellActivate(row, $event)"
     >
       <app-vault-icon slot="start" [cipher]="row" />
-      <!-- Multiwarden: the item's account, in combined mode. -->
-      <app-multiwarden-account-badge [cipherId]="row.id" />
 
       <span class="tw-flex tw-min-w-0 tw-items-center tw-gap-1.5">
         @if (itemAction()) {
@@ -162,6 +160,11 @@
         } @else {
           <span class="tw-truncate">{{ row.name }}</span>
         }
+        <!--
+          Multiwarden: the item's account, in combined mode. Inside the name line, like the
+          extension, so it doesn't take a line of its own above the name.
+        -->
+        <app-multiwarden-account-badge [cipherId]="row.id" />
         @if (row.organizationId) {
           <bit-icon
             name="bwi-business"

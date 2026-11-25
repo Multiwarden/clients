@@ -195,6 +195,87 @@ export class MultiwardenCombinedService {
     );
   }
 
+  /**
+   * Folders for the vault. In combined mode: the folders of every unlocked account, each named
+   * "account · folder" (the prefix keeps equally named folders apart and nested folders grouped
+   * per account), with one "no folder" entry (no id) kept for all accounts at the end. Each
+   * folder's account is remembered, so {@link prepareFor} works with folder ids too.
+   * Otherwise: `load(activeUserId)`, unchanged.
+   */
+  folders$<T extends { id?: unknown; name: string }>(
+    activeUserId: UserId,
+    load: (userId: UserId) => Observable<T[]>,
+  ): Observable<T[]> {
+    return this.enabled$.pipe(
+      switchMap((enabled) => {
+        if (!enabled) {
+          return load(activeUserId);
+        }
+        return this.userIds$.pipe(
+          switchMap((userIds) =>
+            userIds.length === 0
+              ? of<T[]>([])
+              : combineLatest([
+                  this.accounts$,
+                  combineLatest(userIds.map((userId) => load(userId))),
+                ]).pipe(
+                  map(([accounts, perAccount]) => {
+                    const merged: T[] = [];
+                    let noFolder: T | undefined;
+                    perAccount.forEach((folders, index) => {
+                      const userId = userIds[index];
+                      const label = folderLabel(accounts.find((a) => a.userId === userId));
+                      for (const folder of folders ?? []) {
+                        const id = idOf(folder);
+                        if (!id) {
+                          noFolder ??= folder;
+                          continue;
+                        }
+                        if (this.scope?.ownerOf(id) == null) {
+                          this.scope?.remember(id, userId);
+                        }
+                        merged.push(
+                          Object.assign(Object.create(Object.getPrototypeOf(folder)), folder, {
+                            name: `${label} · ${folder.name}`,
+                          }),
+                        );
+                      }
+                    });
+                    return noFolder ? [...merged, noFolder] : merged;
+                  }),
+                ),
+          ),
+        );
+      }),
+    );
+  }
+
+  /**
+   * Runs `act` once per account for the given item or folder ids, with that account made active
+   * first, and resolves to whether every call succeeded. Ids without a known account go with the
+   * active account. Outside combined mode this is a single call with all ids.
+   */
+  async forEachOwner(ids: string[], act: (ids: string[]) => Promise<boolean>): Promise<boolean> {
+    if (!(await firstValueFrom(this.enabled$))) {
+      return act(ids);
+    }
+    // Ids without a known account first, while the account that was active stays active.
+    const groups = new Map<UserId | undefined, string[]>([[undefined, []]]);
+    for (const id of ids) {
+      const owner = this.scope?.ownerOf(id) ?? undefined;
+      groups.set(owner, [...(groups.get(owner) ?? []), id]);
+    }
+    let ok = true;
+    for (const [owner, group] of groups) {
+      if (group.length === 0) {
+        continue;
+      }
+      await this.activate(owner);
+      ok = (await act(group)) && ok;
+    }
+    return ok;
+  }
+
   /** The account an item belongs to, as shown on its badge. */
   accountFor$(cipherId: string | null | undefined): Observable<MultiwardenAccount | undefined> {
     return combineLatest([this.enabled$, this.accounts$]).pipe(
@@ -252,6 +333,11 @@ export class MultiwardenCombinedService {
     }
     await this.activate(this.scope?.ownerOf(cipherId));
   }
+}
+
+/** How a folder names its account in combined mode: the part of the email before the "@". */
+function folderLabel(account: MultiwardenAccount | undefined): string {
+  return (account?.email ?? "").split("@")[0];
 }
 
 function idOf(item: { id?: unknown }): string | undefined {

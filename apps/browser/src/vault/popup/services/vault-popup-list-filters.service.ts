@@ -12,7 +12,6 @@ import {
   startWith,
   switchMap,
   take,
-  of,
 } from "rxjs";
 
 import { CollectionService } from "@bitwarden/admin-console/common";
@@ -107,45 +106,7 @@ export class VaultPopupListFiltersService {
    * entry is kept for all accounts.
    */
   private multiwardenFolders$(userId: UserId): Observable<FolderView[]> {
-    return this.multiwardenCombined.enabled$.pipe(
-      switchMap((enabled) => {
-        if (!enabled) {
-          return this.folderService.folderViews$(userId);
-        }
-        return this.multiwardenCombined.userIds$.pipe(
-          switchMap((userIds) =>
-            userIds.length === 0
-              ? of<FolderView[]>([])
-              : combineLatest([
-                  this.multiwardenCombined.accounts$,
-                  combineLatest(userIds.map((id) => this.folderService.folderViews$(id))),
-                ]).pipe(
-                  map(([accounts, perAccount]) => {
-                    const merged: FolderView[] = [];
-                    let noFolder: FolderView | undefined;
-                    perAccount.forEach((folders, index) => {
-                      const email = accounts.find((a) => a.userId === userIds[index])?.email ?? "";
-                      const label = email.split("@")[0];
-                      for (const folder of folders) {
-                        if (!folder.id) {
-                          noFolder ??= folder;
-                          continue;
-                        }
-                        const labelled: FolderView = Object.assign(
-                          Object.create(Object.getPrototypeOf(folder)),
-                          folder,
-                          { name: `${label} · ${folder.name}` },
-                        );
-                        merged.push(labelled);
-                      }
-                    });
-                    return noFolder ? [...merged, noFolder] : merged;
-                  }),
-                ),
-          ),
-        );
-      }),
-    );
+    return this.multiwardenCombined.folders$(userId, (id) => this.folderService.folderViews$(id));
   }
 
   /** Multiwarden: in combined mode, the organizations of every unlocked account. */

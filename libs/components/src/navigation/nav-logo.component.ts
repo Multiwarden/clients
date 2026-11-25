@@ -2,8 +2,7 @@ import { NgClass } from "@angular/common";
 import { ChangeDetectionStrategy, Component, input, inject } from "@angular/core";
 import { RouterLinkActive, RouterLink } from "@angular/router";
 
-import { BitwardenShield, SideNavLogo, SideNavLogoBeta, BitSvg } from "@bitwarden/assets/svg";
-import { flagEnabled } from "@bitwarden/common/platform/misc/flags";
+import { BitSvg, MultiwardenShield, MultiwardenSideNavLogo } from "@bitwarden/assets/svg";
 
 import { SvgComponent } from "../svg/svg.component";
 
@@ -22,14 +21,16 @@ export class NavLogoComponent {
   /**
    * The v2 side nav always displays this logo for the open state, regardless of `openIcon`.
    */
-  protected readonly sideNavLogo = flagEnabled("prereleaseBuild") ? SideNavLogoBeta : SideNavLogo;
+  // Multiwarden: own logo (upstream: SideNavLogo / SideNavLogoBeta by prereleaseBuild flag).
+  protected readonly sideNavLogo = MultiwardenSideNavLogo;
 
   /**
    * Icon that is displayed when the side nav is closed
    *
-   * @default BitwardenShield
+   * @default MultiwardenShield
    */
-  readonly closedIcon = input(BitwardenShield);
+  // Multiwarden: own mark (upstream: BitwardenShield).
+  readonly closedIcon = input(MultiwardenShield);
 
   /**
    * Icon that is displayed when the side nav is open

@@ -2,6 +2,7 @@ import { computed, inject, Signal } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { map, switchMap } from "rxjs";
 
+import { MultiwardenCombinedService } from "@bitwarden/angular/multiwarden";
 import { AccountService } from "@bitwarden/common/auth/abstractions/account.service";
 import { getUserId } from "@bitwarden/common/auth/services/account.service";
 import { FolderService } from "@bitwarden/common/vault/abstractions/folder/folder.service.abstraction";
@@ -18,11 +19,15 @@ import { MyFolderTrail, resolveMyFolderTrail } from "../../utils/my-folder-trail
 export function injectMyFolderTrail(folderId: Signal<string>): Signal<MyFolderTrail | undefined> {
   const accountService = inject(AccountService);
   const folderService = inject(FolderService);
+  // Multiwarden: in combined mode, the folders of every unlocked account.
+  const multiwardenCombined = inject(MultiwardenCombinedService);
 
   const folders = toSignal(
     accountService.activeAccount$.pipe(
       getUserId,
-      switchMap((userId) => folderService.folderViews$(userId)),
+      switchMap((userId) =>
+        multiwardenCombined.folders$(userId, (id) => folderService.folderViews$(id)),
+      ),
       // The "No folder" entry has no id and is not a folder the user can be in.
       map((folders) => folders.filter((folder) => folder.id != null && folder.id !== "")),
     ),

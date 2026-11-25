@@ -14,6 +14,7 @@ import {
 } from "rxjs";
 
 import { CollectionService } from "@bitwarden/admin-console/common";
+import { MultiwardenCombinedService } from "@bitwarden/angular/multiwarden";
 import { ViewCacheService } from "@bitwarden/angular/platform/view-cache";
 import { DynamicTreeNode } from "@bitwarden/angular/vault/vault-filter/models/dynamic-tree-node.model";
 import { sortDefaultCollections } from "@bitwarden/angular/vault/vault-filter/services/vault-filter.service";
@@ -135,6 +136,16 @@ export class VaultPopupListTableFiltersService {
   private readonly configService = inject(ConfigService);
   private readonly avatarService = inject(AvatarService);
   private readonly stateProvider = inject(StateProvider);
+  // Multiwarden: combined mode (see multiwarden/README.md).
+  private readonly multiwardenCombined = inject(MultiwardenCombinedService);
+
+  /**
+   * Multiwarden: in combined mode, the folders of every unlocked account, each named
+   * "account · folder"; otherwise the active account's.
+   */
+  private multiwardenFolders$(userId: UserId): Observable<FolderView[]> {
+    return this.multiwardenCombined.folders$(userId, (id) => this.folderService.folderViews$(id));
+  }
 
   private readonly activeUserId$ = this.accountService.activeAccount$.pipe(
     map((a) => a?.id),
@@ -387,7 +398,7 @@ export class VaultPopupListTableFiltersService {
     return combineLatest([
       this.organizations$,
       this.collections$,
-      this.activeUserId$.pipe(switchMap((userId) => this.folderService.folderViews$(userId))),
+      this.activeUserId$.pipe(switchMap((userId) => this.multiwardenFolders$(userId))),
       // Not `userState$`, which starts empty: the first emission here is the stored state.
       this.activeUserId$.pipe(
         switchMap((userId) => this.stateProvider.getUser(userId, VAULT_TABLE_FILTERS).state$),
@@ -559,7 +570,7 @@ export class VaultPopupListTableFiltersService {
    */
   folders$: Observable<ChipFilterOption<FolderView>[]> = this.activeUserId$.pipe(
     switchMap((userId) =>
-      this.folderService.folderViews$(userId).pipe(
+      this.multiwardenFolders$(userId).pipe(
         map((folders) => (folders.length === 1 && !folders[0].id ? ([] as FolderView[]) : folders)),
         map((folders) => {
           const nested = getNestedFolderTree(folders, this.i18nService);

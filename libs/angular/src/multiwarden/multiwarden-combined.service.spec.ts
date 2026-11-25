@@ -101,4 +101,88 @@ describe("MultiwardenCombinedService", () => {
 
     expect(requestActivation).not.toHaveBeenCalled();
   });
+
+  describe("folders$", () => {
+    const load = (userId: UserId) =>
+      of(
+        userId === userA
+          ? [
+              { id: "fa", name: "Work" },
+              { id: null, name: "No folder" },
+            ]
+          : [
+              { id: "fb", name: "Work" },
+              { id: null, name: "No folder" },
+            ],
+      );
+
+    it("names every unlocked account's folders after their account, with one no-folder entry", async () => {
+      const folders = await firstValueFrom(service.folders$(userA, load));
+
+      expect(folders.map((f) => [f.id, f.name])).toEqual([
+        ["fa", "a · Work"],
+        ["fb", "b · Work"],
+        [null, "No folder"],
+      ]);
+      expect(service.scope?.ownerOf("fb")).toBe(userB);
+    });
+
+    it("returns the active account's folders unchanged when combined mode is off", async () => {
+      combinedMode$.next(false);
+
+      const folders = await firstValueFrom(service.folders$(userA, load));
+
+      expect(folders.map((f) => [f.id, f.name])).toEqual([
+        ["fa", "Work"],
+        [null, "No folder"],
+      ]);
+    });
+
+    it("activates a folder's account before acting on it", async () => {
+      await firstValueFrom(service.folders$(userA, load));
+
+      await service.prepareFor("fb");
+
+      expect(activeAccount$.value?.id).toBe(userB);
+    });
+  });
+
+  describe("forEachOwner", () => {
+    it("acts on each account's ids with that account active", async () => {
+      await firstValueFrom(service.mergeForUsers((userId) => of([{ id: `${userId}-1` }])));
+      const calls: [UserId | undefined, string[]][] = [];
+
+      const ok = await service.forEachOwner(["user-a-1", "user-b-1", "unknown"], async (ids) => {
+        calls.push([activeAccount$.value?.id, ids]);
+        return true;
+      });
+
+      expect(ok).toBe(true);
+      expect(calls).toEqual([
+        [userA, ["unknown"]],
+        [userA, ["user-a-1"]],
+        [userB, ["user-b-1"]],
+      ]);
+    });
+
+    it("reports a failure in any account", async () => {
+      await firstValueFrom(service.mergeForUsers((userId) => of([{ id: `${userId}-1` }])));
+
+      const ok = await service.forEachOwner(["user-a-1", "user-b-1"], async (ids) =>
+        ids.includes("user-a-1"),
+      );
+
+      expect(ok).toBe(false);
+    });
+
+    it("makes one call with every id when combined mode is off", async () => {
+      combinedMode$.next(false);
+      const act = jest.fn(async () => true);
+
+      await service.forEachOwner(["x", "y"], act);
+
+      expect(act).toHaveBeenCalledTimes(1);
+      expect(act).toHaveBeenCalledWith(["x", "y"]);
+    });
+  });
 });
