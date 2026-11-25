@@ -2,7 +2,7 @@ import { Component, Input } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { By } from "@angular/platform-browser";
 import { mock } from "jest-mock-extended";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, take } from "rxjs";
 
 import { AccountService } from "@bitwarden/common/auth/abstractions/account.service";
 import { ConfigService } from "@bitwarden/common/platform/abstractions/config/config.service";
@@ -97,7 +97,7 @@ describe("FoldersComponent", () => {
   });
 
   it("should show all folders", (done) => {
-    component.folders$.subscribe((folders) => {
+    component.folders$.pipe(take(1)).subscribe((folders) => {
       expect(folders).toEqual([
         { id: "1", name: "Folder 1" },
         { id: "2", name: "Folder 2" },
@@ -116,7 +116,7 @@ describe("FoldersComponent", () => {
     ] as FolderView[]);
     fixture.detectChanges();
 
-    component.folders$.subscribe((folders) => {
+    component.folders$.pipe(take(1)).subscribe((folders) => {
       expect(folders).toEqual([
         { id: "1", name: "Folder 1" },
         { id: "2", name: "Folder 2" },
@@ -137,22 +137,24 @@ describe("FoldersComponent", () => {
     ).toBeFalsy();
   });
 
-  it("opens edit dialog for existing folder", () => {
+  it("opens edit dialog for existing folder", async () => {
     const folder = { id: "1", name: "Folder 1" } as FolderView;
     const editButton = fixture.debugElement.query(By.css('[data-testid="edit-folder-button"]'));
 
     editButton.triggerEventHandler("click");
+    await fixture.whenStable();
 
     expect(open).toHaveBeenCalledWith(mockDialogService, { editFolderConfig: { folder } });
   });
 
-  it("opens add dialog for new folder when there are no folders", () => {
+  it("opens add dialog for new folder when there are no folders", async () => {
     folderViews$.next([]);
     fixture.detectChanges();
 
     const addButton = fixture.debugElement.query(By.css('[data-testid="empty-new-folder-button"]'));
 
     addButton.triggerEventHandler("click");
+    await fixture.whenStable();
 
     expect(open).toHaveBeenCalledWith(mockDialogService, {});
   });

@@ -1,9 +1,13 @@
 import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
-import { combineLatest, filter, map, Observable, switchMap } from "rxjs";
+import { combineLatest, filter, firstValueFrom, map, Observable, switchMap } from "rxjs";
 
 import { JslibModule } from "@bitwarden/angular/jslib.module";
+import {
+  MultiwardenCombinedService,
+  multiwardenChooseNewItemAccount,
+} from "@bitwarden/angular/multiwarden";
 import { NoFolders } from "@bitwarden/assets/svg";
 import { AccountService } from "@bitwarden/common/auth/abstractions/account.service";
 import { FeatureFlag } from "@bitwarden/common/enums/feature-flag.enum";
@@ -54,6 +58,8 @@ export class FoldersComponent {
   NoFoldersIcon = NoFolders;
   private activeUserId$ = this.accountService.activeAccount$.pipe(map((a) => a?.id));
   private configService = inject(ConfigService);
+  // Multiwarden: combined mode (see multiwarden/README.md).
+  private multiwardenCombined = inject(MultiwardenCombinedService);
 
   /** When enabled, the id-less "My Folder" placeholder is filtered out of the folder list. */
   protected readonly vfo1Enabled = toSignal(
@@ -69,17 +75,45 @@ export class FoldersComponent {
     this.folders$ = combineLatest([
       this.activeUserId$.pipe(
         filter((userId): userId is UserId => userId !== null),
-        switchMap((userId) => this.folderService.folderViews$(userId)),
+        // Multiwarden: in combined mode, the folders of every unlocked account.
+        switchMap((userId) =>
+          this.multiwardenCombined.folders$(userId, (id) => this.folderService.folderViews$(id)),
+        ),
       ),
       this.configService.getFeatureFlag$(FeatureFlag.VFO1Foundation),
     ]).pipe(map(([folders, vfo1]) => (vfo1 ? folders.filter((folder) => folder.id) : folders)));
   }
 
   /** Open the Add/Edit folder dialog */
-  openAddEditFolderDialog(folder?: FolderView) {
+  async openAddEditFolderDialog(folder?: FolderView) {
+    // Multiwarden: edit a folder in its own account; ask which account a new folder goes into.
+    if (folder) {
+      folder = await this.multiwardenFolderToEdit(folder);
+    } else if (
+      !(await multiwardenChooseNewItemAccount(this.multiwardenCombined, this.dialogService))
+    ) {
+      return;
+    }
+
     // If a folder is provided, the edit variant should be shown
     const editFolderConfig = folder ? { folder } : undefined;
 
     AddEditFolderDialogComponent.open(this.dialogService, { editFolderConfig });
+  }
+
+  /**
+   * Multiwarden: in combined mode, makes the folder's account active and returns the folder with
+   * its own name (the list shows "account · folder", which must not be saved as its name).
+   */
+  private async multiwardenFolderToEdit(folder: FolderView): Promise<FolderView> {
+    if (!(await firstValueFrom(this.multiwardenCombined.enabled$))) {
+      return folder;
+    }
+    await this.multiwardenCombined.prepareFor(folder.id);
+    const userId = await firstValueFrom(this.activeUserId$);
+    const own = userId
+      ? await firstValueFrom(this.folderService.getDecrypted$(folder.id, userId))
+      : null;
+    return own ?? folder;
   }
 }
