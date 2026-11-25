@@ -203,18 +203,18 @@ jobs:
             runner: ubuntu-22.04
             native: --target=x86_64-unknown-linux-gnu --release
             package: --linux --x64
-            files: "Multiwarden-*.AppImage Multiwarden-*.deb"
+            files: "Multiwarden-*.AppImage Multiwarden-*.deb latest-linux.yml"
           - os: windows
             runner: windows-2022
             native: --target=x86_64-pc-windows-msvc --release
             package: --win --x64
-            files: "Multiwarden-*.exe"
+            files: "Multiwarden-*.exe latest.yml"
           - os: macos
             runner: macos-15
             # Both architectures, merged into one universal app.
             native: cross-platform --release
             package: --mac --universal
-            files: "Multiwarden-*.dmg Multiwarden-*.zip"
+            files: "Multiwarden-*.dmg Multiwarden-*.zip latest-mac.yml"
     defaults:
       run:
         shell: bash
@@ -265,6 +265,8 @@ jobs:
         run: |
           npx electron-builder --config ../../multiwarden/.build/electron-builder.json \
             ${{ matrix.package }} -p never
+          # The update files the app checks (see multiwarden/scripts/desktop-update-info.mjs).
+          node ../../multiwarden/scripts/desktop-update-info.mjs dist
           mkdir -p ../../desktop-dist
           cd dist && cp ${{ matrix.files }} ../../../desktop-dist/
 
